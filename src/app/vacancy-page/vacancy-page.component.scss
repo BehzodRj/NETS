@@ -1,0 +1,338 @@
+.vacancy_animation_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 120px;
+  h1 {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 50px;
+  }
+
+  .vacancy_animation_block {
+    // #fstBlock {
+    //   transform: translateY(-100px);
+    // }
+
+    #secBlock,
+    #thdBlock {
+      opacity: 0;
+    }
+
+    @keyframes MOVE {
+      0% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 0;
+        transform: translateY(0);
+      }
+      10% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 0;
+        transform: translateY(0);
+      }
+
+      20% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      30% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      40% {
+        -webkit-text-stroke: 1px #FFFFFF;
+        color: transparent;
+        font-size: 35px;
+        opacity: 1;
+        transform: translateY(-120px);
+      }
+      100% {
+        -webkit-text-stroke: 1px #FFFFFF;
+        color: transparent;
+        font-size: 35px;
+        opacity: 1;
+        transform: translateY(-120px);
+      }
+      
+    }
+
+
+    #fstBlock {
+      animation-name: MOVE;
+      animation-duration: 8s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes TOP {
+      0% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 0;
+      }
+
+      30% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 0;
+        transform: translateY(0);
+      }
+
+      40% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      50% {
+        -webkit-text-stroke: 0px #FFFFFF;
+        color: #FFFFFF;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      
+    60% {
+      -webkit-text-stroke: 1px #FFFFFF;
+      color: transparent;
+      font-size: 35px;
+      opacity: 1;
+      transform: translateY(-60px);
+    }
+
+      100% {
+        opacity: 1;
+        -webkit-text-stroke: 1px #FFFFFF;
+        color: transparent;
+        font-size: 35px;
+        transform: translateY(-60px);
+      }
+    }
+
+    #secBlock {
+      animation-name: TOP;
+      animation-duration: 8s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes BOTTOM {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+        font-size: 35px
+      }
+
+      100% {
+        opacity: 1;
+        font-size: 35px
+      }
+    }
+
+
+    #thdBlock {
+      opacity:0;
+      animation-name: BOTTOM;
+      animation-duration: 8s;
+      animation-fill-mode: forwards;
+    }
+
+  }
+
+  @keyframes END {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  #allBlock {
+    animation-name: END;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+      position: absolute;
+      width: 80vw
+    }
+  }
+
+  #fthBlock {
+    width: 800px;
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  @keyframes  START {
+    0% { opacity: 0; }
+    80% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  #fthBlock {
+    animation-name: START;
+    animation-duration: 8s;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+  }
+
+}
+
+.vacancy__container {
+  width: 90%;
+  margin: 120px auto 0;
+  padding: 10px;
+
+  h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #FFFFFF;
+  }
+
+  .vacancy__special {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+    .vacancy__block {
+      max-width: 340px;
+      background: #292929;
+      padding: 10px;
+      border-radius: 30px;
+      border: 1px solid rgba(225, 255, 255, 0.5);
+      margin-right: 20px;
+      margin-bottom: 100px;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 250px;
+          margin-top: -70px;
+        }
+      }
+
+      .text {
+        width: 90%;
+        margin: auto;
+
+        h3 {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 36px;
+          color: #FFFFFF;
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        p {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          color: #FFFFFF;
+          text-align: justify;
+          margin-top: 10px;
+        }
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        button {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          color: #EA3E2A;
+          background: none;
+          border: 1px solid #EA3E2A;
+          padding: 5px 20px;
+          border-radius: 30px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: .8;
+          }
+
+          &:active {
+            transform: scale(.99);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:768px) {
+      .vacancy__block {
+        .icon {
+          img {
+            width: 200px;
+          }
+        }
+
+        .text {
+          h3 {
+            font-size: 30px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:450px) {
+      .vacancy__block {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width:320px) {
+      .vacancy__block {
+        .text {
+          h3 {
+            font-size: 25px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+}

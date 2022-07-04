@@ -1,0 +1,112 @@
+<div class="modal__container" *ngIf="modalShow == true">
+  <div class="time">
+    <i class="fas fa-times fa-2x" (click)="modalShow = false"></i>
+  </div>
+  <div class="modal__block">
+    <h1>ВАШ ОТКЛИК</h1>
+    <h2>ТЫ ОТКЛИКАЕШЬСЯ НА ВАКАНСИЮ</h2>
+    <h2>{{ fullVacancyData.title }}</h2>
+    <h3>Контактная информация:</h3>
+    <div class="block_input">
+      <form action="" [formGroup]="vacancyAddForm">
+        <input type="text" placeholder="Фамилия" formControlName="surname">
+        <input type="text" placeholder="Имя" formControlName="name">
+        <input type="text" placeholder="Отчество" formControlName="secondName">
+        <input type="tel" placeholder="Телефон" formControlName="phone">
+        <input type="email" placeholder="Email" formControlName="email">
+      </form>
+    </div>
+    <div class="letter">
+        <h3>Сопроводительное письмо (необязятельно):</h3>
+        <form action="" [formGroup]="vacancyAddForm">
+          <textarea formControlName="letter" name="" id="" cols="10" rows="5" placeholder="Напиши здесь, почему ты хочешь работать на этой позиции."></textarea>
+        </form>
+    </div>
+    <div class="rezume_block">
+        <h3>Резюме:</h3>
+        <div class="rezume" [formGroup]="vacancyAddForm" >
+            <span>{{fileName}}</span>
+            <div class="rezume_choose" >
+              <input type="file" name="" id="" formControlName="file" (change)="preUpload($event)">
+              <span>Выбрать</span>
+            </div>
+        </div>
+    </div>
+    <div class="subtitle">
+        Отправляя Заявку, я соглашаюсь на обработку 
+        <span>моих персональных данных</span>
+    </div> 
+  </div>
+  <div class="btn">
+    <button (click)="send()">Отправить</button>
+</div>
+</div>
+<div class="specialVacancy__container" *ngIf="modalShow == false">
+    <app-header></app-header>
+    <div class="type_page">
+    <h2 routerLink="/vacancy">Вакансии</h2>
+    <h3>\ {{ fullVacancyData.title }}</h3>
+  </div>
+  <div class="special_container">
+    <div class="icon">
+      <img [src]="fullVacancyData.img" alt="" />
+      <button (click)="modalShow = true">Отправить CV</button>
+    </div>
+    <div class="text">
+      <h1>{{ fullVacancyData.title }}</h1>
+      <div class="insideText">
+        <h2>Что нужно делать:</h2>
+        <ul>
+          <li>Обеспечивает правовое сопровождение деятельности Компании;</li>
+          <li>
+            Ведет договорную работу в компании: разрабатывает проекты договоров
+            (подряд на выполнение работ; поставка оборудования, оказание услуг и
+            др.), проверяет соответствие законодательству проектов договоров,
+            представляемых Компании, обеспечивает нотариальное удостоверение или
+            государственную регистрацию отдельных видов договоров и документов;
+          </li>
+          <li>Ведёт документацию по корпоративному управлению;</li>
+          <li>Ведет претензионно-исковую работу в Компании;</li>
+          <li>
+            Готовит материалы для получения лицензий, разрешений и других
+            разрешительных документов, необходимых для осуществления
+            деятельности Компании; представляет интересы Компании при проверках,
+            проводимых государственными контрольно-надзорными органами;
+          </li>
+          <li>
+            Выполняет другие задачи и поручения непосредственного руководителя в
+            рамках своих полномочий.
+          </li>
+        </ul>
+        <h2>Кого мы ищем:</h2>
+        <ul>
+          <li>Высшее юридическое образование - обязательно;</li>
+          <li>Опыт работы в должности юриста от 3 лет – обязательно;</li>
+          <li>
+            Знание гражданского, коммерческого, налогового, трудового,
+            административного, финансового права и других отраслей
+            законодательства РТ - обязательно;
+          </li>
+          <li>
+            Знание нормативно – правовых актов, регулирующие сферу электрической
+            связи;
+          </li>
+          <li>Знание стандартов делопроизводства по правовым документам;</li>
+          <li>
+            Знание государственного и русского языков (хороший уровень устных и
+            письменных навыков) – обязательно; знание английского языка –
+            является преимуществом;
+          </li>
+          <li>
+            Уверенный пользователь персонального компьютера – обязательно;
+          </li>
+          <li>
+            Высокий уровень организованности, ответственности и деловой хватки,
+            хорошие навыки переговоров и коммуникаций, умение работать в команде
+            и инициативность в работе.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

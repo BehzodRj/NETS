@@ -1,0 +1,359 @@
+.modal__container {
+  position: absolute;
+  width: 80%;
+  margin: 30px auto;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  .fas {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    color: #fff;
+
+    &:active {
+      transform: scale(.9);
+    }
+  }
+
+  .modal__block {
+    padding: 30px;
+
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 900;
+      font-size: 60px;
+      color: #C4C4C4;
+
+    }
+
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      font-size: 25px;
+      color: #C4C4C4;
+      margin-top: 30px;
+    }
+
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 25px;
+      color: #DFDFDF;
+      margin-top: 20px;
+
+    }
+
+    .block_input {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      input {
+        padding: 5px 10px;
+        margin-right: 20px;
+        margin-top: 10px;
+        background: none;
+        border: 1px solid #6F7071;
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        color: #AAAAAA;
+
+      }
+
+      @media screen and (max-width:700px) {
+        justify-content: center;
+
+        input {
+          width: 90%;
+          margin-top: 20px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .letter {
+      margin-top: 50px;
+
+      h3 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        color: #DFDFDF;
+      }
+
+      textarea {
+        border: 1px solid #6F7071;
+        width: 100%;
+        margin-top: 20px;
+        background: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        color: #AAAAAA;
+      }
+    }
+
+    .rezume_block {
+      h3 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        color: #DFDFDF;
+        margin-top: 40px;
+
+      }
+
+      .rezume {
+        border: 2px dashed #EA3E2A;
+        padding: 50px 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+
+        span {
+          text-align: center;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 400;
+          font-size: 24px;
+          color: #AAAAAA;
+          margin-bottom: 30px;
+
+          &:last-child {
+            color: #EA3E2A;
+            cursor: pointer;
+          }
+        }
+
+        .rezume_choose {
+          display: flex;
+          justify-content: top;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          cursor: pointer;
+
+          input {
+            width: 200px;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .subtitle {
+      margin-top: 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #FFFFFF;
+
+      span {
+        color: #EA3E2A;
+      }
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    button {
+      padding: 5px 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #FFFFFF;
+      background: #EA3E2A;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+
+      &:active {
+        transform: scale(.99);
+      }
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    width: 100%;
+  }
+  @media screen and (max-width:700px) {
+    .modal__block{
+        
+    h1 { 
+      font-size: 40px; 
+
+    } 
+    h2,h3 { 
+      font-size: 20px; 
+    }  
+    .letter { 
+
+      h3 { 
+        font-size: 20px; 
+      }
+      textarea { 
+        font-size: 20px; 
+      } 
+    }
+    .rezume_block {
+      h3 { 
+        font-size: 25px; 
+
+      } 
+      .rezume {  
+        span { 
+          font-size: 20px; 
+        } 
+      }
+    }
+    .subtitle { 
+      font-size: 16px; 
+    }
+    }
+  }
+   
+
+}
+
+.specialVacancy__container {
+  width: 100%;
+
+  .type_page {
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #EA3E2A;
+      cursor: pointer;
+    }
+
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #7E7E7F;
+      margin-left: 10px;
+
+    }
+  }
+
+  .special_container {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+
+      button {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #EA3E2A;
+        border: 3px solid #EA3E2A;
+        border-radius: 30px;
+        background: none;
+        cursor: pointer;
+        margin-top: 50px;
+        padding: 5px 40px;
+
+        &:hover {
+          opacity: .8;
+        }
+
+        &:active {
+          transform: scale(.99);
+        }
+      }
+    }
+
+    .text {
+      width: 70%;
+      margin-left: 50px;
+
+      h1 {
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        color: #FFFFFF;
+      }
+
+      .insideText {
+        text-align: justify;
+        margin: 30px 0;
+
+        h2 {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 24px;
+          color: #FFFFFF;
+          text-align: left;
+          margin-top: 30px;
+        }
+
+        ul {
+          margin-top: 10px;
+
+          li {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:900px) {
+      flex-direction: column;
+
+      .icon {
+        margin: auto;
+      }
+
+      .text {
+        width: 95%;
+        margin-left: 0;
+        margin-top: 30px; 
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+    @media screen and (max-width:400px) {  
+      .icon { 
+        img{
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      
+    }
+  }
+}

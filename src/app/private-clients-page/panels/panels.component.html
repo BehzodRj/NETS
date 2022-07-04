@@ -1,0 +1,94 @@
+ 
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/allChannels.svg" alt="" />
+                <h3>Все каналы</h3>
+              </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let allChannels of request.allChannelsService" [src]="allChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/tajik_icon.svg" alt="" />
+                <h3>Таджикские</h3>
+            </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let tajikChannels of request.tajikChannelsService" [src]="tajikChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/movie.svg" alt="" />
+                <h3>Кино</h3>
+              </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let movieChannels of request.tajikChannelsService" [src]="movieChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/child.svg" alt="" />
+                <h3>Детские</h3>
+              </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let childChannels of request.childChannelsService" [src]="childChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/sport.svg" alt="" />
+                <h3>Спортивные</h3>
+              </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let sportChannels of request.sportChannelsService" [src]="sportChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/cognitive.svg" alt="" />
+                <h3>Познавательные</h3>
+              </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let informativeChannels of request.informativeChannelsService" [src]="informativeChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="allList_items">
+                <img src="./assets/img/allChannels/tabler_ballon.svg" alt="" />
+                <h3>Развлекательные</h3>
+              </div>
+        </mat-panel-title> 
+      </mat-expansion-panel-header>
+      <div class="allChanels">
+        <img *ngFor="let  entertainmentChannels of request. entertainmentChannelsService" [src]=" entertainmentChannels.img" alt="" />
+      </div> 
+    </mat-expansion-panel> 
+  </mat-accordion>

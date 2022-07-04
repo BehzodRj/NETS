@@ -1,16 +1,57 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import * as jquery from 'jquery';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { PrivateClientsPageComponent } from './private-clients-page/private-clients-page.component';
+import { ForBusinessPageComponent } from './for-business-page/for-business-page.component';
+import { VacancyPageComponent } from './vacancy-page/vacancy-page.component';
+import { HeaderComponent } from './header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { VacancySpecialComponent } from './vacancy-special/vacancy-special.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
+import {MatExpansionModule} from '@angular/material/expansion';
+import { PanelsComponent } from './private-clients-page/panels/panels.component';
+import { SlickComponent } from './slick/slick.component';
+  
+import { BalancesPageComponent } from './admin-page/balances-page/balances-page.component';
+import { PacketsPageComponent } from './admin-page/packets-page/packets-page.component';
+import { SettingsPageComponent } from './admin-page/settings-page/settings-page.component';
+import { TarifsPageComponent } from './admin-page/tarifs-page/tarifs-page.component';
+import { TraficsPageComponent } from './admin-page/trafics-page/trafics-page.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { MenuDashboardComponent } from './admin-page/menu-dashboard/menu-dashboard.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrivateClientsPageComponent,
+    ForBusinessPageComponent,
+    VacancyPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    VacancySpecialComponent,
+    PanelsComponent,
+    SlickComponent,
+    MenuDashboardComponent,  
+    AdminPageComponent,
+    BalancesPageComponent,
+    PacketsPageComponent,
+    SettingsPageComponent,
+    TarifsPageComponent,
+    TraficsPageComponent,
+    MenuDashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

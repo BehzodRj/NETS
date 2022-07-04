@@ -1,0 +1,388 @@
+.service__content {
+    padding: 40px;
+
+    .service__container {
+        background: rgba(32, 32, 32, 0.8); 
+        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+        border-radius: 25px;
+        max-width: 700px;
+        margin: 0 auto;
+        
+        .service_block{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img{
+                margin-top: -55px;
+                margin-bottom: 40px;
+            }
+            
+            h1{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 140%;
+                color: #C4C4C4;
+                padding: 20px;
+                
+            }
+        }
+        }
+        .service_text{
+
+            ul{
+                padding-left: 40px;
+                padding-bottom: 40px;
+                li{
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 140%;                    
+                    color: #EA3E2A;
+                    margin-top: 10px;
+                    
+                    span {
+                        color: #fff;
+                    }
+                }               
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .service__container {
+                .service_block {
+                    flex-direction: column;
+                    
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+                .service_text{
+                    ul{
+                       li{
+
+                       } 
+                        
+                    }
+                }
+            }
+            
+        }
+        @media screen and (max-width: 500px) {
+            .service__container {
+                .service_block {
+                     
+                    img{
+                        margin-top: -48px; 
+                        margin-bottom: 23px; 
+                        width: 130px
+                    }
+                    
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+                .service_text{
+                    ul{
+                        padding-left: 30px; 
+                        padding-right: 20px; 
+                        padding-bottom: 40px;   
+                       li{
+                        span{
+                            font-size: 15px
+                        }
+                        ;  
+                       } 
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+
+.development_content{
+    padding: 40px;
+    .development_container{
+        background: rgba(32, 32, 32, 0.8); 
+        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+        border-radius: 25px;
+        max-width: 700px;
+        margin: 0 auto;
+        .development_block{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                margin-top: -55px;
+                margin-bottom: 40px;
+            }
+            h1{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 140%;
+                color: #C4C4C4;
+                padding: 20px;
+            }
+        }
+        .development_text{
+            width: 90%;
+            margin: auto;
+            p{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 140%;
+                color: #C4C4C4;
+                text-align: left;
+            }
+        }
+        ul{
+            padding-left: 40px;
+            padding-bottom: 40px;
+            li{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;                    
+                color: #EA3E2A;
+                margin-top: 10px;
+                
+                span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .development_container{
+            .development_block{
+                flex-direction: column;
+                
+                h1 {
+                    font-size: 18px;
+                }
+            }
+            .development_text{
+                
+            }
+            ul{
+                   li{
+
+                   } 
+                    
+                }
+        }
+        
+    }
+    @media screen and (max-width: 500px) {
+        .development_container{
+            .development_block{
+                 
+                img{
+                    margin-top: -48px; 
+                    margin-bottom: 23px; 
+                    width: 130px
+                }
+                
+                h1 {
+                    font-size: 18px;
+                }
+            }
+            .development_text{
+                p{
+
+                }
+            }
+            ul{
+                padding-left: 30px; 
+                padding-right: 20px; 
+                padding-bottom: 40px;   
+               li{
+                span{
+                    font-size: 14px;
+                    padding: 0 13px;
+                }
+                ;  
+               } 
+                
+            }
+        }
+        
+    }
+}
+.ipTv_content{
+    padding: 40px;
+    .ipTv_container{
+        background: rgba(32, 32, 32, 0.8); 
+        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+        border-radius: 25px;
+        max-width: 700px;
+        margin: 0 auto;
+        .ipTv_block{
+            display: flex;
+            align-items: center;
+            column-gap: 10%;
+            width: 90%;
+            margin: 0 auto;
+            img{
+                margin-top: -55px;
+                margin-bottom: 40px;
+            }
+            h1{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 140%;
+                color: #C4C4C4;
+                padding: 20px;
+            }
+        }
+        .ipTv_text{
+            width: 90%;
+            margin: auto;
+            p{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 140%;
+                color: #C4C4C4;
+                text-align: left;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .ipTv_container{
+            .ipTv_block{
+                flex-direction: column;
+                
+                h1 {
+                    font-size: 18px;
+                }
+            }
+          
+        }
+        
+    }
+    @media screen and (max-width: 500px) {
+        .ipTv_container{
+            .ipTv_block{
+                 
+                img{
+                    margin-top: -48px; 
+                    margin-bottom: 23px; 
+                    width: 130px
+                }
+                
+                h1 {
+                    font-size: 18px;
+                }
+            }
+           
+        }
+        
+    }
+}
+
+.bitrix_content{
+    padding: 40px;
+    .bitrix_container{
+        background: rgba(32, 32, 32, 0.8); 
+        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+        border-radius: 25px;
+        max-width: 700px;
+        margin: 0 auto;
+        .bitrix_block{
+            display: flex;
+            align-items: center;
+            column-gap: 10%;
+            width: 90%;
+            margin: 0 auto;
+            img{
+                margin-top: -55px;
+                margin-bottom: 40px;
+            }
+            h1{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 140%;
+                color: #C4C4C4;
+                padding: 20px;
+            }
+        }
+        .bitrix_text{
+            p{
+                width: 90%;
+                margin: auto;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 140%;
+                color: #C4C4C4;
+                text-align: left;
+            }
+            ul{
+                padding-left: 40px;
+                padding-bottom: 40px;
+                li{
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 140%;                    
+                    color: #EA3E2A;
+                    margin-top: 10px;
+                    span{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .bitrix_container {
+            .bitrix_block {
+                flex-direction: column;
+                
+                h1 {
+                    font-size: 18px;
+                }
+            }
+        
+        }
+        
+    }
+    @media screen and (max-width: 500px) {
+        .bitrix_container{
+            .bitrix_block{
+                 
+                img{
+                    margin-top: -48px; 
+                    margin-bottom: 23px; 
+                    width: 130px
+                }
+                
+                h1 {
+                    font-size: 18px;
+                }
+            }
+           
+        }
+        
+    }
+}

@@ -1,0 +1,148 @@
+.admin__page {
+    display: flex;
+    background: #202020; 
+    .admin__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px; 
+      .admin_navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #3E3E3E;
+  
+        .navbar-item {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          width: 80%;
+          padding: 20px 10px;
+          background: #202020;
+  
+          h1 {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            color: #FFFFFF;
+          }
+  
+          img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+  
+            &:active {
+              transform: scale(.96);
+            }
+          }
+        }
+      }
+  
+      .admin__content {
+        display: flex;
+        flex-direction: column; 
+        .balance_container{ 
+            .balance_item{
+                display: flex;
+                justify-content: space-around;
+                width: 95%;
+                margin-top: 50px;
+    
+                .myBalance_block{
+                    max-width: 370px;
+                    h1{
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 42px;
+                        color: #FFFFFF
+                    }
+                    .myBalance_item{
+                        background: rgba(255, 255, 255, 0.03);
+                        border: 0.5px solid rgba(255, 255, 255, 0.5);
+                        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                        backdrop-filter: blur(48px);
+                        border-radius: 25px;
+                        width: 100%;
+                        margin-top: 40px;
+                        h1{
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 64px;
+                            line-height: 75px;
+                            color: #FFFFFF;
+                            text-align: center;
+                            margin-top: 70px;
+                        }
+                        .balance_button{
+                            width: 90%;
+                            margin: 0 auto;
+                            margin-top: 35px;
+                            margin-bottom: 25px;
+                        button{
+                            border: 3px solid #EA3E2A;
+                            border-radius: 25px;
+                            width: 100%;
+                            background: rgba(255, 255, 255, 0.03);
+                            height: 40px;
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #FFFFFF;
+                        }
+                        }
+                    }
+                    h2{
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: #EA3E2A;
+                        margin-top: 20px;
+                        span{
+                        color: #7E7E7F;
+                        font-size: 18px;
+                        }
+                    }
+                }
+                .banner_block{
+                    width: 365px;
+                    background-color: #EA3E2A;
+                    height: 700px; 
+                } 
+            }
+            @media screen and (max-width: 768px) { 
+                    .balance_item{
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 0 auto;
+                         
+                    } 
+                
+            }
+        }
+      }
+  
+      @media screen and (max-width: 961px) {
+        .admin_navbar {
+          .navbar-item {
+            width: 90%;
+            justify-content: space-between;
+  
+            div {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+   
+}
+  

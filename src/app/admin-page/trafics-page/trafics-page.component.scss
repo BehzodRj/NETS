@@ -1,0 +1,305 @@
+.admin__page {
+  display: flex;
+  background: #202020;
+
+  .admin__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .admin_navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #3E3E3E;
+
+      .navbar-item {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 80%;
+        padding: 20px 10px;
+        background: #202020;
+
+        h1 {
+          margin: 0;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 40px;
+          color: #FFFFFF;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+
+          &:active {
+            transform: scale(.96);
+          }
+        }
+      }
+    }
+
+    .admin__content {
+      display: flex;
+      flex-direction: column;
+
+      .traffic_content {
+        .traffic_container {
+          .traffic_block {
+            display: flex;
+            gap: 10px;
+
+            .traffic_item {
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              width: 80%;
+              margin-top: 35px;
+              gap: 10px;
+              margin-left: 30px;
+              width: 100%;
+
+              .browsingTraffic_block {
+
+                h1 {
+                  font-family: 'Raleway';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 36px;
+                  line-height: 42px;
+                  color: #FFFFFF;
+
+                }
+
+                .browsingTraffic_item {
+                  margin-top: 25px;
+                  background: rgba(255, 255, 255, 0.03);
+                  border: 0.5px solid rgba(255, 255, 255, 0.5);
+                  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(48px);
+                  border-radius: 25px;
+                  width: 470px;
+
+                  .circle_block {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    border: 12px solid #EA3E2A;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 40px;
+
+                    h1 {
+                      font-family: 'Raleway';
+                      font-style: normal;
+                      font-weight: 800;
+                      font-size: 48px;
+                      line-height: 75px;
+                      color: #FFFFFF;
+                    }
+                  }
+
+                  .general_block {
+                    margin-top: 17px;
+
+                    .general_item {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 90%;
+                      margin: 0 auto;
+
+                      h3 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #C4C4C4;
+                      }
+
+                      h2 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #FFFFFF;
+
+                      }
+                    }
+
+                    .line {
+                      width: 100%;
+                      border: 1px solid #3E3E3E;
+                    }
+                  }
+
+                  .spent_block {
+                    margin-top: 19px;
+
+                    .spent_item {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 90%;
+                      margin: 0 auto;
+
+                      h3 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #C4C4C4;
+                      }
+
+                      h2 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #FFFFFF;
+                      }
+                    }
+
+                    .line {
+                      width: 100%;
+                      border: 1px solid #3E3E3E;
+                    }
+
+                  }
+
+                  .remainder_block {
+                    margin-top: 19px;
+
+                    .remainder_item {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 90%;
+                      margin: 0 auto;
+
+                      h3 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #C4C4C4;
+                      }
+
+                      h2 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #FFFFFF;
+                      }
+                    }
+                  }
+
+                  .traffic_btn {
+                    width: 70%;
+                    margin: 0 auto;
+                    margin-top: 59px;
+                    margin-bottom: 25px;
+
+                    button {
+                      border: 3px solid #EA3E2A;
+                      border-radius: 25px;
+                      background: rgba(255, 255, 255, 0.03);
+                      font-family: 'Raleway';
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #FFFFFF;
+                      width: 100%;
+                      height: 41px;
+                    }
+                  }
+                }
+              }
+
+              .banner_block {
+                background: #EA3E2A;
+                width: 400px;
+                height: 700px;
+
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+
+    @media screen and (max-width: 961px) {
+      .admin_navbar {
+        .navbar-item {
+          width: 90%;
+          justify-content: space-between;
+
+          div {
+            display: none;
+          }
+        }
+      }
+
+      .admin__content {
+        .traffic_content {
+          .traffic_container {
+            .traffic_block {
+              .traffic_item {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      .admin__content {
+        .traffic_content {
+          .traffic_container {
+            .traffic_block {
+              .traffic_item {
+                .browsingTraffic_block {
+                  width: 92%;
+
+                  h1 {
+                    text-align: center;
+                    font-size: 27px;
+                  }
+
+                  .browsingTraffic_item {
+                    width: 100%;
+                    padding-top: 1px;
+
+                    .traffic_btn {
+                      padding-bottom: 30px;
+                    }
+                  }
+                }
+
+                .banner_block {
+                  width: 85%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
