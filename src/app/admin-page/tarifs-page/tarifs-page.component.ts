@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestsService } from 'src/app/all.service';
 
 @Component({
   selector: 'app-tarifs-page',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tarifs-page.component.scss']
 })
 export class TarifsPageComponent implements OnInit {
+  changeTarifsData: any = []
 
-  constructor() { }
+  constructor(private request: RequestsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.changeTarifsData = this.request.getLocalTarifs 
   }
 
 }
