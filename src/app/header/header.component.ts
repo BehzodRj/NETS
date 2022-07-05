@@ -15,5 +15,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.route = this.router.url;
   }
+
+  logIn() {
+    this.router.navigate(['/admin'])
+  }
   
 }

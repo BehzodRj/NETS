@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -275,5 +276,25 @@ export class RequestsService {
       { img: './assets/img/allChannels_category/entertainment/7.jpg' }
     ]
 
-  constructor() {}
+    private url = "http://example.tj"
+
+  constructor(private http: HttpClient) {}
+
+  // Local Requests
+  // End of Local Requests
+
+
+
+  // Global Requests
+
+  // Auth Request
+  authRequest(login: any, password: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+    return this.http.post( this.url + "/api/auth/login", {"login": login, "password": password}, {headers: header})
+  }
+  // End of Auth Request
+
+  // End of Global Requests
 }
