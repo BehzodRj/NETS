@@ -56,7 +56,8 @@
                 padding: 0 10px;
                 gap: 10px;
                 width: 100%;
-                margin-top: 25px;
+                max-width: 1200px;
+                margin: 25px auto;
                .password_block{
                   h1{
                     font-family: 'Raleway';
@@ -196,7 +197,17 @@
     }
         
     }
-
+    @media screen and (max-width: 480px) {
+      .admin_navbar {
+        .navbar-item {
+          h1{
+            font-size: 30px;
+          }
+  
+         
+        }
+      }
+    }
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {

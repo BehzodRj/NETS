@@ -51,7 +51,8 @@
               justify-content: space-around;
               flex-wrap: wrap;
               width: 100%;
-              margin-top: 50px;
+              max-width: 1200px;
+              margin: 50px auto;
               gap: 10px;
               .myBalance_block{
                   max-width: 370px;
@@ -75,7 +76,7 @@
                           font-family: 'Raleway';
                           font-style: normal;
                           font-weight: 700;
-                          font-size: 64px;
+                          font-size: 58px;
                           line-height: 75px;
                           color: #FFFFFF;
                           text-align: center;
@@ -125,7 +126,8 @@
           }
           } 
           @media screen and (max-width: 365px) { 
-                   .balance_bllock{
+                  
+                  .balance_bllock{
                     h1{
                       text-align: center;
                       width: 90%;
@@ -140,7 +142,7 @@
                       }
                         .myBalance_item{
                           h1{
-                            font-size: 50px;
+                            font-size: 40px;
                           }
                        
                         .balance_button{
@@ -165,6 +167,17 @@
       }
     }
 
+    @media screen and (max-width: 480px) {
+    .admin_navbar {
+      .navbar-item {
+        h1{
+          font-size: 30px;
+        }
+
+       
+      }
+    }
+  }
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {

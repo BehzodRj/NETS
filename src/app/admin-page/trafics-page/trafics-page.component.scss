@@ -51,14 +51,15 @@
           .traffic_block {
             display: flex;
             gap: 10px;
-
+            max-width: 1200px;
+            margin: 0 auto;
             .traffic_item {
               display: flex;
               justify-content: space-around;
               flex-wrap: wrap;
               width: 100%;
               margin-top: 35px;
-             
+              gap: 10px;
               margin-left: 30px;
               width: 100%;
 
@@ -242,7 +243,17 @@
       }
 
     }
-
+    @media screen and (max-width: 480px) {
+      .admin_navbar {
+        .navbar-item {
+          h1{
+            font-size: 30px;
+          }
+  
+         
+        }
+      }
+    }
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {

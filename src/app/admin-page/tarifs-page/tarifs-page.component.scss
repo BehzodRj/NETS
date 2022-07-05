@@ -381,6 +381,7 @@
               }
             }
           }
+          
           @media screen and (max-width:480px) {
               .tariffChange_block{
                   .tariffChange_item{
@@ -404,7 +405,17 @@
           }
         }
     }
-
+    @media screen and (max-width: 480px) {
+      .admin_navbar {
+        .navbar-item {
+          h1{
+            font-size: 30px;
+          }
+  
+         
+        }
+      }
+    }
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {
