@@ -12,6 +12,7 @@ import { TarifsPageComponent } from './admin-page/tarifs-page/tarifs-page.compon
 import { TraficsPageComponent } from './admin-page/trafics-page/trafics-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { SlickComponent } from './slick/slick.component';
+import { AditionalPacketPageComponent } from './admin-page/aditional-packet-page/aditional-packet-page.component';
 
 const routes: Routes = [
   { path: '', component: PrivateClientsPageComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'packet', component:PacketsPageComponent },
   { path: 'setting', component:SettingsPageComponent },
   { path: 'slick', component:SlickComponent },
+  { path: 'additionalPackage', component: AditionalPacketPageComponent},
 
 ];
 

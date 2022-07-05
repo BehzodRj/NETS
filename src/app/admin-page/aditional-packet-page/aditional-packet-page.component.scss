@@ -1,0 +1,274 @@
+.admin__page {
+    display: flex;
+    background: #202020;
+    .admin__container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+      .admin_navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #3e3e3e;
+  
+        .navbar-item {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          width: 80%;
+          padding: 20px 10px;
+          background: #202020;
+  
+          h1 {
+            margin: 0;
+            font-family: "Raleway", sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            color: #ffffff;
+          }
+  
+          img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+  
+            &:active {
+              transform: scale(0.96);
+            }
+          }
+        }
+      }
+  
+      .admin__content {
+        display: flex;
+        flex-direction: column;
+        .additionalPackages_content {
+          .additionalPackages_container {
+            .additionalPackages_block {
+              display: flex;
+              gap: 10px;
+  
+              .additionalPackages_item {
+                width: 100%;
+                margin-top: 30px;
+                h2 {
+                  font-family: "Raleway";
+                  font-style: normal;
+                  font-weight: 300;
+                  font-size: 14px;
+                  line-height: 16px;
+                  color: #ea3e2a;
+                  margin-left: 20px;
+                  span {
+                    color: #c4c4c4;
+                  }
+                }
+                .packages_block {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+                  gap: 10px;
+                  padding: 10px;
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  // .normalTariffs_block{
+                  .tarriffs_block {
+                    background: rgba(255, 255, 255, 0.03);
+                    border: 0.5px solid rgba(255, 255, 255, 0.5);
+                    box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05),
+                      inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                    backdrop-filter: blur(48px);
+                    border-radius: 25px;
+                    width: 370px;
+                    margin-top: 40px;
+                    .name_block {
+                      width: 70%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      margin: 0 auto;
+                      margin-top: 50px;
+                      h3 {
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #c4c4c4;
+                      }
+                      h2 {
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #ffffff;
+                      }
+                    }
+                    .line {
+                      border: 1px solid #3e3e3e;
+                      width: 75%;
+                      margin: 0 auto;
+                    }
+                    .price_block {
+                      width: 70%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      margin: 0 auto;
+                      margin-top: 15px;
+                      h3 {
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #c4c4c4;
+                      }
+                      h2 {
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #ffffff;
+                      }
+                    }
+                    .tariffs_btn {
+                      width: 60%;
+                      margin: 0 auto;
+                      margin-top: 50px;
+                      margin-bottom: 35px;
+                      button {
+                        border: 3px solid #ea3e2a;
+                        border-radius: 25px;
+                        width: 100%;
+                        height: 40px;
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #ffffff;
+                        background: rgba(255, 255, 255, 0.03);
+                        cursor: pointer;
+                      }
+                    }
+                  }
+                  // }
+                }
+              }
+            }
+        
+            @media screen and (max-width: 440px) {
+              .additionalPackages_block {
+                .additionalPackages_item {
+                  h2{
+                      font-size: 12px;
+                  }
+                  padding: 0;
+                  .packages_block {
+                    padding: 0;
+                    .normalTariffs_block {
+                      width: 100%;
+                      .tarriffs_block {
+                        width: 80%;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                      }
+                      .name_block {
+                        width: 80%;
+                        h3 {
+                          font-size: 17px;
+                        }
+                        h2 {
+                          font-size: 15px;
+                        }
+                      }
+                      .line {
+                        width: 85%;
+                      }
+                      .price_block {
+                        width: 80%;
+                        h3 {
+                          font-size: 17px;
+                        }
+                        h2 {
+                          font-size: 15px;
+                        }
+                      }
+                      .tariffs_btn {
+                        button {
+                          font-size: 14px;
+                        }
+                      }
+                    }
+                    .superTariffs_block {
+                      width: 100%;
+                      .tarriffs_block {
+                        width: 80%;
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        .name_block {
+                          width: 80%;
+                          h3 {
+                            font-size: 17px;
+                          }
+                          h2 {
+                            font-size: 15px;
+                          }
+                        }
+                        .line {
+                          width: 85%;
+                        }
+                        .price_block {
+                          width: 80%;
+                          h3 {
+                            font-size: 17px;
+                          }
+                          h2 {
+                            font-size: 15px;
+                          }
+                        }
+                        .tariffs_btn {
+                          button {
+                            font-size: 14px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .admin_navbar {
+          .navbar-item {
+            h1{
+              font-size: 30px;
+            }
+    
+           
+          }
+        }
+      }
+      @media screen and (max-width: 961px) {
+        .admin_navbar {
+          .navbar-item {
+            width: 90%;
+            justify-content: space-between;
+  
+            div {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
