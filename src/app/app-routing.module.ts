@@ -18,7 +18,6 @@ const routes: Routes = [
   { path: 'b2b', component: ForBusinessPageComponent },
   { path: 'vacancy', component: VacancyPageComponent }, 
   { path: 'vacancy-special/:id', component: VacancySpecialComponent}, 
-  
   { path: 'admin', component:AdminPageComponent },
   { path: 'tarifs', component:TarifsPageComponent },
   { path: 'balance', component:BalancesPageComponent },
