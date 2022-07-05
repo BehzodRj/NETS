@@ -59,7 +59,7 @@
                 font-weight: 700;
                 font-size: 36px;
                 color: #FFFFFF;
-                text-align: center;
+                
               }
 
               .priceTariffs_block {
@@ -114,20 +114,22 @@
                     }
 
                   }
-
-                  .line {
+                  progress{
+                    -webkit-appearance: none;
                     width: 100%;
-                    background: #7E7E7F;
-                    border-radius: 8px;
-                    height: 10px;
-
-                    div {
+                    height: 11px;
+                    &::-webkit-progress-bar{
+                      border-radius: 8px;
+                      background: #7E7E7F;
+                      overflow: hidden;
+                    }
+                    &::-webkit-progress-value{
                       background: #EA3E2A;
                       border-radius: 8px;
-                      width: 30%;
-                      height: 10px;
                     }
+
                   }
+              
                 }
 
                 .speed_block {
@@ -142,18 +144,20 @@
                     color: #FFFFFF;
                   }
 
-                  .line {
+                  progress{
+                    -webkit-appearance: none;
                     width: 100%;
-                    background: #7E7E7F;
-                    border-radius: 8px;
-                    height: 10px;
-
-                    div {
+                    height: 11px;
+                    &::-webkit-progress-bar{
+                      border-radius: 8px;
+                      background: #7E7E7F;
+                      overflow: hidden;
+                    }
+                    &::-webkit-progress-value{
                       background: #EA3E2A;
                       border-radius: 8px;
-                      width: 30%;
-                      height: 10px;
                     }
+
                   }
                 }
 
@@ -226,16 +230,49 @@
               width: 100%;
 
               .myTariffs_block {
+                width: 90%;
+                h1{
+                  font-size: 30px;
+                  text-align: center;
+                }
                 .priceTariffs_block {
-                  width: 250px;
-
+                  width: 100%;
+                  margin-top: 30px;
+                  .monthlyPrice_block{
+                    h1{
+                      font-size: 50px;
+                    }
+                    h2{
+                      font-size: 16px;
+                      line-height: 20px;
+                    }
+                  }
+                  .gigabytes_block{
+                    .gigabytes_item{
+                      p{
+                        font-size: 16px;
+                        margin: 0;
+                      }
+                    }
+                  }
+                  .speed_block{
+                    p{
+                      font-size: 16px;
+                      margin: 0;
+                    }
+                  }
+                  .tariffs_button{
+                    button{
+                      font-size: 16px;
+                    }
+                  }
                 }
               }
 
               .banners_block {
-                width: 275px;
+                width: 90%;
               }
-
+              
             }
           }
         }
