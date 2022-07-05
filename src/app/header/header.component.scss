@@ -54,7 +54,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      
+      img{
+        cursor: pointer;
+      }
     }
 
     .header__btn {
@@ -364,6 +366,7 @@
         color: #FFFFFF;
         border: none;
         margin-bottom: 70px;
+        cursor: pointer;
         &:active{
           transform: scale(.98);
         }
