@@ -1,17 +1,62 @@
 <div class="admin__page">
-    <app-menu-dashboard></app-menu-dashboard>
-    <div class="admin__container">
-      <div class="admin_navbar">
-        <div class="navbar-item">
-          <div></div>
-          <h1>«Nets.tj»</h1>
-          <img src="./assets/img/admin_page/logOut.svg" alt="" />
-        </div>
-      </div>
-      <div class="admin__content">
-            <h1>Packet</h1>
+  <app-menu-dashboard></app-menu-dashboard>
+  <div class="admin__container">
+    <div class="admin_navbar">
+      <div class="navbar-item">
+        <div></div>
+        <h1>«Nets.tj»</h1>
+        <img src="./assets/img/admin_page/logOut.svg" alt="" />
       </div>
     </div>
-  </div> 
-  <app-footer></app-footer>
-  <p>packets-page works!</p>
+    <div class="admin__content">
+      <div class="packages_content">
+        <div class="packages_container">
+            <div class="packages_block">
+                <div class="packages_item">
+                    <div class="packageManagement_block">
+                        <h1>Управление пакетами</h1>
+                        <div class="packageManagement_item">
+                        <div class="circle_block">
+                            <h1>10GB</h1>
+                        </div>
+                        <div class="naming_block">
+                            <div class="naming_item">
+                                <h3>Название</h3>
+                                <h2>+10GB</h2>
+                            </div>
+                                <div class="line"></div>
+                             </div>
+                            <div class="date_block">
+                                <div class="date_item">
+                                    <h3>Дата подключения</h3>
+                                    <h2>22.06.2022</h2>
+                                </div>
+                                    <div class="line"></div>   
+                            </div>
+                                <div class="price_block">
+                                    <div class="price_item">
+                                        <h3>Стоимость</h3>
+                                        <h2>40 сомони</h2>
+                                    </div>
+                                </div>
+                                <div class="packages_btn">
+                                    <button>Удалить пакет</button>
+                                </div>
+                       </div>
+                       <h2 routerLink="/additionalPackage">+Подключить дополнительный пакет</h2>
+                    </div>
+                    <div class="banner_block">
+                        <h1>Баннер</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    </div>
+  </div>
+</div> 
+<app-footer></app-footer>
+
+

@@ -1,17 +1,44 @@
 <div class="admin__page">
-    <app-menu-dashboard></app-menu-dashboard>
-    <div class="admin__container">
-      <div class="admin_navbar">
-        <div class="navbar-item">
-          <div></div>
-          <h1>«Nets.tj»</h1>
-          <img src="./assets/img/admin_page/logOut.svg" alt="" />
-        </div>
-      </div>
-      <div class="admin__content">
-            <h1>Setting</h1>
+  <app-menu-dashboard></app-menu-dashboard>
+  <div class="admin__container">
+    <div class="admin_navbar">
+      <div class="navbar-item">
+        <div></div>
+        <h1>«Nets.tj»</h1>
+        <img src="./assets/img/admin_page/logOut.svg" alt="" />
       </div>
     </div>
-  </div> 
-  <app-footer></app-footer>
+    <div class="admin__content">
+      <div class="settings_content">
+        <div class="settings_container">
+            <div class="settings_block">
+                <div class="settings_item">
+                    <div class="password_block">
+                       <h1>Изменить пароль</h1>
+                       <div class="password_item">
+                        <div class="oldPassword_block">
+                            <input type="text" placeholder="Старый пароль">
+                        </div>
+                        <div class="newPassword_block">
+                            <input type="password" placeholder="Новый пароль">
+                            <img src="./assets/img/eye.svg" alt="">
+                        </div>
+                        <div class="password_btn">
+                            <button>Сохранить пароль</button>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="banner_block">
+                        <h1>Баннер</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+  </div>
+</div> 
+<app-footer></app-footer>
+
   

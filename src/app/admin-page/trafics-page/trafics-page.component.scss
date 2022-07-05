@@ -56,9 +56,9 @@
               display: flex;
               justify-content: space-around;
               flex-wrap: wrap;
-              width: 80%;
+              width: 100%;
               margin-top: 35px;
-              gap: 10px;
+             
               margin-left: 30px;
               width: 100%;
 
@@ -233,7 +233,7 @@
                 background: #EA3E2A;
                 width: 400px;
                 height: 700px;
-
+                
               }
             }
           }
@@ -261,6 +261,12 @@
             .traffic_block {
               .traffic_item {
                 margin-left: 0;
+                .banner_block {
+                  background: #EA3E2A;
+                  width: 400px;
+                  height: 700px;
+                  margin-top: 20px;
+                }
               }
             }
           }
@@ -285,7 +291,47 @@
                   .browsingTraffic_item {
                     width: 100%;
                     padding-top: 1px;
-
+                    .circle_block{
+                      width: 120px;
+                      height: 120px;
+                      h1{
+                        font-size: 35px;
+                      }
+                    }
+                    .general_block{
+                      .general_item{
+                        h3{
+                          font-size: 18px;
+                          margin: 0;
+                        }
+                        h2{
+                          font-size: 16px;
+                          margin: 0;
+                        }
+                      }
+                    }
+                    .spent_block{
+                      .spent_item{
+                        h3{
+                          font-size: 18px;
+                          margin: 0;
+                        }
+                        h2{
+                          font-size: 16px;
+                          margin: 0;
+                        }
+                      }
+                    }
+                    .remainder_block{
+                      .remainder_item{
+                        h3{
+                          font-size: 18px;
+                        }
+                        h2{
+                          font-size: 16px;
+                        }
+                      }
+                    }
                     .traffic_btn {
                       padding-bottom: 30px;
                     }
@@ -294,6 +340,7 @@
 
                 .banner_block {
                   width: 85%;
+                  margin-top: 30px;
                 }
               }
             }

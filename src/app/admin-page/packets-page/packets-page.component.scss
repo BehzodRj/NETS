@@ -1,64 +1,330 @@
 .admin__page {
+  display: flex;
+  background: #202020; 
+  .admin__container {
+    width: 100%;
     display: flex;
-    background: #202020; 
-    .admin__container {
-      width: 100%;
+    flex-direction: column;
+    padding-bottom: 50px; 
+    .admin_navbar {
       display: flex;
-      flex-direction: column;
-      padding-bottom: 50px; 
-      .admin_navbar {
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #3E3E3E;
+
+      .navbar-item {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 1px solid #3E3E3E;
-  
-        .navbar-item {
-          display: flex;
-          justify-content: space-between;
-          align-content: center;
-          width: 80%;
-          padding: 20px 10px;
-          background: #202020;
-  
-          h1 {
-            margin: 0;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 700;
-            font-size: 40px;
-            color: #FFFFFF;
-          }
-  
-          img {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-  
-            &:active {
-              transform: scale(.96);
-            }
-          }
+        justify-content: space-between;
+        align-content: center;
+        width: 80%;
+        padding: 20px 10px;
+        background: #202020;
+
+        h1 {
+          margin: 0;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 40px;
+          color: #FFFFFF;
         }
-      }
-  
-      .admin__content {
-        display: flex;
-        flex-direction: column; 
-          
-      }
-  
-      @media screen and (max-width: 961px) {
-        .admin_navbar {
-          .navbar-item {
-            width: 90%;
-            justify-content: space-between;
-  
-            div {
-              display: none;
-            }
+
+        img {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+
+          &:active {
+            transform: scale(.96);
           }
         }
       }
     }
-   
+
+    .admin__content {
+      display: flex;
+      flex-direction: column; 
+      .packages_content{
+        .packages_container{
+            .packages_block{
+                display: flex;
+                gap: 10px;
+                .menu{
+                    width: 20%;
+                    background: blue;
+                    h1{
+                     font-size: 50px;
+                    }
+                }
+                .packages_item{
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    padding: 0 10px;
+                    width: 100%;
+                    margin-top: 35px;
+                    gap: 10px;
+                    .packageManagement_block{
+                        
+                        h1{
+                            font-family: 'Raleway';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 36px;
+                            line-height: 42px;
+                            color: #FFFFFF;
+    
+                        }
+                        .packageManagement_item{
+                            margin-top: 25px;
+                            background: rgba(255, 255, 255, 0.03);
+                            border: 0.5px solid rgba(255, 255, 255, 0.5);
+                            box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                            backdrop-filter: blur(48px);
+                            border-radius: 25px;
+                            max-width: 470px;
+                        .circle_block{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            border: 12px solid #EA3E2A;
+                            margin: 0 auto;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 40px;
+                            h1{
+                                font-family: 'Raleway';
+                                font-style: normal;
+                                font-weight: 800;
+                                font-size: 48px;
+                                line-height: 75px;
+                                color: #FFFFFF;
+                            }
+                        }
+                        .naming_block{
+                            margin-top: 17px;
+                            .naming_item{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 90%;
+                                margin: 0 auto;
+                                h3{
+                                    font-family: 'Raleway';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 20px;
+                                    line-height: 23px;
+                                    color: #C4C4C4;
+                                }
+                                h2{
+                                    font-family: 'Raleway';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                    line-height: 21px;
+                                    color: #FFFFFF;
+                                    
+                                }
+                            }
+                            .line{
+                             width: 100%;
+                             border: 1px solid #3E3E3E;
+                            }
+                        }
+                        .date_block{
+                            margin-top: 19px;
+                            .date_item{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 90%;
+                                margin: 0 auto;
+                                h3{
+                                    font-family: 'Raleway';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 20px;
+                                    line-height: 23px;
+                                    color: #C4C4C4;
+                                }
+                                h2{
+                                    font-family: 'Raleway';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                    line-height: 21px;
+                                    color: #FFFFFF;
+                                }
+                            }
+                                .line{
+                                    width: 100%;
+                                    border: 1px solid #3E3E3E;
+                                }
+                            
+                        }
+                        .price_block{
+                            margin-top: 19px;
+                            .price_item{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 90%;
+                                margin: 0 auto;
+                                h3{
+                                    font-family: 'Raleway';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 20px;
+                                    line-height: 23px;
+                                    color: #C4C4C4;
+                                }
+                                h2{
+                                    font-family: 'Raleway';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                    line-height: 21px;
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
+                        .packages_btn{
+                            width: 70%;
+                            margin: 0 auto;
+                            margin-top: 59px;
+                            margin-bottom: 25px;
+                            button{
+                                border: 3px solid #EA3E2A;
+                                border-radius: 25px;
+                                background: rgba(255, 255, 255, 0.03);
+                                font-family: 'Raleway';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 21px;
+                                color: #FFFFFF;
+                                width: 100%;
+                                height: 41px;
+                            }
+                        }
+                    }
+                    h2{
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: #EA3E2A;
+                        margin: 0;
+                        padding-top: 10px;
+                    }
+               }
+                    .banner_block{
+                        width: 365px;
+                        background: #fff;
+                        height: 700px;
+                        h1{
+                         font-size: 50px;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:480px){
+                .packages_block{
+                   
+                    .packages_item{
+                        
+                        width: 100%;
+                        padding: 0 10px;
+                        .packageManagement_block{
+                              width: 100%;
+                            h1{
+                              font-size: 26px;
+                              text-align: center;
+                              
+                            }
+                            .packageManagement_item{
+                              .circle_block{
+                                width: 120px;
+                                height: 120px;
+                                h1{
+                                  font-size: 36px;
+                                }
+                              }
+                              .naming_block{
+                                .naming_item{
+                                h3{
+                                  font-size: 17px;
+                                  margin: 0;
+                                }
+                                h2{
+                                  font-size: 15px;
+                                  margin: 0;
+                                }
+                              }
+                             }
+                              .date_block{
+                                .date_item{
+                                  h3{
+                                    font-size: 17px;
+                                    margin: 0;
+                                  }
+                                  h2{
+                                    font-size: 15px;
+                                    margin: 0;
+                                  }
+                              }
+                              }
+                              .price_block{
+                                .price_item{
+                                  h3{
+                                    font-size: 17px;
+                                    margin: 0;
+                                  }
+                                  h2{
+                                    font-size: 15px;
+                                    margin: 0;
+                                  }
+                                }
+                              }
+                              .packages_btn{
+                                width: 65%;
+                                button{
+                                  font-size: 15px;
+                                }
+                              }
+                            }
+                            h2{
+                              font-size: 20px;
+                              text-align: center;
+                            }
+                        }
+                        .banner_block{
+                          width: 100%;
+                          margin-top: 30px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+        
+    }
+
+    @media screen and (max-width: 961px) {
+      .admin_navbar {
+        .navbar-item {
+          width: 90%;
+          justify-content: space-between;
+
+          div {
+            display: none;
+          }
+        }
+      }
+    }
   }
-  
+ 
+}
