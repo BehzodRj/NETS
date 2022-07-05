@@ -370,14 +370,6 @@
               .tariffChange_item {
                 margin-left: 0;
                 margin: 30px auto;
-      
-                .tariffs_block {
-                  margin: 0 auto;
-                  flex-direction: column;
-                  
-      
-                }
-      
               }
             }
           }
@@ -386,15 +378,8 @@
               .tariffChange_block{
                   .tariffChange_item{
                      .tariffs_block{
-                      flex-direction: column;
                        .normalTariffs_block{
                           width: 85%;
-                          .priceTariffs_block{
-                              width: 100%;
-                          }
-                      }
-                      .superTariffs_block{
-                          width: 80%;
                           .priceTariffs_block{
                               width: 100%;
                           }
@@ -405,17 +390,14 @@
           }
         }
     }
-    @media screen and (max-width: 480px) {
-      .admin_navbar {
-        .navbar-item {
-          h1{
-            font-size: 30px;
-          }
-  
-         
-        }
+
+    @media screen and (max-width: 1566px) {
+      .tariffs_block {
+        height: 900px;
+        overflow-y: auto;
       }
     }
+
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {
@@ -427,6 +409,18 @@
           }
         }
         
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .admin_navbar {
+        .navbar-item {
+          h1{
+            font-size: 30px;
+          }
+  
+         
+        }
       }
     }
   }

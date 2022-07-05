@@ -16,128 +16,22 @@
                       <h1 >Смена тарифа</h1>
                       <h3  ><span routerLink="/admin" >Тарифы</span> \ Сменить тариф </h3>
                       <div class="tariffs_block">
-                        <div class="normalTariffs_block">
+                        <div class="normalTariffs_block" *ngFor="let changeTarifs of changeTarifsData">
                           <div class="priceTariffs_block">
                             <div class="monthlyPrice_block">
-                              <h1>280</h1>
+                              <h1>{{ changeTarifs.price }}</h1>
                               <h2>Сомони <br>в меяц</h2>
                             </div>
                             <div class="gigabytes_block">
                               <div class="gigabytes_item">
                                 <p>Гигабайты</p>
-                                <p>70</p>
+                                <p>{{ changeTarifs.gigSpeed }}</p>
                               </div>
-                              <progress max="10" value="3"></progress>
+                              <progress max="500" [value]="changeTarifs.gigSpeed"></progress>
                             </div>
                             <div class="speed_block">
-                              <p> &#9830; Скорость 5 Mbit/s</p>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="tariffs_button">
-                              <button>Проверить остаток</button>
-                            </div>
-                          </div>
-              
-                          <div class="priceTariffs_block">
-                            <div class="monthlyPrice_block">
-                              <h1>600</h1>
-                              <h2>Сомони <br>в меяц</h2>
-                            </div>
-                            <div class="gigabytes_block">
-                              <div class="gigabytes_item">
-                                <p>Гигабайты</p>
-                                <p>150</p>
-                              </div>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="speed_block">
-                              <p> &#9830; Скорость 10 Mbit/s</p>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="tariffs_button">
-                              <button>Проверить остаток</button>
-                            </div>
-                          </div>
-              
-                          <div class="priceTariffs_block">
-                            <div class="monthlyPrice_block">
-                              <h1>1200</h1>
-                              <h2>Сомони <br>в меяц</h2>
-                            </div>
-                            <div class="gigabytes_block">
-                              <div class="gigabytes_item">
-                                <p>Гигабайты</p>
-                                <p>300</p>
-                              </div>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="speed_block">
-                              <p> &#9830; Скорость 12 Mbit/s</p>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="tariffs_button">
-                              <button>Проверить остаток</button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="superTariffs_block">
-                          <div class="priceTariffs_block">
-                            <div class="monthlyPrice_block">
-                              <h1>400</h1>
-                              <h2>Сомони <br>в меяц</h2>
-                            </div>
-                            <div class="gigabytes_block">
-                              <div class="gigabytes_item">
-                                <p>Гигабайты</p>
-                                <p>70</p>
-                              </div>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="speed_block">
-                              <p> &#9830; Скорость 5 Mbit/s</p>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="tariffs_button">
-                              <button>Проверить остаток</button>
-                            </div>
-                          </div>
-              
-                          <div class="priceTariffs_block">
-                            <div class="monthlyPrice_block">
-                              <h1>800</h1>
-                              <h2>Сомони <br>в меяц</h2>
-                            </div>
-                            <div class="gigabytes_block">
-                              <div class="gigabytes_item">
-                                <p>Гигабайты</p>
-                                <p>70</p>
-                              </div>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="speed_block">
-                              <p> &#9830; Скорость 5 Mbit/s</p>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="tariffs_button">
-                              <button>Проверить остаток</button>
-                            </div>
-                          </div>
-              
-                          <div class="priceTariffs_block">
-                            <div class="monthlyPrice_block">
-                              <h1>2000</h1>
-                              <h2>Сомони <br>в меяц</h2>
-                            </div>
-                            <div class="gigabytes_block">
-                              <div class="gigabytes_item">
-                                <p>Гигабайты</p>
-                                <p>70</p>
-                              </div>
-                              <progress max="10" value="3"></progress>
-                            </div>
-                            <div class="speed_block">
-                              <p> &#9830; Скорость 5 Mbit/s</p>
-                              <progress max="10" value="3"></progress>
+                              <p> &#9830; Скорость {{changeTarifs.speed }} Mbit/s</p>
+                              <progress max="15" [value]="changeTarifs.speed"></progress>
                             </div>
                             <div class="tariffs_button">
                               <button>Проверить остаток</button>
