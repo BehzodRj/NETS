@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import * as jquery from 'jquery';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,7 @@ import { TraficsPageComponent } from './admin-page/trafics-page/trafics-page.com
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MenuDashboardComponent } from './admin-page/menu-dashboard/menu-dashboard.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { AditionalPacketPageComponent } from './admin-page/aditional-packet-page/aditional-packet-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,13 +43,15 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     SettingsPageComponent,
     TarifsPageComponent,
     TraficsPageComponent,
-    MenuDashboardComponent
+    MenuDashboardComponent,
+    AditionalPacketPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatExpansionModule,
     SlickCarouselModule,
