@@ -131,9 +131,7 @@
           position: absolute;
           bottom: 53px;
           cursor: pointer;
-          img{
-            
-          }
+          
           h2{
             margin: 0;
             font-family: 'Raleway';
@@ -362,9 +360,7 @@
                             font-style: normal;
                             font-weight: 700;
                             font-size: 36px;
-                            line-height: 42px;
                             color: #FFFFFF;
-    
                         }
                         .packageManagement_item{
                             margin-top: 25px;
@@ -374,25 +370,30 @@
                             backdrop-filter: blur(48px);
                             border-radius: 25px;
                             max-width: 470px;
-                        .circle_block{
-                            width: 150px;
-                            height: 150px;
-                            border-radius: 50%;
-                            border: 12px solid #EA3E2A;
-                            margin: 0 auto;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-top: 40px;
-                            h1{
-                                font-family: 'Raleway';
-                                font-style: normal;
-                                font-weight: 800;
-                                font-size: 48px;
-                                line-height: 75px;
-                                color: #FFFFFF;
+                            
+                            .circle_block {
+                              width: 100%;
+                              height: 170px;
+                              margin: 0 auto;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              flex-direction: column;
+                              margin-top: 40px;
+          
+                              .number {
+                                position: absolute;
+                                top: 100px;
+          
+                                h2 {
+                                  font-family: 'Raleway';
+                                  font-style: normal;
+                                  font-weight: 800;
+                                  font-size: 35px;
+                                  color: #FFFFFF;
+                                }
+                              }
                             }
-                        }
                         .naming_block{
                             margin-top: 17px;
                             .naming_item{

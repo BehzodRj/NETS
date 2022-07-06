@@ -57,6 +57,33 @@
   </div>
 </div>
 
+<div class="modal__container" *ngIf="showModalTarifsOrder">
+  <div class="modal__content">
+    <div class="time">
+      <i class="fas fa-times fa-2x" (click)="showModalTarifsOrder = false"></i>
+    </div>
+    <div class="modal__block">
+      <h1>ВАШ ОТКЛИК</h1>
+      <div class="conection_title">
+        <h2>ВЫ ОСТАВЛЯЕТЕ ЗАЯВКУ НА СМЕНУ ТАРИФА</h2>
+        <h2>{{ tarifs_name }} GB</h2>
+      </div>
+      <h3>Контактная информация:</h3>
+      <div class="block_input">
+        <form action="">
+          <input type="text" placeholder="Фамилия" formControlName="surname" />
+          <input type="text" placeholder="Имя" formControlName="name" />
+          <input type="text" placeholder="Отчество" formControlName="secondName" />
+          <input type="tel" placeholder="Телефон" formControlName="phone" />
+          <input type="email" placeholder="Email" formControlName="address" />
+        </form>
+      </div>
+    </div>
+    <div class="btn">
+      <button [routerLink]="['/admin', tarifs_id]">Отправить</button>
+    </div>
+  </div>
+</div>
 
 <div class="admin__page"> 
   <app-menu-dashboard></app-menu-dashboard>
@@ -65,7 +92,7 @@
            <div class="navbar-item">
                <div></div>
                <h1>«Nets.tj»</h1>
-               <img src="./assets/img/admin_page/logOut.svg" alt="">
+               <img src="./assets/img/admin_page/logOut.svg" alt="" (click)="logOut()">
            </div>
        </div>
        <div class="admin__content"> 
@@ -74,7 +101,7 @@
                   <div class="tariffChange_block"> 
                     <div class="tariffChange_item">
                       <h1 >Смена тарифа</h1>
-                      <h3  ><span routerLink="/admin" >Тарифы</span> \ Сменить тариф </h3>
+                      <h3 (click)="backToTarif()"><span>Тарифы</span> \ Сменить тариф </h3>
                       <div class="tariffs_block">
                         <div class="normalTariffs_block" *ngFor="let changeTarifs of changeTarifsData">
                           <div class="priceTariffs_block">
@@ -94,7 +121,7 @@
                               <progress max="15" [value]="changeTarifs.speed"></progress>
                             </div>
                             <div class="tariffs_button">
-                              <button [routerLink]="['/admin', changeTarifs.id]">Оставить заявку</button>
+                              <button (click)="sendTarifOrder( changeTarifs.id, changeTarifs.gigSpeed)">Оставить заявку</button>
                             </div>
                           </div>
                         </div>

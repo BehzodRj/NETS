@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  typePassword = 'password'
   modalSignIn = false
   route = ""
 
@@ -14,6 +15,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.route = this.router.url;
+  }
+
+  changeTypePassword() {
+    this.typePassword = 'text'
+  }
+
+  changeTypeText() {
+    this.typePassword = 'password'
   }
 
   logIn() {

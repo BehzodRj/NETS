@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'tarifs', component:TarifsPageComponent },
   { path: 'balance', component:BalancesPageComponent },
   { path: 'trafics/:id', component:TraficsPageComponent },
-  { path: 'packet', component:PacketsPageComponent },
+  { path: 'packet/:id', component:PacketsPageComponent },
   { path: 'setting', component:SettingsPageComponent },
   { path: 'slick', component:SlickComponent },
   { path: 'additionalPackage', component: AditionalPacketPageComponent},

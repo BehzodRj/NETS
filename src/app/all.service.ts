@@ -281,6 +281,8 @@ export class RequestsService {
   constructor(private http: HttpClient) {}
 
   // Local Requests
+
+  // Tarifs
   getLocalTarifs: any = [
     {id: 1, price: '280', gigSpeed: 70, speed: 5, trafficFull: [{ spendTraffic: 0,  remainTraffic: 70}] },
     {id: 2, price: '400', gigSpeed: 100, speed: 8, trafficFull: [{ spendTraffic: 20,  remainTraffic: 80}] },
@@ -289,6 +291,18 @@ export class RequestsService {
     {id: 5, price: '1200', gigSpeed: 300, speed: 12, trafficFull: [{ spendTraffic: 80,  remainTraffic: 220}]},
     {id: 6, price: '2000', gigSpeed: 500, speed: 15, trafficFull: [{ spendTraffic: 100,  remainTraffic: 400}]}
   ]
+  // End of Tarifs
+
+
+  // Packages
+  getLocalPackages: any = [
+    {id: 1, name: '10', price: 40, date: new Date()},
+    {id: 2, name: '30', price: 120, date: new Date()},
+    {id: 3, name: '50', price: 200, date: new Date()},
+    {id: 4, name: '100', price: 400, date: new Date()}
+  ]
+  // End of Packages
+
   // End of Local Requests
 
 

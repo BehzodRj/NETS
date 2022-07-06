@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuDashboardComponent implements OnInit {
   adminId: any
+  packagesId: any
 
   constructor() { }
 
@@ -15,6 +16,12 @@ export class MenuDashboardComponent implements OnInit {
       this.adminId = localStorage.getItem('tarifs_id')
     } else {
       this.adminId = 1
+    }
+
+    if( localStorage.getItem('packages_id') ) {
+      this.packagesId = localStorage.getItem('packages_id')
+    } else {
+      this.packagesId = 1
     }
   }
 

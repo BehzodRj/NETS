@@ -1,7 +1,5 @@
-
-
-.header__subtitle { 
-  .header__container { 
+.header__subtitle {
+  .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,40 +10,44 @@
     background: #202020;
     display: none;
     position: fixed;
+
     @media screen and (max-width:600px) {
       top: 0;
     }
+
     .header__logo {
       display: flex;
       justify-content: center;
-      align-items: center; 
+      align-items: center;
     }
 
     .header__btn {
       display: flex;
       align-items: center;
       width: 70%;
-      a{
+
+      a {
         text-decoration: none;
         margin-left: 20px;
+
         h3 {
           font-family: 'Raleway', sans-serif;
           font-weight: 700;
           font-size: 16px;
           color: #fff;
-          cursor: pointer; 
-          
-  
+          cursor: pointer;
+
+
           &:not(:first-child) {
             margin-left: 30px;
           }
-  
+
           &:hover {
             color: #EA3E2A;
           }
         }
       }
-     
+
 
       @media screen and (max-width:700px) {
         display: none;
@@ -56,14 +58,14 @@
       width: 50px;
       height: 58px;
       margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    position: absolute;
-    right: 5px;
-    top: 21px;
-      display: none; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      position: absolute;
+      right: 5px;
+      top: 21px;
+      display: none;
     }
 
     /* скрываем чекбокс */
@@ -122,8 +124,9 @@
       z-index: 2;
       border-bottom-left-radius: 30px;
       top: 0px;
+
       .menu__dashboard {
-        li{
+        li {
           display: flex;
           align-items: center;
           gap: 12px;
@@ -131,10 +134,10 @@
           position: absolute;
           bottom: 53px;
           cursor: pointer;
-          img{
-            
-          }
-          h2{
+
+          img {}
+
+          h2 {
             margin: 0;
             font-family: 'Raleway';
             font-weight: 600;
@@ -143,44 +146,46 @@
 
           }
         }
+
         background: #202020;
         width: 100%;
-        
+
         position: sticky;
         height: 100%;
+
         .menu__logo {
           display: flex;
           justify-content: center;
           border-bottom: 1px solid #3E3E3E;
         }
-    
+
         .menu_block {
-          
-    margin-top: 30px;
+
+          margin-top: 30px;
 
           .menu-item {
             border-bottom: 1px solid #3E3E3E;
-    
+
             #tr {
               img {
                 width: 50px;
                 height: 50px;
-    
+
                 margin-left: -5px;
               }
-    
+
               h2 {
                 margin-left: 15px;
               }
             }
-    
+
             .item-list {
               display: flex;
               align-items: center;
               justify-content: flex-start;
               padding: 10px 0 10px 21px;
               cursor: pointer;
-    
+
               h2 {
                 margin: 0;
                 font-family: 'Raleway';
@@ -188,12 +193,12 @@
                 font-size: 20px;
                 color: #FFFFFF;
                 margin-left: 20px;
-    
+
                 &:active {
                   transform: scale(.97);
                 }
               }
-    
+
               img {
                 width: 40px;
                 height: 40px;
@@ -202,13 +207,13 @@
           }
         }
       }
-      
+
     }
 
-    
-    
 
-   
+
+
+
 
     /* элементы меню */
     .menu__item {
@@ -219,7 +224,7 @@
       font-weight: 300;
       text-decoration: none;
       padding: 5px;
-      text-align: left; 
+      text-align: left;
     }
 
     .menu__item:hover {
@@ -277,13 +282,14 @@
       }
     }
   }
+
   @media screen and (max-width: 961px) {
-      .header__container{
-        display: flex;
-        align-items: center;
-        
-      }
+    .header__container {
+      display: flex;
+      align-items: center;
+
     }
+  }
 }
 
 
@@ -293,12 +299,14 @@
 
 .admin__page {
   display: flex;
-  background: #202020; 
+  background: #202020;
+
   .admin__container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
+
     .admin_navbar {
       display: flex;
       align-items: center;
@@ -335,173 +343,204 @@
 
     .admin__content {
       display: flex;
-      flex-direction: column; 
-      .settings_content{
-        .settings_container{
-            .settings_block{
-                display: flex;
-                gap: 10px;
-                
-            .settings_item{
-                display: flex;
-                justify-content: space-around;
-                flex-wrap: wrap;
-                padding: 0 10px;
-                gap: 10px;
-                width: 100%;
-                max-width: 1200px;
-                margin: 25px auto;
-               .password_block{
-                  h1{
+      flex-direction: column;
+
+      .settings_content {
+        .settings_container {
+          .settings_block {
+            display: flex;
+            gap: 10px;
+
+            .settings_item {
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              padding: 0 10px;
+              gap: 10px;
+              width: 100%;
+              max-width: 1200px;
+              margin: 25px auto;
+
+              .password_block {
+                h1 {
+                  font-family: 'Raleway';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 36px;
+                  line-height: 42px;
+                  color: #FFFFFF;
+
+                }
+
+                .password_item {
+                  background: rgba(255, 255, 255, 0.03);
+                  border: 0.5px solid rgba(255, 255, 255, 0.5);
+                  backdrop-filter: blur(48px);
+                  border-radius: 25px;
+                  width: 370px;
+                  padding: 30px 0 30px;
+
+                  .oldPassword_block {
+                    border: 1px solid #6F7071;
+                    border-radius: 80px;
+                    width: 70%;
+                    margin: 0 auto;
+                    background: rgba(255, 255, 255, 0.03);
+                    margin-top: 85px;
+
+                    input {
+                      width: 78%;
+                      border: none;
+                      outline: none;
+                      background: none;
+                      font-size: 18px;
+                      margin-left: 8px;
+                      color: #fff;
+                      height: 45px;
+                      text-indent: 10px;
+
+                      &:-webkit-autofill {
+                        -webkit-text-fill-color: #fff;
+                        transition: background-color 5000s ease-in-out 0s;
+                      }
+                    }
+                  }
+
+                  .newPassword_block {
+                    display: flex;
+                    border: 1px solid #6F7071;
+                    border-radius: 80px;
+                    width: 70%;
+                    background: rgba(255, 255, 255, 0.03);
+                    margin: 0 auto;
+                    gap: 5px;
+                    margin-top: 25px;
+
+                    input {
+                      width: 78%;
+                      border: none;
+                      outline: none;
+                      background: none;
+                      height: 45px;
+                      font-size: 18px;
+                      margin-left: 8px;
+                      color: #fff;
+                      text-indent: 10px;
+
+                      &:-webkit-autofill {
+                        -webkit-text-fill-color: #fff;
+                        transition: background-color 5000s ease-in-out 0s;
+                      }
+                    }
+
+                    img {
+                      background: none;
+                      cursor: pointer;
+                    }
+                  }
+                }
+
+                .password_btn {
+                  width: 60%;
+                  margin: 0 auto;
+                  margin-top: 85px;
+                  margin-bottom: 80px;
+
+                  button {
+                    border: 3px solid #EA3E2A;
+                    border-radius: 25px;
+                    width: 100%;
+                    height: 40px;
                     font-family: 'Raleway';
                     font-style: normal;
-                    font-weight: 700;
-                    font-size: 36px;
-                    line-height: 42px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21px;
                     color: #FFFFFF;
-    
-                  }
-                  .password_item{
                     background: rgba(255, 255, 255, 0.03);
-                    border: 0.5px solid rgba(255, 255, 255, 0.5);
-                    box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-                    backdrop-filter: blur(48px);
-                    border-radius: 25px;
-                    width: 370px;
-                    padding: 30px 0 30px;
-                    .oldPassword_block{
-                        border: 1px solid #6F7071;
-                        box-shadow: 0px 4px 4px 4px rgba(255, 255, 255, 0.05);
-                        border-radius: 80px;
-                        width: 70%;
-                        margin: 0 auto;
-                        background: rgba(255, 255, 255, 0.03);
-                        margin-top: 85px;
-                        input{
-                            width: 78%;
-                            border: none;
-                            outline: none;
-                            background: none;
-                            font-size: 18px;
-                            margin-left: 8px;
-                            color: #fff;
-                            height: 45px;
-                        }
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+
+          .banner_block {
+            width: 400px;
+            background-color: yellow;
+            height: 700px;
+
+            h1 {
+              font-size: 50px;
+              text-align: center;
+            }
+          }
+
+          @media screen and(max-width: 480px) {
+            .settings_block {
+
+              .settings_item {
+                justify-content: center;
+                width: 100%;
+                padding: 0px;
+
+                .password_block {
+                  width: 90%;
+
+                  h1 {
+                    font-size: 29px;
+                    text-align: center;
+                  }
+
+                  .password_item {
+                    width: 100%;
+
+                    .oldPassword_block {
+                      input {
+                        font-size: 16px;
+                      }
                     }
-                    .newPassword_block{
-                        display: flex;
-                        border: 1px solid #6F7071;
-                        box-shadow: 0px 4px 4px 4px rgba(255, 255, 255, 0.05);
-                        border-radius: 80px;
-                        width: 70%;
-                        background: rgba(255, 255, 255, 0.03);
-                        margin: 0 auto;
-                        gap: 5px;
-                        margin-top: 25px;
-                        input{
-                        width: 78%;
-                        border: none;
-                        outline: none;
-                        background: none;
-                        height: 45px;
-                        font-size: 18px;
-                        margin-left: 8px;
-                        color: #fff;
-                        }
-                        img{
-                            background: none;
-                            cursor: pointer;
-                        }
+
+                    .newPassword_block {
+                      input {
+                        font-size: 16px;
+                      }
+                    }
+
+                    .password_btn {
+                      button {
+                        font-size: 16px;
+                      }
                     }
                   }
-                  .password_btn{
-                    width: 60%;
-                    margin: 0 auto;
-                    margin-top: 85px;
-                    margin-bottom: 80px;
-                    button{
-                        border: 3px solid #EA3E2A;
-                        border-radius: 25px;
-                        width: 100%;
-                        height: 40px;
-                        font-family: 'Raleway';
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 18px;
-                        line-height: 21px;
-                        color: #FFFFFF;
-                        background: rgba(255, 255, 255, 0.03);
-                        cursor: pointer;
-                    }
-                  }
-               } 
-            }    
-            }
-            .banner_block{
-                width: 400px;
-                background-color: yellow;
-                height: 700px;
-                h1{
-                 font-size: 50px;
-                 text-align: center;
+
                 }
-            }
-            @media screen and(max-width: 480px) {
-                .settings_block{
-                    
-                    .settings_item{
-                        justify-content: center;
-                        width: 100%;
-                        padding: 0px;
-                        .password_block{
-                          width: 90%;
-                          h1{
-                            font-size: 29px;
-                            text-align: center;
-                          }
-                          .password_item{
-                            width: 100%;
-                            .oldPassword_block{
-                              input{
-                                font-size: 16px;
-                              }
-                            }
-                            .newPassword_block{
-                              input{
-                                font-size: 16px;
-                              }
-                            }
-                            .password_btn{
-                              button{
-                                font-size: 16px;
-                              }
-                            }
-                          }
-                          
-                        }
-                        .banner_block{
-                            width: 90%;
-                            margin-top: 30px;
-                        }
-                    }
+
+                .banner_block {
+                  width: 90%;
+                  margin-top: 30px;
                 }
-                
+              }
             }
+
+          }
         }
+      }
+
     }
-        
-    }
+
     @media screen and (max-width: 480px) {
       .admin_navbar {
         .navbar-item {
-          h1{
+          h1 {
             font-size: 30px;
           }
-  
-         
+
+
         }
       }
     }
+
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {
@@ -515,5 +554,5 @@
       }
     }
   }
- 
+
 }
