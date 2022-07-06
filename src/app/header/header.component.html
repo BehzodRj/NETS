@@ -92,13 +92,15 @@
      <i class="fa fa-times" (click)="modalSignIn = false"></i>
     <div class="sign_block">
       <h1>Вход в личный кабинет</h1>
-      <div class="sign-log">
-        <input type="text" placeholder="Логин">
-      </div>
-      <div class="sign-log">
-        <input type="text" placeholder="Пароль">
-      </div>
+      <div class="oldPassword_block">
+        <input type="text" placeholder="Старый пароль">
+    </div>
+    <div class="newPassword_block">
+      <input type="password" placeholder="Новый пароль">
+      <img src="./assets/img/eye.svg" alt="">
+  </div>
       <button (click)="logIn()">Войти</button>
+      <!-- <img src="./assets/img/8.svg" alt=""> -->
     </div>
   </div>
 </div>

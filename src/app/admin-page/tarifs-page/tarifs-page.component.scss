@@ -377,11 +377,41 @@
           @media screen and (max-width:480px) {
               .tariffChange_block{
                   .tariffChange_item{
+                    h1{
+                      font-size: 32px;
+                    }
                      .tariffs_block{
                        .normalTariffs_block{
                           width: 85%;
                           .priceTariffs_block{
                               width: 100%;
+                              .monthlyPrice_block{
+                                h1{
+                                  font-size: 50px;
+                                }
+                                h2{
+                                  font-size: 16px;
+                                }
+                              }
+                              .gigabytes_block{
+                                .gigabytes_item{
+                                  p{
+                                    font-size: 16px;
+                                    margin: 0;
+                                  }
+                                }
+                              }
+                              .speed_block{
+                                p{
+                                  font-size: 16px;
+                                  margin: 0;
+                                }
+                              }
+                              .tariffs_button{
+                                button{
+                                  font-size: 16px;
+                                }
+                              }
                           }
                       }
                      } 

@@ -308,10 +308,9 @@
   background: rgba(0,0,0,.5);
   z-index:120;  
   top: 0;
-  
   .modalSignIn__content {  
     position: absolute;
-  
+    z-index: 1;
     background: #202020;
     padding: 20px;
     border-radius: 20px; 
@@ -324,9 +323,14 @@
       color: #fff;
       cursor: pointer;
     }
+    background-image: url('/assets/img/8.svg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 190px;
     .sign_block{
         text-align: center;
         width: 100%;
+        
       h1{
         font-family: 'Raleway';
         font-style: normal;
@@ -337,21 +341,50 @@
         margin: 0;
         margin-top: 100px;
       }
-      .sign-log{
-      input{
-        width: 70%;
-        margin-top: 25px;
+      .oldPassword_block{
         border: 1px solid #6F7071;
         box-shadow: 0px 4px 4px 4px rgba(255, 255, 255, 0.05);
         border-radius: 80px;
+        width: 70%;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.03);
+        margin-top: 85px;
+        input{
+            width: 78%;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            margin-left: 8px;
+            color: #fff;
+            height: 45px;
+        }
+    }
+    .newPassword_block{
+        display: flex;
+        border: 1px solid #6F7071;
+        box-shadow: 0px 4px 4px 4px rgba(255, 255, 255, 0.05);
+        border-radius: 80px;
+        width: 70%;
+        background: rgba(255, 255, 255, 0.03);
+        margin: 0 auto;
+        gap: 5px;
+        margin-top: 25px;
+        input{
+        width: 78%;
+        border: none;
         outline: none;
-        height: 50px;
-        background: #202020;
-        text-indent: 10px;
+        background: none;
+        height: 45px;
+        font-size: 18px;
+        margin-left: 8px;
         color: #fff;
-       }
-       
-      }
+        }
+        img{
+            background: none;
+            cursor: pointer;
+        }
+    }
       button{
         background: #EA3E2A;
         border-radius: 25px;
@@ -371,6 +404,12 @@
           transform: scale(.98);
         }
        }
+      //  img{
+      //    position: absolute;
+      //    bottom: 0;
+      //    left: 0;
+      //    z-index: -5;
+      //  }
     }
   }
   @media screen and (max-width:480px) {
