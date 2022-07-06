@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./balances-page.component.scss']
 })
 export class BalancesPageComponent implements OnInit {
-
+  modalQrCode = false;
   constructor() { }
 
   ngOnInit(): void {
