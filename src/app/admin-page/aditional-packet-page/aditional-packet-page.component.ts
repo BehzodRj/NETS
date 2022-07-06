@@ -21,4 +21,9 @@ export class AditionalPacketPageComponent implements OnInit {
     this.router.navigate(['/packet', localStorage.getItem('packages_id')])
   }
 
+  logOut() {
+    localStorage.clear()
+    this.router.navigate(['/'])
+  }
+
 }

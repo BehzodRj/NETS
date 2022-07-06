@@ -96,8 +96,9 @@
         <input type="text" placeholder="Старый пароль">
     </div>
     <div class="newPassword_block">
-      <input type="password" placeholder="Новый пароль">
-      <img src="./assets/img/eye.svg" alt="">
+      <input [type]="typePassword" placeholder="Новый пароль">
+      <img src="./assets/img/eye.svg" *ngIf="typePassword == 'password'" (click)="changeTypePassword()">
+      <img src="./assets/img/akar-icons_eye.svg" *ngIf="typePassword == 'text'" (click)="changeTypeText()">
   </div>
       <button (click)="logIn()">Войти</button>
       <!-- <img src="./assets/img/8.svg" alt=""> -->

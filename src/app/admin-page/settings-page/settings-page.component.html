@@ -64,7 +64,7 @@
       <div class="navbar-item">
         <div></div>
         <h1>«Nets.tj»</h1>
-        <img src="./assets/img/admin_page/logOut.svg" alt="" />
+        <img src="./assets/img/admin_page/logOut.svg" alt="" (click)="logOut()"/>
       </div>
     </div>
     <div class="admin__content">
@@ -79,8 +79,9 @@
                             <input type="text" placeholder="Старый пароль">
                         </div>
                         <div class="newPassword_block">
-                            <input type="password" placeholder="Новый пароль">
-                            <img src="./assets/img/eye.svg" alt="">
+                            <input [type]="typePassword" placeholder="Новый пароль">
+                            <img src="./assets/img/eye.svg" *ngIf="typePassword == 'password'" (click)="changeTypePassword()">
+                            <img src="./assets/img/akar-icons_eye.svg" *ngIf="typePassword == 'text'" (click)="changeTypeText()">
                         </div>
                         <div class="password_btn">
                             <button>Сохранить пароль</button>

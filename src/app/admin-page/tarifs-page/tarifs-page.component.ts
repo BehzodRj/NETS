@@ -9,6 +9,9 @@ import { RequestsService } from 'src/app/all.service';
 })
 export class TarifsPageComponent implements OnInit {
   changeTarifsData: any = []
+  showModalTarifsOrder = false
+  tarifs_id: any
+  tarifs_name: any
 
   constructor(private request: RequestsService, private router: Router) { }
 
@@ -18,6 +21,17 @@ export class TarifsPageComponent implements OnInit {
 
   backToTarif() {
     this.router.navigate(['/admin', localStorage.getItem('tarifs_id')])
+  }
+
+  sendTarifOrder(id: number, name: any) {
+    this.tarifs_id = id
+    this.tarifs_name = name
+    this.showModalTarifsOrder = true
+  }
+
+  logOut() {
+    localStorage.clear()
+    this.router.navigate(['/'])
   }
 
 }
