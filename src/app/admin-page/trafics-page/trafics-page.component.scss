@@ -85,23 +85,26 @@
                   width: 470px;
 
                   .circle_block {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
-                    border: 12px solid #EA3E2A;
+                    width: 100%;
+                    height: 170px;
                     margin: 0 auto;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    flex-direction: column;
                     margin-top: 40px;
 
-                    h1 {
-                      font-family: 'Raleway';
-                      font-style: normal;
-                      font-weight: 800;
-                      font-size: 48px;
-                      line-height: 75px;
-                      color: #FFFFFF;
+                    .number {
+                      position: absolute;
+
+                      h2 {
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 35px;
+                        line-height: 75px;
+                        color: #FFFFFF;
+                      }
                     }
                   }
 
@@ -303,13 +306,13 @@
                   .browsingTraffic_item {
                     width: 100%;
                     padding-top: 1px;
-                    .circle_block{
-                      width: 120px;
-                      height: 120px;
-                      h1{
-                        font-size: 35px;
-                      }
-                    }
+                    // .circle_block{
+                    //   width: 120px;
+                    //   height: 120px;
+                    //   h1{
+                    //     font-size: 35px;
+                    //   }
+                    // }
                     .general_block{
                       .general_item{
                         h3{

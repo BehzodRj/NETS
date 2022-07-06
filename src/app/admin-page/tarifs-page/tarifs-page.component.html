@@ -34,7 +34,7 @@
                               <progress max="15" [value]="changeTarifs.speed"></progress>
                             </div>
                             <div class="tariffs_button">
-                              <button>Проверить остаток</button>
+                              <button [routerLink]="['/admin', changeTarifs.id]">Оставить заявку</button>
                             </div>
                           </div>
                         </div>

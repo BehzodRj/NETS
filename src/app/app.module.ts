@@ -12,7 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { VacancySpecialComponent } from './vacancy-special/vacancy-special.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PanelsComponent } from './private-clients-page/panels/panels.component';
 import { SlickComponent } from './slick/slick.component';
   
@@ -47,6 +48,7 @@ import { AditionalPacketPageComponent } from './admin-page/aditional-packet-page
     AditionalPacketPageComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -54,6 +56,7 @@ import { AditionalPacketPageComponent } from './admin-page/aditional-packet-page
     HttpClientModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    MatProgressSpinnerModule,
     SlickCarouselModule,
   ],
   providers: [],

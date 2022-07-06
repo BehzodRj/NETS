@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logIn() {
-    this.router.navigate(['/admin'])
+    this.router.navigate(['/admin', 1])
   }
   
 }
