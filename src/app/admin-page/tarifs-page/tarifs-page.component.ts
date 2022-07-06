@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RequestsService } from 'src/app/all.service';
 
 @Component({
@@ -9,10 +10,14 @@ import { RequestsService } from 'src/app/all.service';
 export class TarifsPageComponent implements OnInit {
   changeTarifsData: any = []
 
-  constructor(private request: RequestsService) { }
+  constructor(private request: RequestsService, private router: Router) { }
 
   ngOnInit() {
-    this.changeTarifsData = this.request.getLocalTarifs 
+    this.changeTarifsData = this.request.getLocalTarifs
+  }
+
+  backToTarif() {
+    this.router.navigate(['/admin', localStorage.getItem('tarifs_id')])
   }
 
 }

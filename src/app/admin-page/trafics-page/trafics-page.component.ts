@@ -15,8 +15,6 @@ export class TraficsPageComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe( (param: any) => {
       this.trafficFullData = this.request.getLocalTarifs.filter( (res: any) => res.id == param.id)[0]
-      console.log(this.trafficFullData);
-      
     })
   }
 

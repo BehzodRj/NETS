@@ -14,7 +14,7 @@
                   <div class="tariffChange_block"> 
                     <div class="tariffChange_item">
                       <h1 >Смена тарифа</h1>
-                      <h3  ><span routerLink="/admin" >Тарифы</span> \ Сменить тариф </h3>
+                      <h3 (click)="backToTarif()"><span>Тарифы</span> \ Сменить тариф </h3>
                       <div class="tariffs_block">
                         <div class="normalTariffs_block" *ngFor="let changeTarifs of changeTarifsData">
                           <div class="priceTariffs_block">

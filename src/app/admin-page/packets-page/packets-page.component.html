@@ -17,26 +17,33 @@
                         <h1>Управление пакетами</h1>
                         <div class="packageManagement_item">
                         <div class="circle_block">
-                            <h1>10GB</h1>
+                            <mat-progress-spinner class="circle1" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
+                            <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="packagesData.name * 10" *ngIf="packagesData.id == 1"></mat-progress-spinner>
+                            <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="packagesData.name * 3.4" *ngIf="packagesData.id == 2"></mat-progress-spinner>
+                            <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="packagesData.name * 2" *ngIf="packagesData.id == 3"></mat-progress-spinner>
+                            <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="packagesData.name" *ngIf="packagesData.id == 4"></mat-progress-spinner>
+                            <div class="number">
+                              <h2>{{ packagesData.name }}GB</h2>
+                            </div>
                         </div>
                         <div class="naming_block">
                             <div class="naming_item">
                                 <h3>Название</h3>
-                                <h2>+10GB</h2>
+                                <h2>+{{ packagesData.name }}GB</h2>
                             </div>
                                 <div class="line"></div>
                              </div>
                             <div class="date_block">
                                 <div class="date_item">
                                     <h3>Дата подключения</h3>
-                                    <h2>22.06.2022</h2>
+                                    <h2>{{ packagesData.date | date: 'dd.MM.yyyy' }}</h2>
                                 </div>
                                     <div class="line"></div>   
                             </div>
                                 <div class="price_block">
                                     <div class="price_item">
                                         <h3>Стоимость</h3>
-                                        <h2>40 сомони</h2>
+                                        <h2>{{ packagesData.price }} сомони</h2>
                                     </div>
                                 </div>
                                 <div class="packages_btn">
