@@ -282,12 +282,12 @@ export class RequestsService {
 
   // Local Requests
   getLocalTarifs: any = [
-    {id: 1, price: '280', gigSpeed: 70, speed: 5},
-    {id: 1, price: '400', gigSpeed: 100, speed: 8},
-    {id: 1, price: '600', gigSpeed: 150, speed: 10},
-    {id: 1, price: '800', gigSpeed: 200, speed: 12},
-    {id: 1, price: '1200', gigSpeed: 300, speed: 12},
-    {id: 1, price: '2000', gigSpeed: 500, speed: 15}
+    {id: 1, price: '280', gigSpeed: 70, speed: 5, trafficFull: [{ spendTraffic: 0,  remainTraffic: 70}] },
+    {id: 2, price: '400', gigSpeed: 100, speed: 8, trafficFull: [{ spendTraffic: 20,  remainTraffic: 80}] },
+    {id: 3, price: '600', gigSpeed: 150, speed: 10, trafficFull: [{ spendTraffic: 40,  remainTraffic: 110}] },
+    {id: 4, price: '800', gigSpeed: 200, speed: 12, trafficFull: [{ spendTraffic: 60,  remainTraffic: 140}]},
+    {id: 5, price: '1200', gigSpeed: 300, speed: 12, trafficFull: [{ spendTraffic: 80,  remainTraffic: 220}]},
+    {id: 6, price: '2000', gigSpeed: 500, speed: 15, trafficFull: [{ spendTraffic: 100,  remainTraffic: 400}]}
   ]
   // End of Local Requests
 

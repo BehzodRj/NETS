@@ -16,22 +16,22 @@
               <h1>Мой тариф</h1>
               <div class="priceTariffs_block">
                 <div class="monthlyPrice_block">
-                  <h1>280</h1>
+                  <h1>{{ tarifsData.price }}</h1>
                   <h2>Сомони <br />в меяц</h2>
                 </div>
                 <div class="gigabytes_block">
                   <div class="gigabytes_item">
                     <p>Гигабайты</p>
-                    <p>70</p>
+                    <p>{{ tarifsData.gigSpeed }}</p>
                   </div>
-                  <progress max="10" value="3"></progress>
+                  <progress max="500" [value]="tarifsData.gigSpeed"></progress>
                 </div>
                 <div class="speed_block">
-                  <p>&#9830; Скорость 5 Mbit/s</p>
-                  <progress max="10" value="3"></progress>
+                  <p>&#9830; Скорость {{ tarifsData.speed }} Mbit/s</p>
+                  <progress max="15" [value]="tarifsData.speed"></progress>
                 </div>
                 <div class="tariffs_button">
-                  <button routerLink="/packet">Проверить остаток</button>
+                  <button [routerLink]="['/trafics', tarifsData.id]">Проверить остаток</button>
                 </div>
               </div>
               <h2 routerLink="/tarifs">Сменить тариф</h2>

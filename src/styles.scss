@@ -78,5 +78,21 @@ body {
   display: none;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.circle_block {
+
+  .circle1 {
+    position: absolute;
+    
+    circle {
+      stroke: gray !important;
+    }
+  }
+
+  .circle2 {
+    position: absolute;
+
+    circle {
+      stroke: #EA3E2A !important;
+    }
+  }
+}

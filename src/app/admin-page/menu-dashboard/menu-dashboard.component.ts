@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-dashboard.component.scss']
 })
 export class MenuDashboardComponent implements OnInit {
+  adminId: any
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    if( localStorage.getItem('tarifs_id') ) {
+      this.adminId = localStorage.getItem('tarifs_id')
+    } else {
+      this.adminId = 1
+    }
   }
 
 }

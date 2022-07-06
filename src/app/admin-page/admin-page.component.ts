@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { RequestsService } from '../all.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -7,11 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-page.component.scss']
 })
 export class AdminPageComponent implements OnInit {
+  tarifsData: any = []
  
  
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute, private request: RequestsService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.subscribe( (param: any) => {
+      localStorage.setItem('tarifs_id', param.id)
+      this.tarifsData = this.request.getLocalTarifs.filter( (res: any) => res.id == param.id )[0]
+    })
+  }
 
   logOut() {
     localStorage.clear()
