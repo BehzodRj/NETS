@@ -82,8 +82,9 @@
     i {
       right: 25px;
       font-size: 25px;
-  
+
     }
+
     .modal_block {
       h1 {
         font-size: 25px;
@@ -419,7 +420,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border-bottom: 1px solid #3E3E3E;
 
       .navbar-item {
         display: flex;
@@ -613,6 +613,12 @@
             display: none;
           }
         }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .banner_block {
+        display: none;
       }
     }
   }

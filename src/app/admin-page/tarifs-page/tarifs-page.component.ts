@@ -9,14 +9,16 @@ import { RequestsService } from 'src/app/all.service';
 })
 export class TarifsPageComponent implements OnInit {
   changeTarifsData: any = []
-  showModalTarifsOrder = false
-  tarifs_id: any
   tarifs_name: any
+  tarifs_id: any
+  tarifsLocal_id: any
+  showModalTarifsOrder = false
 
   constructor(private request: RequestsService, private router: Router) { }
 
   ngOnInit() {
     this.changeTarifsData = this.request.getLocalTarifs
+    this.tarifsLocal_id = localStorage.getItem('tarifs_id')
   }
 
   backToTarif() {

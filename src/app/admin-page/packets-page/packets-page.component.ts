@@ -9,6 +9,7 @@ import { RequestsService } from 'src/app/all.service';
 })
 export class PacketsPageComponent implements OnInit {
   packagesData: any = []
+  deletePackageButton = true
 
   constructor(private route: ActivatedRoute, private router: Router, private request: RequestsService) { }
 
@@ -17,11 +18,20 @@ export class PacketsPageComponent implements OnInit {
       localStorage.setItem('packages_id', param.id)
       this.packagesData = this.request.getLocalPackages.filter( (res: any) => res.id == param.id )[0]
     })
+    
+    let local: any = localStorage.getItem('packages_id')
+    if( local >= 1) {
+      this.deletePackageButton = true
+    } else if(local < 1) {
+      this.deletePackageButton = false
+      alert('s')
+    }
   }
 
   deletePackage() {
     this.packagesData = []
     localStorage.setItem('packages_id', '0')
+    this.deletePackageButton = false
   }
 
   logOut() {

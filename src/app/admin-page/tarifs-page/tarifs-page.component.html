@@ -43,7 +43,7 @@
                   <div class="tariffChange_block"> 
                     <div class="tariffChange_item">
                       <h1 >Смена тарифа</h1>
-                      <h3 (click)="backToTarif()"><span>Тарифы</span> \ Сменить тариф </h3>
+                      <h3 class="croshki_tarifs" (click)="backToTarif()"><span>Тарифы</span> \ Сменить тариф </h3>
                       <div class="tariffs_block">
                         <div class="normalTariffs_block" *ngFor="let changeTarifs of changeTarifsData">
                           <div class="priceTariffs_block">
@@ -63,7 +63,7 @@
                               <progress max="15" [value]="changeTarifs.speed"></progress>
                             </div>
                             <div class="tariffs_button">
-                              <button (click)="sendTarifOrder( changeTarifs.id, changeTarifs.gigSpeed)">Оставить заявку</button>
+                              <button [disabled]="changeTarifs.id == tarifsLocal_id" [ngStyle]="{color: changeTarifs.id == tarifsLocal_id ? 'grey': '#FFF'}" (click)="sendTarifOrder( changeTarifs.id, changeTarifs.gigSpeed)">Оставить заявку</button>
                             </div>
                           </div>
                         </div>

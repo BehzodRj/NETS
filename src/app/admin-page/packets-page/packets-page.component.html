@@ -47,8 +47,8 @@
                                         <h2>{{ packagesData.price }} сомони</h2>
                                     </div>
                                 </div>
-                                <div class="packages_btn" (click)="deletePackage()">
-                                    <button>Удалить пакет</button>
+                                <div class="packages_btn"  (click)="deletePackage()">
+                                    <button *ngIf="deletePackageButton">Удалить пакет</button>
                                 </div>
                        </div>
                        <h2 routerLink="/additionalPackage">+Подключить дополнительный пакет</h2>

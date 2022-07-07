@@ -2,7 +2,7 @@
     
     <div class="modal_block">
      <i class="fa fa-times" (click)="modalPackagesConnect = false"></i>
-     <h2>Подключить пакет +10GB?</h2>
+     <h2>Подключить пакет +{{ modalPackagesName }}GB?</h2>
      <div class="button_block">
         <button (click)="modalPackagesConnectButton()">Да, подключить</button>
         <button (click)="modalPackagesConnect = false">Отмена</button>
@@ -27,7 +27,7 @@
             <div class="additionalPackages_block">
               
               <div class="additionalPackages_item">
-                <h2 style="cursor: pointer;" (click)="backToPackages()">Пакеты <span>\ Дополнительный пакет</span></h2>
+                <h2 class="croshki_packages" style="cursor: pointer;" (click)="backToPackages()">Пакеты <span>\ Дополнительный пакет</span></h2>
                 <div class="packages_block">
                   <div class="normalTariffs_block" *ngFor="let packagesData of changePackagesData">
                     <div class="tarriffs_block">
@@ -41,7 +41,7 @@
                         <h2>{{ packagesData.price }} сомони</h2>
                       </div>
                       <div class="tariffs_btn">
-                        <button (click)="modalPackagesOpenButton( packagesData.id )">Подключить пакет</button>
+                        <button [disabled]="packagesData.id == packageLocal_id" [ngStyle]="{color: packagesData.id == packageLocal_id ? 'grey': '#FFF'}" (click)="modalPackagesOpenButton(packagesData.name, packagesData.id)">Подключить пакет</button>
                       </div>
                     </div>
                   </div>
