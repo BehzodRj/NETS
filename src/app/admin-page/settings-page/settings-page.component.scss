@@ -55,21 +55,20 @@
 
             .settings_item {
               display: flex;
-              justify-content: space-around;
+              justify-content: space-between;
               flex-wrap: wrap;
-              padding: 0 10px;
+              padding: 0 20px;
               gap: 10px;
               width: 100%;
               max-width: 1200px;
               margin: 0 auto;
-
+              margin-top: 15px;
               .password_block {
                 h1 {
                   font-family: 'Raleway';
                   font-style: normal;
                   font-weight: 700;
                   font-size: 36px;
-                  line-height: 42px;
                   color: #FFFFFF;
 
                 }
@@ -81,7 +80,7 @@
                   border-radius: 25px;
                   width: 370px;
                   padding: 30px 0 30px;
-
+                  margin-top: 60px;
                   .oldPassword_block {
                     border: 1px solid #6F7071;
                     border-radius: 80px;
@@ -168,9 +167,9 @@
           }
 
           .banner_block {
-            width: 400px;
-            background-color: yellow;
-            height: 700px;
+            background: #EA3E2A;
+              width: 400px;
+              height: 700px;
 
             h1 {
               font-size: 50px;
@@ -225,6 +224,13 @@
               }
             }
 
+          }
+          @media screen and (max-width: 1222px) {
+            .settings_block{
+              .settings_item{
+                justify-content: center;
+              }
+            }
           }
         }
       }

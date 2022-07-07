@@ -53,14 +53,15 @@
             gap: 10px;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
             .traffic_item {
               display: flex;
-              justify-content: space-around;
+              justify-content: space-between;
               flex-wrap: wrap;
               width: 100%;
-              margin-top: 35px;
+              margin-top: 50px;
               gap: 10px;
-              margin-left: 30px;
+              // margin-left: 30px;
               width: 100%;
 
               .browsingTraffic_block {
@@ -70,13 +71,12 @@
                   font-style: normal;
                   font-weight: 700;
                   font-size: 36px;
-                  line-height: 42px;
                   color: #FFFFFF;
 
                 }
 
                 .browsingTraffic_item {
-                  margin-top: 25px;
+                  margin-top: 60px;
                   background: rgba(255, 255, 255, 0.03);
                   border: 0.5px solid rgba(255, 255, 255, 0.5);
                   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
@@ -101,9 +101,12 @@
                         font-family: 'Raleway';
                         font-style: normal;
                         font-weight: 800;
-                        font-size: 35px;
+                        font-size: 45px;
                         color: #FFFFFF;
                         margin: 0;
+                        span{
+                          font-size: 25px;
+                        }
                       }
                     }
                   }
@@ -244,8 +247,19 @@
           }
 
         }
-      }
 
+      }
+      @media screen and (max-width: 1322px) {
+        .traffic_content{
+          .traffic_container{
+            .traffic_block{
+              .traffic_item{
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
     }
     @media screen and (max-width: 480px) {
       .admin_navbar {
@@ -306,34 +320,26 @@
                   .browsingTraffic_item {
                     width: 100%;
                     padding-top: 1px;
-                    // .circle_block{
-                    //   width: 120px;
-                    //   height: 120px;
-                    //   h1{
-                    //     font-size: 35px;
-                    //   }
-                    // }
-                    .general_block{
-                      .general_item{
-                        h3{
-                          font-size: 18px;
-                          margin: 0;
+                    
+                        .general_block{
+                          .general_item{
+                            h3{
+                              font-size: 18px;
+                              
+                            }
+                            h2{
+                            }
+                          }
                         }
-                        h2{
-                          font-size: 16px;
-                          margin: 0;
-                        }
-                      }
-                    }
-                    .spent_block{
-                      .spent_item{
-                        h3{
-                          font-size: 18px;
-                          margin: 0;
-                        }
-                        h2{
-                          font-size: 16px;
-                          margin: 0;
+                        .spent_block{
+                          .spent_item{
+                            h3{
+                              font-size: 18px;
+                              
+                            }
+                            h2{
+                              font-size: 16px;
+                              
                         }
                       }
                     }
@@ -347,9 +353,7 @@
                         }
                       }
                     }
-                    .traffic_btn {
-                      padding-bottom: 30px;
-                    }
+                    
                   }
                 }
 

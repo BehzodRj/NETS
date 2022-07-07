@@ -455,11 +455,11 @@
 
       .balance_container {
         .balance_bllock {
-          padding: 0 10px;
+          padding: 0 20px;
 
           .balance_item {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-wrap: wrap;
             width: 100%;
             max-width: 1200px;
@@ -474,8 +474,9 @@
                 font-style: normal;
                 font-weight: 700;
                 font-size: 36px;
-                line-height: 42px;
-                color: #FFFFFF
+                color: #FFFFFF;
+                margin: 0;
+                
               }
 
               .myBalance_item {
@@ -485,6 +486,7 @@
                 backdrop-filter: blur(48px);
                 border-radius: 25px;
                 width: 100%;
+                margin-top: 60px;
 
                 h1 {
                   font-family: 'Raleway';
@@ -537,12 +539,17 @@
               }
             }
 
-            .banner_block {
-              width: 365px;
-              background-color: #EA3E2A;
+            .banner_block{
+              background: #EA3E2A;
+              width: 400px;
               height: 700px;
             }
           }
+          @media screen and (max-width: 1158px) {
+            .balance_item{
+              justify-content: center;
+            }
+        }
         }
 
         @media screen and (max-width: 365px) {
@@ -550,7 +557,7 @@
           .balance_bllock {
             h1 {
               text-align: center;
-              width: 90%;
+            
             }
 
             .balance_item {
@@ -615,5 +622,6 @@
         }
       }
     }
+    
   }
 }

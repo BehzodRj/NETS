@@ -24,7 +24,7 @@
                             <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="packagesData.name * 2" *ngIf="packagesData.id == 3"></mat-progress-spinner>
                             <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="packagesData.name" *ngIf="packagesData.id == 4"></mat-progress-spinner>
                             <div class="number">
-                              <h2>{{ packagesData.name }}GB</h2>
+                              <h2>{{ packagesData.name }}<span>GB</span></h2>
                             </div>
                         </div>
                         <div class="naming_block">
@@ -54,7 +54,7 @@
                        <h2 routerLink="/additionalPackage">+Подключить дополнительный пакет</h2>
                     </div>
                     <div class="banner_block">
-                        <h1>Баннер</h1>
+                        <h1></h1>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@
                     <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic / 3" *ngIf="trafficFullData.id == 5"></mat-progress-spinner>
                     <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic / 5" *ngIf="trafficFullData.id == 6"></mat-progress-spinner>
                     <div class="number">
-                      <h2>{{ trafficFullData.trafficFull[0]?.remainTraffic }}GB</h2>
+                      <h2>{{ trafficFullData.trafficFull[0]?.remainTraffic }}<span>GB</span></h2>
                     </div>
                   </div>
                   <div class="general_block">
