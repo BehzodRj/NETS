@@ -349,7 +349,7 @@
         background: rgba(255, 255, 255, 0.03);
         margin-top: 85px;
         input{
-            width: 78%;
+            width: 96%;
             border: none;
             outline: none;
             background: none;
@@ -430,6 +430,19 @@
       .sign_block{
         h1{
           font-size: 20px;
+        }
+        .oldPassword_block{
+          input{
+            font-size: 14px;
+          }
+        }
+        .newPassword_block{
+          input{
+            font-size: 14px;
+          }
+        }
+        button{
+          font-size: 16px;
         }
       }
     }
