@@ -47,13 +47,15 @@
           display: flex;
           max-width: 1200px;
           margin: 0 auto;
+          padding: 0 20px;
           .tariffs_item {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            margin: 50px 20px 0;
             gap: 10px;
             flex-wrap: wrap;
+            margin: 50px auto;
+
             .myTariffs_block {
               h1 {
                 font-family: 'Raleway', sans-serif;
