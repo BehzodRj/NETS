@@ -1,11 +1,11 @@
-<div class="modal_container" *ngIf="modalQrCode">
+<div class="modal_container" *ngIf="modalPackagesConnect">
     
     <div class="modal_block">
-     <i class="fa fa-times" (click)="modalQrCode = false"></i>
+     <i class="fa fa-times" (click)="modalPackagesConnect = false"></i>
      <h2>Подключить пакет +10GB?</h2>
      <div class="button_block">
-        <button>Да, подключить</button>
-        <button>Отмена</button>
+        <button (click)="modalPackagesConnectButton()">Да, подключить</button>
+        <button (click)="modalPackagesConnect = false">Отмена</button>
      </div>
     </div>
 </div>
@@ -41,8 +41,7 @@
                         <h2>{{ packagesData.price }} сомони</h2>
                       </div>
                       <div class="tariffs_btn">
-                        <button (click)="modalQrCode = true">Подключить пакет</button>
-                        <!-- [routerLink]="['/packet', packagesData.id]" -->
+                        <button (click)="modalPackagesOpenButton( packagesData.id )">Подключить пакет</button>
                       </div>
                     </div>
                   </div>

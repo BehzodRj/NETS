@@ -47,6 +47,7 @@
       flex-direction: column;
 
       .settings_content {
+        margin-top: 35px;
         .settings_container {
           .settings_block {
             display: flex;
@@ -60,7 +61,7 @@
               gap: 10px;
               width: 100%;
               max-width: 1200px;
-              margin: 25px auto;
+              margin: 0 auto;
 
               .password_block {
                 h1 {

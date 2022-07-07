@@ -9,16 +9,25 @@ import { RequestsService } from 'src/app/all.service';
 })
 export class AditionalPacketPageComponent implements OnInit {
   changePackagesData: any = []
-  modalQrCode = false;
+  modalPackagesConnect = false;
+  modalPackagesId: any
   constructor(private request: RequestsService, private router: Router) { }
 
   ngOnInit() {
     this.changePackagesData = this.request.getLocalPackages
-
   }
 
   backToPackages() {
     this.router.navigate(['/packet', localStorage.getItem('packages_id')])
+  }
+
+  modalPackagesOpenButton(id: number) {
+    this.modalPackagesId = id
+    this.modalPackagesConnect = true
+  }
+
+  modalPackagesConnectButton() {
+    this.router.navigate(['/packet', this.modalPackagesId])
   }
 
   logOut() {
