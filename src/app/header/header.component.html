@@ -75,6 +75,21 @@
             </mat-expansion-panel>
           </mat-accordion>
         </li>
+
+        <li>
+          <mat-accordion>
+            <mat-expansion-panel
+              style="background-color: #202020; box-shadow: none"
+              hideToggle
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title  >
+                  <h1 (click)="modalSignIn = true">Войти</h1>
+                </mat-panel-title>
+              </mat-expansion-panel-header> 
+            </mat-expansion-panel>
+          </mat-accordion>
+        </li>
         <!-- <li>
           <h1 [routerLink]="['/b2b']" routerLinkActive="active">Для бизнеса</h1>
         </li>
