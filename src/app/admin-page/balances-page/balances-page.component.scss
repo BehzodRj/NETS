@@ -1,4 +1,4 @@
-.modal_container{ 
+.modal_container {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -11,60 +11,106 @@
   align-items: center;
   justify-content: center;
   z-index: 99;
-  background-color: rgba(0,0,0,0.4);
-  i{
-    position: relative;
-    left: 93%;
-    top: 5%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  i {
+    position: absolute;
+    right: 45px;
     color: #fff;
     font-size: 38px;
-    
-} 
-  .modal_block{
-      background: #202020;
-      border-radius: 50px;
-      margin: auto;
-      width: 800px;
-      padding: 20px 0;
+    cursor: pointer;
+  }
+
+  .modal_block {
+    position: relative;
+    background: #202020;
+    border-radius: 50px;
+    margin: auto;
+    width: 800px;
+    padding: 20px 0;
+    margin: 0 20px;
+
+    h1,
+    h2 {
+      font-family: 'Raleway';
+      font-weight: 700;
+      font-size: 32px;
+      color: #FFFFFF;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .alifQr_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 20px;
 
-  h2{
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 32px;
-    color: #FFFFFF;
-    margin-top: 50px;
-    text-align: center;
+      .alifQr_block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .alifQr_text {
+          text-align: center;
+          margin: 0;
+          margin-top: 30px;
+          font-weight: 400;
+
+        }
+
+        .qrCode_text {
+          margin: 0;
+          margin-top: 10px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .qr_img {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+  }
+
+  @media screen and (max-width: 480px) {
+    i {
+      right: 25px;
+      font-size: 25px;
+  
+    }
+    .modal_block {
+      h1 {
+        font-size: 25px;
+      }
+
+      .alifQr_content {
+
+        .alifQr_block {
+          h2 {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .qr_img {
+        img {
+          width: 220px;
+        }
+      }
+    }
+  }
+
 }
-.alifQr_block{
- 
-
-.alifQr_text{
-    text-align: center;
-    margin: 0;
-    margin-top: 30px;
-  }
-  .qrCode_text{
-    margin: 0;
-    margin-top: 10px;
-
-  }
-}
-  .qr_img{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  }
-}
 
 
-.header__subtitle { 
-  .header__container { 
+.header__subtitle {
+  .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,40 +121,44 @@
     background: #202020;
     display: none;
     position: fixed;
+
     @media screen and (max-width:600px) {
       top: 0;
     }
+
     .header__logo {
       display: flex;
       justify-content: center;
-      align-items: center; 
+      align-items: center;
     }
 
     .header__btn {
       display: flex;
       align-items: center;
       width: 70%;
-      a{
+
+      a {
         text-decoration: none;
         margin-left: 20px;
+
         h3 {
           font-family: 'Raleway', sans-serif;
           font-weight: 700;
           font-size: 16px;
           color: #fff;
-          cursor: pointer; 
-          
-  
+          cursor: pointer;
+
+
           &:not(:first-child) {
             margin-left: 30px;
           }
-  
+
           &:hover {
             color: #EA3E2A;
           }
         }
       }
-     
+
 
       @media screen and (max-width:700px) {
         display: none;
@@ -119,14 +169,14 @@
       width: 50px;
       height: 58px;
       margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    position: absolute;
-    right: 5px;
-    top: 21px;
-      display: none; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      position: absolute;
+      right: 5px;
+      top: 21px;
+      display: none;
     }
 
     /* скрываем чекбокс */
@@ -185,8 +235,9 @@
       z-index: 2;
       border-bottom-left-radius: 30px;
       top: 0px;
+
       .menu__dashboard {
-        li{
+        li {
           display: flex;
           align-items: center;
           gap: 12px;
@@ -194,7 +245,8 @@
           position: absolute;
           bottom: 53px;
           cursor: pointer;
-          h2{
+
+          h2 {
             margin: 0;
             font-family: 'Raleway';
             font-weight: 600;
@@ -203,44 +255,46 @@
 
           }
         }
+
         background: #202020;
         width: 100%;
-        
+
         position: sticky;
         height: 100%;
+
         .menu__logo {
           display: flex;
           justify-content: center;
           border-bottom: 1px solid #3E3E3E;
         }
-    
+
         .menu_block {
-          
-    margin-top: 30px;
+
+          margin-top: 30px;
 
           .menu-item {
             border-bottom: 1px solid #3E3E3E;
-    
+
             #tr {
               img {
                 width: 50px;
                 height: 50px;
-    
+
                 margin-left: -5px;
               }
-    
+
               h2 {
                 margin-left: 15px;
               }
             }
-    
+
             .item-list {
               display: flex;
               align-items: center;
               justify-content: flex-start;
               padding: 10px 0 10px 21px;
               cursor: pointer;
-    
+
               h2 {
                 margin: 0;
                 font-family: 'Raleway';
@@ -248,12 +302,12 @@
                 font-size: 20px;
                 color: #FFFFFF;
                 margin-left: 20px;
-    
+
                 &:active {
                   transform: scale(.97);
                 }
               }
-    
+
               img {
                 width: 40px;
                 height: 40px;
@@ -262,13 +316,13 @@
           }
         }
       }
-      
+
     }
 
-    
-    
 
-   
+
+
+
 
     /* элементы меню */
     .menu__item {
@@ -279,7 +333,7 @@
       font-weight: 300;
       text-decoration: none;
       padding: 5px;
-      text-align: left; 
+      text-align: left;
     }
 
     .menu__item:hover {
@@ -337,13 +391,14 @@
       }
     }
   }
+
   @media screen and (max-width: 961px) {
-      .header__container{
-        display: flex;
-        align-items: center;
-        
-      }
+    .header__container {
+      display: flex;
+      align-items: center;
+
     }
+  }
 }
 
 
@@ -352,12 +407,14 @@
 
 .admin__page {
   display: flex;
-  background: #202020; 
+  background: #202020;
+
   .admin__container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
+
     .admin_navbar {
       display: flex;
       align-items: center;
@@ -394,141 +451,158 @@
 
     .admin__content {
       display: flex;
-      flex-direction: column; 
-      .balance_container{
-        .balance_bllock{
+      flex-direction: column;
+
+      .balance_container {
+        .balance_bllock {
           padding: 0 10px;
-          .balance_item{
-              display: flex;
-              justify-content: space-around;
-              flex-wrap: wrap;
-              width: 100%;
-              max-width: 1200px;
-              margin: 50px auto;
-              gap: 10px;
-              .myBalance_block{
-                  max-width: 370px;
-                  h1{
-                      font-family: 'Raleway';
-                      font-style: normal;
-                      font-weight: 700;
-                      font-size: 36px;
-                      line-height: 42px;
-                      color: #FFFFFF
-                  }
-                  .myBalance_item{
-                      background: rgba(255, 255, 255, 0.03);
-                      border: 0.5px solid rgba(255, 255, 255, 0.5);
-                      box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-                      backdrop-filter: blur(48px);
-                      border-radius: 25px;
-                      width: 100%;
-                      h1{
-                          font-family: 'Raleway';
-                          font-style: normal;
-                          font-weight: 700;
-                          font-size: 58px;
-                          line-height: 75px;
-                          color: #FFFFFF;
-                          text-align: center;
-                          padding: 50px 0;
-                      }
-                      .balance_button{
-                          width: 90%;
-                          margin: 0 auto;
-                          margin-top: 35px;
-                          margin-bottom: 25px;
-                      button{
-                          border: 3px solid #EA3E2A;
-                          border-radius: 25px;
-                          width: 100%;
-                          background: rgba(255, 255, 255, 0.03);
-                          height: 40px;
-                          font-family: 'Raleway';
-                          font-style: normal;
-                          font-weight: 700;
-                          font-size: 18px;
-                          line-height: 21px;
-                          color: #FFFFFF;
-                          cursor: pointer;
-                      }
-                      }
-                  }
-                  h2{
-                      font-family: 'Raleway';
-                      font-style: normal;
-                      font-weight: 700;
-                      font-size: 24px;
-                      line-height: 28px;
-                      color: #EA3E2A;
-                      margin-top: 20px;
-                      cursor: pointer;
-                      span{
-                      color: #7E7E7F;
-                      font-size: 18px;
-                      }
-                  }
+
+          .balance_item {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 10px;
+
+            .myBalance_block {
+              max-width: 370px;
+
+              h1 {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 42px;
+                color: #FFFFFF
               }
-              .banner_block{
-                  width: 365px;
-                  background-color: #EA3E2A;
-                  height: 700px; 
-              } 
-          }
-          } 
-          @media screen and (max-width: 365px) { 
-                  
-                  .balance_bllock{
-                    h1{
-                      text-align: center;
-                      width: 90%;
-                    }
-                    .balance_item{
-                     width: 100%;
-                     .myBalance_block{
-                      width: 100%;
-                      h1{
-                        font-size: 34px;
-                        text-align: center;
-                      }
-                        .myBalance_item{
-                          h1{
-                            font-size: 40px;
-                          }
-                       
-                        .balance_button{
-                          button{
-                            font-size: 16px;
-                          }
-                        }
-                       }
-                    
-                     h2{
-                      font-size: 18px;
-                      text-align: center;
-                     }
-                     }
-                  
-                  .banner_block{
+
+              .myBalance_item {
+                background: rgba(255, 255, 255, 0.03);
+                border: 0.5px solid rgba(255, 255, 255, 0.5);
+                box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(48px);
+                border-radius: 25px;
+                width: 100%;
+
+                h1 {
+                  font-family: 'Raleway';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 58px;
+                  line-height: 75px;
+                  color: #FFFFFF;
+                  text-align: center;
+                  padding: 50px 0;
+                }
+
+                .balance_button {
+                  width: 90%;
+                  margin: 0 auto;
+                  margin-top: 35px;
+                  margin-bottom: 25px;
+
+                  button {
+                    border: 3px solid #EA3E2A;
+                    border-radius: 25px;
                     width: 100%;
+                    background: rgba(255, 255, 255, 0.03);
+                    height: 40px;
+                    font-family: 'Raleway';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #FFFFFF;
+                    cursor: pointer;
                   }
-              } 
+                }
+              }
+
+              h2 {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                color: #EA3E2A;
+                margin-top: 20px;
+                cursor: pointer;
+
+                span {
+                  color: #7E7E7F;
+                  font-size: 18px;
+                }
+              }
+            }
+
+            .banner_block {
+              width: 365px;
+              background-color: #EA3E2A;
+              height: 700px;
             }
           }
+        }
+
+        @media screen and (max-width: 365px) {
+
+          .balance_bllock {
+            h1 {
+              text-align: center;
+              width: 90%;
+            }
+
+            .balance_item {
+              width: 100%;
+
+              .myBalance_block {
+                width: 100%;
+
+                h1 {
+                  font-size: 34px;
+                  text-align: center;
+                }
+
+                .myBalance_item {
+                  h1 {
+                    font-size: 40px;
+                  }
+
+                  .balance_button {
+                    button {
+                      font-size: 16px;
+                    }
+                  }
+                }
+
+                h2 {
+                  font-size: 18px;
+                  text-align: center;
+                }
+              }
+
+              .banner_block {
+                width: 100%;
+              }
+            }
+          }
+        }
       }
     }
 
     @media screen and (max-width: 480px) {
-    .admin_navbar {
-      .navbar-item {
-        h1{
-          font-size: 30px;
-        }
+      .admin_navbar {
+        .navbar-item {
+          h1 {
+            font-size: 30px;
+          }
 
-       
+
+        }
       }
     }
-  }
+
     @media screen and (max-width: 961px) {
       .admin_navbar {
         .navbar-item {
@@ -542,5 +616,4 @@
       }
     }
   }
- 
 }
