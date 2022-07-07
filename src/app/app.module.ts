@@ -26,6 +26,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MenuDashboardComponent } from './admin-page/menu-dashboard/menu-dashboard.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AditionalPacketPageComponent } from './admin-page/aditional-packet-page/aditional-packet-page.component';
+import { HeaderMobiComponent } from './admin-page/header-mobi/header-mobi.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { AditionalPacketPageComponent } from './admin-page/aditional-packet-page
     TarifsPageComponent,
     TraficsPageComponent,
     MenuDashboardComponent,
-    AditionalPacketPageComponent
+    AditionalPacketPageComponent,
+    HeaderMobiComponent
   ],
   imports: [
     
