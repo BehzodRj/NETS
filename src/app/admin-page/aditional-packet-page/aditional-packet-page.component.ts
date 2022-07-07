@@ -9,7 +9,7 @@ import { RequestsService } from 'src/app/all.service';
 })
 export class AditionalPacketPageComponent implements OnInit {
   changePackagesData: any = []
-
+  modalQrCode = false;
   constructor(private request: RequestsService, private router: Router) { }
 
   ngOnInit() {
