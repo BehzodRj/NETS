@@ -194,9 +194,6 @@
           position: absolute;
           bottom: 53px;
           cursor: pointer;
-          img{
-            
-          }
           h2{
             margin: 0;
             font-family: 'Raleway';
@@ -426,7 +423,6 @@
                       backdrop-filter: blur(48px);
                       border-radius: 25px;
                       width: 100%;
-                      margin-top: 40px;
                       h1{
                           font-family: 'Raleway';
                           font-style: normal;
@@ -435,7 +431,7 @@
                           line-height: 75px;
                           color: #FFFFFF;
                           text-align: center;
-                          margin-top: 70px;
+                          padding: 50px 0;
                       }
                       .balance_button{
                           width: 90%;

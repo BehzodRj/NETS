@@ -1,295 +1,3 @@
- .header__subtitle {
-   .header__container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     width: 100%;
-     margin: auto;
-     z-index: 99;
-     border-bottom: 1px solid #3E3E3E;
-     background: #202020;
-     display: none;
-     position: fixed;
-
-     @media screen and (max-width:600px) {
-       top: 0;
-     }
-
-     .header__logo {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-     }
-
-     .header__btn {
-       display: flex;
-       align-items: center;
-       width: 70%;
-
-       a {
-         text-decoration: none;
-         margin-left: 20px;
-
-         h3 {
-           font-family: 'Raleway', sans-serif;
-           font-weight: 700;
-           font-size: 16px;
-           color: #fff;
-           cursor: pointer;
-
-
-           &:not(:first-child) {
-             margin-left: 30px;
-           }
-
-           &:hover {
-             color: #EA3E2A;
-           }
-         }
-       }
-
-
-       @media screen and (max-width:700px) {
-         display: none;
-       }
-     }
-
-     .menu__block {
-       width: 50px;
-       height: 58px;
-       margin-left: 20px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       display: none;
-       position: absolute;
-       right: 5px;
-       top: 21px;
-       display: none;
-     }
-
-     /* скрываем чекбокс */
-     #menu__toggle {
-       opacity: 0;
-     }
-
-     /* стилизуем кнопку */
-     .menu__btn {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       position: fixed;
-       width: 35px;
-       height: 35px;
-       cursor: pointer;
-       z-index: 3;
-       position: relative;
-       top: -16px;
-     }
-
-     /* добавляем "гамбургер" */
-     .menu__btn>span,
-     .menu__btn>span::before,
-     .menu__btn>span::after {
-       display: block;
-       position: absolute;
-       width: 100%;
-       height: 3px;
-       background-color: #EA3E2A;
-     }
-
-     .menu__btn>span::before {
-       content: '';
-       top: -8px;
-     }
-
-     .menu__btn>span::after {
-       content: '';
-       top: 8px;
-     }
-
-     /* контейнер меню */
-     .menu__box {
-       display: block;
-       position: fixed;
-       visibility: hidden;
-       right: 100%;
-       width: 100%;
-       height: 100%;
-       margin: 0;
-       list-style: none;
-       text-align: center;
-       background-color: #202020;
-       box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-       z-index: 2;
-       border-bottom-left-radius: 30px;
-       top: 0px;
-
-       .menu__dashboard {
-         li {
-           display: flex;
-           align-items: center;
-           gap: 12px;
-           margin-left: 25px;
-           position: absolute;
-           bottom: 53px;
-           cursor: pointer;
-
-           h2 {
-             margin: 0;
-             font-family: 'Raleway';
-             font-weight: 600;
-             font-size: 17.9191px;
-             color: #FFFFFF;
-
-           }
-         }
-
-         background: #202020;
-         width: 100%;
-
-         position: sticky;
-         height: 100%;
-
-         .menu__logo {
-           display: flex;
-           justify-content: center;
-           border-bottom: 1px solid #3E3E3E;
-         }
-
-         .menu_block {
-
-           margin-top: 30px;
-
-           .menu-item {
-             border-bottom: 1px solid #3E3E3E;
-
-             #tr {
-               img {
-                 width: 50px;
-                 height: 50px;
-
-                 margin-left: -5px;
-               }
-
-               h2 {
-                 margin-left: 15px;
-               }
-             }
-
-             .item-list {
-               display: flex;
-               align-items: center;
-               justify-content: flex-start;
-               padding: 10px 0 10px 21px;
-               cursor: pointer;
-
-               h2 {
-                 margin: 0;
-                 font-family: 'Raleway';
-                 font-weight: 900;
-                 font-size: 20px;
-                 color: #FFFFFF;
-                 margin-left: 20px;
-
-                 &:active {
-                   transform: scale(.97);
-                 }
-               }
-
-               img {
-                 width: 40px;
-                 height: 40px;
-               }
-             }
-           }
-         }
-       }
-
-     }
-
-
-
-
-
-
-     /* элементы меню */
-     .menu__item {
-       display: block;
-       color: #fff;
-       font-family: 'Roboto', sans-serif;
-       font-size: 20px;
-       font-weight: 300;
-       text-decoration: none;
-       padding: 5px;
-       text-align: left;
-     }
-
-     .menu__item:hover {
-       color: #EA3E2A;
-     }
-
-     .menu__item:active {
-       transform: scale(.7);
-     }
-
-     #menu__toggle:checked~.menu__btn>span {
-       transform: rotate(45deg);
-     }
-
-     #menu__toggle:checked~.menu__btn>span::before {
-       top: 0;
-       transform: rotate(0);
-     }
-
-     #menu__toggle:checked~.menu__btn>span::after {
-       top: 0;
-       transform: rotate(90deg);
-     }
-
-     #menu__toggle:checked~.menu__box {
-       visibility: visible;
-       right: 0;
-     }
-
-
-     .menu__btn>span,
-     .menu__btn>span::before,
-     .menu__btn>span::after {
-       transition-duration: .25s;
-     }
-
-     .menu__box {
-       transition-duration: .25s;
-     }
-
-     .menu__item {
-       transition-duration: .25s;
-     }
-
-
-     @media screen and (max-width:961px) {
-       .header__logo {
-         img {
-           width: 200px;
-         }
-       }
-
-       .menu__block {
-         display: flex;
-       }
-     }
-   }
-
-   @media screen and (max-width: 961px) {
-     .header__container {
-       display: flex;
-       align-items: center;
-
-     }
-   }
- }
-
  .modal__container {
    position: fixed;
    width: 100vw;
@@ -365,7 +73,7 @@
            color: #AAAAAA;
            text-indent: 10px;
            outline: none;
-           
+
            &:-webkit-autofill {
              -webkit-text-fill-color: #fff;
              transition: background-color 5000s ease-in-out 0s;
@@ -449,43 +157,45 @@
            }
          }
        }
+
        .btn {
-        button {
-          font-size: 15px;
-        }
-      }
+         button {
+           font-size: 15px;
+         }
+       }
      }
 
      @media screen and (max-width: 350px) {
-      .fas {
-        font-size: 18px;
-      }
+       .fas {
+         font-size: 18px;
+       }
 
-      .modal__block {
+       .modal__block {
 
-        h1 {
-          font-size: 20px;
-          margin: 0;
-        }
+         h1 {
+           font-size: 20px;
+           margin: 0;
+         }
 
-        h2,
-        h3 {
-          font-size: 12px;
-          margin: 0;
-        }
+         h2,
+         h3 {
+           font-size: 12px;
+           margin: 0;
+         }
 
-        .block_input {
-          input {
-            font-size: 13px;
-          }
-        }
-      }
-      .btn {
-       button {
-         font-size: 15px;
+         .block_input {
+           input {
+             font-size: 13px;
+           }
+         }
+       }
+
+       .btn {
+         button {
+           font-size: 15px;
+         }
        }
      }
-    }
    }
  }
 
