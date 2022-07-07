@@ -1,686 +1,661 @@
- .modal__container {
-   position: fixed;
-   width: 100vw;
-   height: 100vh;
-   z-index: 100;
-   background-color: rgba(0, 0, 0, 0.6);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-
-   .modal__content {
-     position: relative;
-     max-width: 1200px;
-     background-color: #222;
-     margin: 0 20px;
-     padding: 25px 0;
-
-     .fas {
-       position: absolute;
-       right: 30px;
-       top: 30px;
-       cursor: pointer;
-       color: #fff;
-
-       &:active {
-         transform: scale(.9);
-       }
-     }
-
-
-     .modal__block {
-       padding: 30px;
-
-       h1 {
-         font-family: 'Raleway', sans-serif;
-         font-weight: 900;
-         font-size: 60px;
-         color: #C4C4C4;
-
-       }
-
-       h2 {
-         font-family: 'Raleway', sans-serif;
-         font-weight: 500;
-         font-size: 25px;
-         color: #C4C4C4;
-         margin-top: 30px;
-       }
-
-       h3 {
-         font-family: 'Raleway', sans-serif;
-         font-weight: 700;
-         font-size: 25px;
-         color: #DFDFDF;
-         margin-top: 20px;
-
-       }
-
-       .block_input {
-         display: flex;
-         flex-wrap: wrap;
-         align-items: center;
-
-         input {
-           padding: 5px 0;
-           margin-right: 20px;
-           margin-top: 15px;
-           background: none;
-           border: 1px solid #6F7071;
-           font-family: 'Raleway', sans-serif;
-           font-style: normal;
-           font-weight: 400;
-           font-size: 24px;
-           color: #AAAAAA;
-           text-indent: 10px;
-           outline: none;
-
-           &:-webkit-autofill {
-             -webkit-text-fill-color: #fff;
-             transition: background-color 5000s ease-in-out 0s;
-           }
-         }
-
-         @media screen and (max-width: 717px) {
-           justify-content: center;
-
-           input {
-             width: 95%;
-             margin-top: 20px;
-             margin-right: 0;
-           }
-         }
-       }
-     }
-
-     .btn {
-       display: flex;
-       justify-content: center;
-       padding: 30px;
-
-       button {
-         padding: 5px 30px;
-         font-family: 'Raleway', sans-serif;
-         font-weight: 700;
-         font-size: 18px;
-         color: #FFFFFF;
-         background: #EA3E2A;
-         border: none;
-         cursor: pointer;
-         border-radius: 30px;
-
-         &:active {
-           transform: scale(.99);
-         }
-       }
-     }
-
-     @media screen and (max-width:768px) {
-       .modal__block {
-
-         h1 {
-           font-size: 40px;
-         }
-
-         h2,
-         h3 {
-           font-size: 20px;
-           margin-top: 2px !important;
-         }
-
-         .block_input {
-           input {
-             font-size: 18px;
-           }
-         }
-       }
-     }
-
-     @media screen and (max-width: 500px) {
-       .fas {
-         font-size: 18px;
-       }
-
-       .modal__block {
-
-         h1 {
-           font-size: 25px;
-         }
-
-         h2,
-         h3 {
-           font-size: 15px;
-         }
-
-         .block_input {
-           input {
-             font-size: 16px;
-           }
-         }
-       }
-
-       .btn {
-         button {
-           font-size: 15px;
-         }
-       }
-     }
-
-     @media screen and (max-width: 350px) {
-       .fas {
-         font-size: 18px;
-       }
-
-       .modal__block {
-
-         h1 {
-           font-size: 20px;
-           margin: 0;
-         }
-
-         h2,
-         h3 {
-           font-size: 12px;
-           margin: 0;
-         }
-
-         .block_input {
-           input {
-             font-size: 13px;
-           }
-         }
-       }
-
-       .btn {
-         button {
-           font-size: 15px;
-         }
-       }
-     }
-   }
- }
-
-
-
- .admin__page {
-   display: flex;
-   background: #202020;
-
-   .admin__container {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     padding-bottom: 50px;
-
-     .admin_navbar {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-
-       .navbar-item {
-         display: flex;
-         justify-content: space-between;
-         align-content: center;
-         width: 80%;
-         padding: 20px 10px;
-         background: #202020;
-
-         h1 {
-           margin: 0;
-           font-family: 'Raleway', sans-serif;
-           font-weight: 700;
-           font-size: 40px;
-           color: #FFFFFF;
-         }
-
-         img {
-           width: 40px;
-           height: 40px;
-           cursor: pointer;
-
-           &:active {
-             transform: scale(.96);
-           }
-         }
-       }
-     }
-
-     .admin__content {
-       display: flex;
-       flex-direction: column;
-
-       .tariffChange_container {
-         .tariffChange_block {
-           display: flex;
-
-           .menu {
-             width: 305px;
-             background-color: gold;
-
-             h1 {
-               font-size: 50px;
-             }
-           }
-
-           .tariffChange_item {
-             width: 100%;
-             margin: 20px 10px 0 0;
-
-             h1 {
-               font-family: 'Raleway';
-               font-style: normal;
-               font-weight: 700;
-               font-size: 36px;
-               line-height: 42px;
-               color: #FFFFFF;
-               text-align: center;
-             }
-
-             h3 {
-               font-family: 'Raleway';
-               font-style: normal;
-               font-weight: 300;
-               font-size: 14px;
-               line-height: 16px;
-               color: #C4C4C4;
-               margin-left: 29px;
-               cursor: pointer;
-
-               span {
-                 color: #EA3E2A;
-               }
-             }
-
-             .tariffs_block {
-               max-width: 1200px;
-               margin: 0 auto;
-               display: flex;
-               align-items: center;
-               justify-content: space-evenly;
-               flex-wrap: wrap;
-               width: 100%;
-               gap: 20px;
-
-               .normalTariffs_block {
-                 .priceTariffs_block {
-
-                   background: rgba(255, 255, 255, 0.03);
-                   border: 0.5px solid rgba(255, 255, 255, 0.5);
-                   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-                   backdrop-filter: blur(48px);
-                   border-radius: 25px;
-                   width: 370px;
-                   margin-top: 60px;
-
-                   .monthlyPrice_block {
-                     display: flex;
-                     align-items: center;
-                     justify-content: center;
-                     gap: 10px;
-
-                     h1 {
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 700;
-                       font-size: 64px;
-                       line-height: 75px;
-                       color: #FFFFFF;
-                       margin: 0;
-                     }
-
-                     h2 {
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 500;
-                       font-size: 18px;
-                       line-height: 21px;
-                       color: #FFFFFF;
-                       margin: 0;
-                     }
-                   }
-
-                   .gigabytes_block {
-                     width: 80%;
-                     margin: 0 auto;
-                     margin-top: 35px;
-
-                     .gigabytes_item {
-                       width: 100%;
-                       display: flex;
-                       align-items: center;
-                       justify-content: space-between;
-
-                       p {
-                         font-family: 'Raleway';
-                         font-style: normal;
-                         font-weight: 500;
-                         font-size: 18px;
-                         line-height: 21px;
-                         color: #FFFFFF;
-                       }
-
-                     }
-
-                     progress {
-                       -webkit-appearance: none;
-                       width: 100%;
-                       height: 11px;
-
-                       &::-webkit-progress-bar {
-                         border-radius: 8px;
-                         background: #7E7E7F;
-                         overflow: hidden;
-                       }
-
-                       &::-webkit-progress-value {
-                         background: #EA3E2A;
-                         border-radius: 8px;
-                       }
-
-                     }
-                   }
-
-                   .speed_block {
-                     width: 80%;
-                     margin: 0 auto;
-                     margin-top: 25px;
-
-                     p {
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 500;
-                       font-size: 18px;
-                       line-height: 21px;
-                       color: #FFFFFF;
-                     }
-
-                     progress {
-                       -webkit-appearance: none;
-                       width: 100%;
-                       height: 11px;
-
-                       &::-webkit-progress-bar {
-                         border-radius: 8px;
-                         background: #7E7E7F;
-                         overflow: hidden;
-                       }
-
-                       &::-webkit-progress-value {
-                         background: #EA3E2A;
-                         border-radius: 8px;
-                       }
-
-                     }
-                   }
-
-                   .tariffs_button {
-                     width: 80%;
-                     margin: 0 auto;
-
-                     button {
-                       border: 3px solid #EA3E2A;
-                       border-radius: 25px;
-                       background: rgba(255, 255, 255, 0.03);
-                       width: 100%;
-                       height: 41px;
-                       margin: 25px 0;
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 700;
-                       font-size: 18px;
-                       line-height: 21px;
-                       color: #FFFFFF;
-                       cursor: pointer;
-                     }
-
-                   }
-
-                 }
-               }
-
-               .superTariffs_block {
-                 .priceTariffs_block {
-                   background: rgba(255, 255, 255, 0.03);
-                   border: 0.5px solid rgba(255, 255, 255, 0.5);
-                   box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
-                   backdrop-filter: blur(48px);
-                   border-radius: 25px;
-                   width: 370px;
-                   margin-top: 60px;
-
-                   .monthlyPrice_block {
-                     display: flex;
-                     align-items: center;
-                     justify-content: center;
-                     gap: 10px;
-
-                     h1 {
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 700;
-                       font-size: 64px;
-                       line-height: 75px;
-                       color: #FFFFFF;
-                       margin: 0;
-                     }
-
-                     h2 {
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 500;
-                       font-size: 18px;
-                       line-height: 21px;
-                       color: #FFFFFF;
-                       margin: 0;
-                     }
-                   }
-
-                   .gigabytes_block {
-                     width: 80%;
-                     margin: 0 auto;
-                     margin-top: 35px;
-
-                     .gigabytes_item {
-                       width: 100%;
-                       display: flex;
-                       align-items: center;
-                       justify-content: space-between;
-
-                       p {
-                         font-family: 'Raleway';
-                         font-style: normal;
-                         font-weight: 500;
-                         font-size: 18px;
-                         line-height: 21px;
-                         color: #FFFFFF;
-                       }
-
-                     }
-
-                     progress {
-                       -webkit-appearance: none;
-                       width: 100%;
-                       height: 11px;
-
-                       &::-webkit-progress-bar {
-                         border-radius: 8px;
-                         background: #7E7E7F;
-                         overflow: hidden;
-                       }
-
-                       &::-webkit-progress-value {
-                         background: #EA3E2A;
-                         border-radius: 8px;
-                       }
-
-                     }
-                   }
-
-                   .speed_block {
-                     width: 80%;
-                     margin: 0 auto;
-                     margin-top: 25px;
-
-                     p {
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 500;
-                       font-size: 18px;
-                       line-height: 21px;
-                       color: #FFFFFF;
-                     }
-
-                     progress {
-                       -webkit-appearance: none;
-                       width: 100%;
-                       height: 11px;
-
-                       &::-webkit-progress-bar {
-                         border-radius: 8px;
-                         background: #7E7E7F;
-                         overflow: hidden;
-                       }
-
-                       &::-webkit-progress-value {
-                         background: #EA3E2A;
-                         border-radius: 8px;
-                       }
-
-                     }
-                   }
-
-                   .tariffs_button {
-                     width: 80%;
-                     margin: 0 auto;
-
-                     button {
-                       border: 3px solid #EA3E2A;
-                       border-radius: 25px;
-                       background: rgba(255, 255, 255, 0.03);
-                       width: 100%;
-                       height: 41px;
-                       margin: 25px 0;
-                       font-family: 'Raleway';
-                       font-style: normal;
-                       font-weight: 700;
-                       font-size: 18px;
-                       line-height: 21px;
-                       color: #FFFFFF;
-                       cursor: pointer;
-                     }
-
-                   }
-
-                 }
-               }
-             }
-
-             @media screen and (max-width: 961px) {
-               margin: 30px 0 0 0;
-             }
-           }
-         }
-
-         @media screen and (max-width:768px) {
-           .tariffChange_block {
-             .tariffChange_item {
-               margin-left: 0;
-               margin: 30px auto;
-
-               .croshki_tarifs {
-                display: none !important;
-               }
-             }
-           }
-         }
-
-         @media screen and (max-width:480px) {
-           .tariffChange_block {
-             .tariffChange_item {
-               h1 {
-                 font-size: 32px;
-               }
-
-               .tariffs_block {
-                 .normalTariffs_block {
-                   width: 85%;
-
-                   .priceTariffs_block {
-                     width: 100%;
-
-                     .monthlyPrice_block {
-                       h1 {
-                         font-size: 50px;
-                       }
-
-                       h2 {
-                         font-size: 16px;
-                       }
-                     }
-
-                     .gigabytes_block {
-                       .gigabytes_item {
-                         p {
-                           font-size: 16px;
-                           margin: 0;
-                         }
-                       }
-                     }
-
-                     .speed_block {
-                       p {
-                         font-size: 16px;
-                         margin: 0;
-                       }
-                     }
-
-                     .tariffs_button {
-                       button {
-                         font-size: 16px;
-                       }
-                     }
-                   }
-                 }
-               }
-             }
-           }
-         }
-       }
-     }
-
-     @media screen and (max-width: 1566px) {
-       .tariffs_block {
-         height: 900px;
-         overflow-y: auto;
-       }
-     }
-
-     @media screen and (max-width: 961px) {
-       .admin_navbar {
-         .navbar-item {
-           width: 90%;
-           justify-content: space-between;
-
-           div {
-             display: none;
-           }
-         }
-
-       }
-     }
-
-     @media screen and (max-width: 480px) {
-       .admin_navbar {
-         .navbar-item {
-           h1 {
-             font-size: 30px;
-           }
-
-
-         }
-       }
-     }
-   }
-
-
- }
+.modal__container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal__content {
+    position: relative;
+    max-width: 1200px;
+    background-color: #222;
+    margin: 0 20px;
+    padding: 30px;
+
+    .fas {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+      color: #fff;
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+
+    .modal__block {
+      padding: 30px;
+
+      h1 {
+        font-family: "Raleway", sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        color: #c4c4c4;
+      }
+
+      h2 {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 25px;
+        color: #c4c4c4;
+        margin-top: 30px;
+      }
+
+      h3 {
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        color: #dfdfdf;
+        margin-top: 20px;
+      }
+
+      .block_input {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        input {
+          padding: 5px 0;
+          margin-right: 20px;
+          margin-top: 15px;
+          background: none;
+          border: 1px solid #6f7071;
+          font-family: "Raleway", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          color: #aaaaaa;
+          text-indent: 10px;
+          outline: none;
+
+          &:-webkit-autofill {
+            -webkit-text-fill-color: #fff;
+            transition: background-color 5000s ease-in-out 0s;
+          }
+        }
+
+        @media screen and (max-width: 717px) {
+          justify-content: center;
+
+          input {
+            width: 95%;
+            margin-top: 20px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+
+      button {
+        padding: 5px 30px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #ffffff;
+        background: #ea3e2a;
+        border: none;
+        cursor: pointer;
+        border-radius: 30px;
+
+        &:active {
+          transform: scale(0.99);
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .modal__block {
+        h1 {
+          font-size: 40px;
+        }
+
+        h2,
+        h3 {
+          font-size: 20px;
+          margin-top: 2px !important;
+        }
+
+        .block_input {
+          input {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .fas {
+        font-size: 18px;
+      }
+
+      .modal__block {
+        h1 {
+          font-size: 25px;
+        }
+
+        h2,
+        h3 {
+          font-size: 15px;
+        }
+
+        .block_input {
+          input {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .btn {
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 350px) {
+      .fas {
+        font-size: 18px;
+      }
+
+      .modal__block {
+        h1 {
+          font-size: 20px;
+          margin: 0;
+        }
+
+        h2,
+        h3 {
+          font-size: 12px;
+          margin: 0;
+        }
+
+        .block_input {
+          input {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .btn {
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.admin__page {
+  display: flex;
+  background: #202020;
+
+  .admin__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .admin_navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #3e3e3e;
+
+      .navbar-item {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 80%;
+        padding: 20px 10px;
+        background: #202020;
+
+        h1 {
+          margin: 0;
+          font-family: "Raleway", sans-serif;
+          font-weight: 700;
+          font-size: 40px;
+          color: #ffffff;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+
+          &:active {
+            transform: scale(0.96);
+          }
+        }
+      }
+    }
+
+    .admin__content {
+      display: flex;
+      flex-direction: column;
+
+      .tariffChange_container {
+        .tariffChange_block {
+          display: flex;
+
+          .menu {
+            width: 305px;
+            background-color: gold;
+
+            h1 {
+              font-size: 50px;
+            }
+          }
+
+          .tariffChange_item {
+            width: 100%;
+            margin: 20px 10px 0 0;
+
+            h1 {
+              font-family: "Raleway";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 42px;
+              color: #ffffff;
+              text-align: center;
+            }
+
+            h3 {
+              font-family: "Raleway";
+              font-style: normal;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 16px;
+              color: #c4c4c4;
+              margin-left: 29px;
+              cursor: pointer;
+
+              span {
+                color: #ea3e2a;
+              }
+            }
+
+            .tariffs_block {
+              max-width: 1200px;
+              margin: 0 auto;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+              flex-wrap: wrap;
+              width: 100%;
+              gap: 20px;
+              margin-top: 40px;
+              .normalTariffs_block {
+                .priceTariffs_block {
+                  background: rgba(255, 255, 255, 0.03);
+                  border: 0.5px solid rgba(255, 255, 255, 0.5);
+                  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05),
+                    inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(48px);
+                  border-radius: 25px;
+                  width: 370px;
+                  margin-top: 15px;
+
+                  .monthlyPrice_block {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    h1 {
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 700;
+                      font-size: 64px;
+                      line-height: 75px;
+                      color: #ffffff;
+                      margin: 0;
+                    }
+
+                    h2 {
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #ffffff;
+                      margin: 0;
+                    }
+                  }
+
+                  .gigabytes_block {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-top: 35px;
+
+                    .gigabytes_item {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+
+                      p {
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #ffffff;
+                      }
+                    }
+
+                    progress {
+                      -webkit-appearance: none;
+                      width: 100%;
+                      height: 11px;
+
+                      &::-webkit-progress-bar {
+                        border-radius: 8px;
+                        background: #7e7e7f;
+                        overflow: hidden;
+                      }
+
+                      &::-webkit-progress-value {
+                        background: #ea3e2a;
+                        border-radius: 8px;
+                      }
+                    }
+                  }
+
+                  .speed_block {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-top: 25px;
+
+                    p {
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #ffffff;
+                    }
+
+                    progress {
+                      -webkit-appearance: none;
+                      width: 100%;
+                      height: 11px;
+
+                      &::-webkit-progress-bar {
+                        border-radius: 8px;
+                        background: #7e7e7f;
+                        overflow: hidden;
+                      }
+
+                      &::-webkit-progress-value {
+                        background: #ea3e2a;
+                        border-radius: 8px;
+                      }
+                    }
+                  }
+
+                  .tariffs_button {
+                    width: 80%;
+                    margin: 0 auto;
+
+                    button {
+                      border: 3px solid #ea3e2a;
+                      border-radius: 25px;
+                      background: rgba(255, 255, 255, 0.03);
+                      width: 100%;
+                      height: 41px;
+                      margin: 25px 0;
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 700;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #ffffff;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+
+              .superTariffs_block {
+                .priceTariffs_block {
+                  background: rgba(255, 255, 255, 0.03);
+                  border: 0.5px solid rgba(255, 255, 255, 0.5);
+                  box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05),
+                    inset 0px 4px 4px rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(48px);
+                  border-radius: 25px;
+                  width: 370px;
+                  margin-top: 60px;
+
+                  .monthlyPrice_block {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    h1 {
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 700;
+                      font-size: 64px;
+                      line-height: 75px;
+                      color: #ffffff;
+                      margin: 0;
+                    }
+
+                    h2 {
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #ffffff;
+                      margin: 0;
+                    }
+                  }
+
+                  .gigabytes_block {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-top: 35px;
+
+                    .gigabytes_item {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+
+                      p {
+                        font-family: "Raleway";
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #ffffff;
+                      }
+                    }
+
+                    progress {
+                      -webkit-appearance: none;
+                      width: 100%;
+                      height: 11px;
+
+                      &::-webkit-progress-bar {
+                        border-radius: 8px;
+                        background: #7e7e7f;
+                        overflow: hidden;
+                      }
+
+                      &::-webkit-progress-value {
+                        background: #ea3e2a;
+                        border-radius: 8px;
+                      }
+                    }
+                  }
+
+                  .speed_block {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-top: 25px;
+
+                    p {
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #ffffff;
+                    }
+
+                    progress {
+                      -webkit-appearance: none;
+                      width: 100%;
+                      height: 11px;
+
+                      &::-webkit-progress-bar {
+                        border-radius: 8px;
+                        background: #7e7e7f;
+                        overflow: hidden;
+                      }
+
+                      &::-webkit-progress-value {
+                        background: #ea3e2a;
+                        border-radius: 8px;
+                      }
+                    }
+                  }
+
+                  .tariffs_button {
+                    width: 80%;
+                    margin: 0 auto;
+
+                    button {
+                      border: 3px solid #ea3e2a;
+                      border-radius: 25px;
+                      background: rgba(255, 255, 255, 0.03);
+                      width: 100%;
+                      height: 41px;
+                      margin: 25px 0;
+                      font-family: "Raleway";
+                      font-style: normal;
+                      font-weight: 700;
+                      font-size: 18px;
+                      line-height: 21px;
+                      color: #ffffff;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+            }
+
+            @media screen and (max-width: 961px) {
+              margin: 30px 0 0 0;
+            }
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          .tariffChange_block {
+            .tariffChange_item {
+              margin-left: 0;
+              margin: 30px auto;
+            }
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .tariffChange_block {
+            .tariffChange_item {
+              h1 {
+                font-size: 32px;
+              }
+
+              .tariffs_block {
+                .normalTariffs_block {
+                  width: 85%;
+
+                  .priceTariffs_block {
+                    width: 100%;
+
+                    .monthlyPrice_block {
+                      h1 {
+                        font-size: 50px;
+                      }
+
+                      h2 {
+                        font-size: 16px;
+                      }
+                    }
+
+                    .gigabytes_block {
+                      .gigabytes_item {
+                        p {
+                          font-size: 16px;
+                          margin: 0;
+                        }
+                      }
+                    }
+
+                    .speed_block {
+                      p {
+                        font-size: 16px;
+                        margin: 0;
+                      }
+                    }
+
+                    .tariffs_button {
+                      button {
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1566px) {
+      .tariffs_block {
+        height: 900px;
+        overflow-y: auto;
+      }
+    }
+
+    @media screen and (max-width: 961px) {
+      .admin_navbar {
+        .navbar-item {
+          width: 90%;
+          justify-content: space-between;
+
+          div {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .admin_navbar {
+        .navbar-item {
+          h1 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -48,22 +48,17 @@
             .packages_block{
                 display: flex;
                 gap: 10px;
-                .menu{
-                    width: 20%;
-                    background: blue;
-                    h1{
-                     font-size: 50px;
-                    }
-                }
+                
                 .packages_item{
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     flex-wrap: wrap;
-                    padding: 0 10px;
+                    padding: 0 20px;
                     width: 100%;
                     gap: 10px;
                     max-width: 1200px;
-                    margin: 0 auto;
+                    margin: 0px auto;
+                    margin-top: 15px;
                     .packageManagement_block{
                         
                         h1{
@@ -74,7 +69,7 @@
                             color: #FFFFFF;
                         }
                         .packageManagement_item{
-                            margin-top: 25px;
+                            margin-top: 60px;
                             background: rgba(255, 255, 255, 0.03);
                             border: 0.5px solid rgba(255, 255, 255, 0.5);
                             box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 4px 4px rgba(255, 255, 255, 0.15);
@@ -100,6 +95,9 @@
                                   font-size: 35px;
                                   color: #FFFFFF;
                                   padding: 0;
+                                  span{
+                                    font-size: 25px;
+                                  }
                                 }
                               }
                             }
@@ -110,7 +108,7 @@
                                 align-items: center;
                                 justify-content: space-between;
                                 width: 90%;
-                                margin: 0 auto;
+                                margin: 10px auto;
                                 h3{
                                     font-family: 'Raleway';
                                     font-style: normal;
@@ -118,6 +116,7 @@
                                     font-size: 20px;
                                     line-height: 23px;
                                     color: #C4C4C4;
+                                    margin: 0;
                                 }
                                 h2{
                                     font-family: 'Raleway';
@@ -141,7 +140,7 @@
                                 align-items: center;
                                 justify-content: space-between;
                                 width: 90%;
-                                margin: 0 auto;
+                                margin: 10px auto;
                                 h3{
                                     font-family: 'Raleway';
                                     font-style: normal;
@@ -149,6 +148,7 @@
                                     font-size: 20px;
                                     line-height: 23px;
                                     color: #C4C4C4;
+                                    margin: 0;
                                 }
                                 h2{
                                     font-family: 'Raleway';
@@ -172,7 +172,7 @@
                                 align-items: center;
                                 justify-content: space-between;
                                 width: 90%;
-                                margin: 0 auto;
+                                margin: 10px auto;
                                 h3{
                                     font-family: 'Raleway';
                                     font-style: normal;
@@ -180,6 +180,7 @@
                                     font-size: 20px;
                                     line-height: 23px;
                                     color: #C4C4C4;
+                                    margin: 0;
                                 }
                                 h2{
                                     font-family: 'Raleway';
@@ -225,14 +226,21 @@
                     }
                }
                     .banner_block{
-                        width: 365px;
-                        background: #fff;
-                        height: 700px;
+                            background: #EA3E2A;
+                            width: 400px;
+                            height: 700px;
                         h1{
                          font-size: 50px;
                         }
                     }
                 }
+            }
+            @media screen and (max-width:1290px){
+              .packages_block{
+                .packages_item{
+                  justify-content: center;
+                }
+              }
             }
             @media screen and (max-width:480px){
                 .packages_block{
@@ -258,13 +266,14 @@
                               }
                               .naming_block{
                                 .naming_item{
+                                  margin-top: 40px;
                                 h3{
                                   font-size: 17px;
-                                  margin: 0;
+                                  
                                 }
                                 h2{
                                   font-size: 15px;
-                                  margin: 0;
+                                  
                                 }
                               }
                              }
@@ -272,11 +281,11 @@
                                 .date_item{
                                   h3{
                                     font-size: 17px;
-                                    margin: 0;
+                                    
                                   }
                                   h2{
                                     font-size: 15px;
-                                    margin: 0;
+                                    
                                   }
                               }
                               }
@@ -284,11 +293,11 @@
                                 .price_item{
                                   h3{
                                     font-size: 17px;
-                                    margin: 0;
+                                    
                                   }
                                   h2{
                                     font-size: 15px;
-                                    margin: 0;
+                                    
                                   }
                                 }
                               }
@@ -301,7 +310,7 @@
                             }
                             h2{
                               font-size: 20px;
-                              text-align: center;
+                              text-align: start;
                             }
                         }
                         .banner_block{

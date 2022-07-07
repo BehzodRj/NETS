@@ -49,9 +49,9 @@
           margin: 0 auto;
           .tariffs_item {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             width: 100%;
-            margin-top: 50px;
+            margin: 50px 20px 0;
 
             .myTariffs_block {
               h1 {
@@ -86,12 +86,13 @@
                     margin: 0;
                   }
 
-                  h2 {
+                  h3 {
                     font-family: 'Raleway', sans-serif;
                     font-weight: 500;
                     font-size: 18px;
                     color: #FFFFFF;
                     margin: 0;
+                    line-height: 1;
                   }
                 }
 
