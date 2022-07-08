@@ -637,9 +637,11 @@
 
     @media screen and (max-width: 961px) {
       .admin_navbar {
+        border-bottom: none;
         .navbar-item {
           width: 90%;
           justify-content: space-between;
+          
 
           div {
             display: none;
