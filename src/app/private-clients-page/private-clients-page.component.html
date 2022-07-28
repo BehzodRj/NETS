@@ -358,22 +358,22 @@
         </div>
         <div class="benifits__text"> 
           <ngx-slick-carousel class="carousel" 
-          #slickModal="slick-carousel" 
-          [config]="textConfig" 
-          (init)="slickInit($event)"
-          (breakpoint)="breakpoint($event)"
-          (afterChange)="afterChange($event)"
-          (beforeChange)="beforeChange($event)">
-          <div ngxSlickItem *ngFor="let textSetting of textSetting" class="slide"> 
-            <div class="text_container">  
-              <div class="text">
-                <h3>{{textSetting.title}}</h3>
-                <p>
-                  {{textSetting.text}}
-                </p>
-              </div> 
+            #slickModal="slick-carousel" 
+            [config]="textConfig" 
+            (init)="slickInit($event)"
+            (breakpoint)="breakpoint($event)"
+            (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let textSetting of textSetting" class="slide"> 
+              <div class="text_container">  
+                <div class="text">
+                  <h3>{{textSetting.title}}</h3>
+                  <p>
+                    {{textSetting.text}}
+                  </p>
+                </div> 
+              </div>
             </div>
-          </div>
           </ngx-slick-carousel>
         </div> 
       </div>

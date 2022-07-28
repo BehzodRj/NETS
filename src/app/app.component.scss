@@ -1,0 +1,10 @@
+.container {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: transparent;
+    z-index: 999;
+    height: 100vh;
+  }

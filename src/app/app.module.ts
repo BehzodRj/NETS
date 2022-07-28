@@ -47,7 +47,7 @@ import { HeaderMobiComponent } from './admin-page/header-mobi/header-mobi.compon
     TraficsPageComponent,
     MenuDashboardComponent,
     AditionalPacketPageComponent,
-    HeaderMobiComponent
+    HeaderMobiComponent,
   ],
   imports: [
     
