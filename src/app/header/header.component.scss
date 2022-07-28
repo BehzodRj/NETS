@@ -49,13 +49,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
+
 
     .header__logo {
       display: flex;
       justify-content: center;
       align-items: center;
       img{
+        width: 140px;
+        height: 22px;
         cursor: pointer;
+        margin: 6px 0;
       }
     }
 
