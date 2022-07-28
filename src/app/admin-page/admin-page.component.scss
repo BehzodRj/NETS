@@ -10,7 +10,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      border-bottom: 1px solid #3e3e3e;
       .navbar-item {
         display: flex;
         justify-content: space-between;
@@ -295,10 +295,11 @@
     }
     @media screen and (max-width: 961px) {
       .admin_navbar {
+        border-bottom: none;
         .navbar-item {
           width: 90%;
           justify-content: space-between;
-
+          
           div {
             display: none;
           }

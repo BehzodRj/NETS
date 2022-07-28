@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="letter">
-        <h3>Комментарий (необязятельно):</h3>
+        <h3>Комментарий <span>(необязятельно)</span>:</h3>
         <form action="" [formGroup]="connectionForm">
           <textarea
             formControlName="comments"
@@ -54,12 +54,12 @@
             id=""
             cols="10"
             rows="5"
-            placeholder="Напиши здесь, напиши что-нибудь. можешь не писать."
+            placeholder="Напиши здесь что-нибудь."
           ></textarea>
         </form>
       </div>
       <div class="rezume_block">
-        <h3>Резюме:</h3>
+        <h3>Фотография паспорта:</h3>
         <div class="rezume" [formGroup]="connectionForm">
           <span>{{ fileName }}</span>
           <div class="rezume_choose">
@@ -103,7 +103,7 @@
         <div ngxSlickItem *ngFor="let tarifs of tarifsData; let idx = index" class="slide">
           <div class="nets_block">
             <div class="nets_title">{{ tarifs.name }}</div>
-            <div class="nets_subtitle" (mouseover)="mouseProgress(idx)" (mouseleave)="progressValue = -1">
+            <div class="nets_subtitle" id="sub" (mouseover)="mouseProgress(idx)" (mouseleave)="progressValue = -1">
               <div class="price">
                 <h3>{{ tarifs.price }}</h3>
                 <h4> сомони <br/> в месяц
@@ -122,7 +122,7 @@
                 </span>
                 <span>
                   <img src="./assets/img/Ellipse 48.svg" alt="" />
-                  <h3>{{ tarifs.li_2 }}</h3>
+                  <h3>Бесплатное IPTV в <i style="color: red;">подарок</i> на {{tarifs.li_2}} месяц</h3>
                 </span>
                 <span>
                   <img src="./assets/img/Ellipse 48.svg" alt="" />
@@ -138,7 +138,7 @@
                 </span>
               </div>
               <div class="btn">
-                <button (click)="connectionTarifs(tarifs.id)">
+                <button for="sub" [ngStyle]="{background: progressValue == idx ? '#EA3E2A' : 'black'}" (click)="connectionTarifs(tarifs.id)">
                   Подключить
                 </button>
               </div>

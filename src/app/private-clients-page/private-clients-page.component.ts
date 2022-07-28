@@ -11,7 +11,7 @@ import * as jquery from 'jquery';
 export class PrivateClientsPageComponent implements OnInit {
   colorChannel: any = 1;
   progressValue: any = -1
-  fileName = 'Перетащи резюме сюда или выбери из папки';
+  fileName = 'Перетащи фото сюда или выбери из папки';
   slideConfig = { 
     slidesToShow: 4, 
     slidesToScroll: 1,
@@ -56,7 +56,7 @@ export class PrivateClientsPageComponent implements OnInit {
       widthSpeed: 25,
       price: '99',
       li_1: 'Оборудование в аренду',
-      li_2: 'Бесплатное IPTV в подарок на 1 месяц',
+      li_2: '1',
       li_3: 'Бесплатное подключение',
       li_4: 'Безлимитный трафик',
       li_5: 'Доступ к локальным ресурсам до 100мбит',
@@ -68,19 +68,19 @@ export class PrivateClientsPageComponent implements OnInit {
       widthSpeed:50,
       price: '125',
       li_1: 'Оборудование в аренду',
-      li_2: 'Бесплатное IPTV в подарок на 1 месяц',
+      li_2: '1',
       li_3: 'Бесплатное подключение',
       li_4: 'Безлимитный трафик',
       li_5: 'Доступ к локальным ресурсам до 100мбит',
     },
-    {
+    { 
       id: 3,
       name: 'Nets 3',
       speed: 'Скорость до 10 Mbit/s',
       widthSpeed:75,
       price: '225',
       li_1: 'Оборудование в аренду',
-      li_2: 'Бесплатное IPTV в подарок на 2 месяц',
+      li_2: '2',
       li_3: 'Бесплатное подключение',
       li_4: 'Безлимитный трафик',
       li_5: 'Доступ к локальным ресурсам до 100мбит',
@@ -92,7 +92,7 @@ export class PrivateClientsPageComponent implements OnInit {
       widthSpeed:100,
       price: '375',
       li_1: 'Оборудование в аренду',
-      li_2: 'Бесплатное IPTV в подарок на 2 месяц',
+      li_2: '2',
       li_3: 'Бесплатное подключение',
       li_4: 'Безлимитный трафик',
       li_5: 'Доступ к локальным ресурсам до 100мбит',
