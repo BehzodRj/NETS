@@ -10,7 +10,7 @@
   
       .footer_provider {
         width: 50%;
-  
+        position: relative;
         .provider_company {
           width: 70%;
   
@@ -68,7 +68,8 @@
           color: #7E7E7F;
           display: flex;
           align-items: flex-end;
-          height: 100%;
+          position: absolute;
+          bottom: 0;
           
         }
   
