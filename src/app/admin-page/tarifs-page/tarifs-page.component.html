@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="btn">
-      <button [routerLink]="['/admin', tarifs_id]">Отправить</button>
+      <button>Отправить</button>
     </div>
   </div>
 </div>
@@ -51,19 +51,27 @@
                               <h1>{{ changeTarifs.price }}</h1>
                               <h2>Сомони <br>в меяц</h2>
                             </div>
-                            <div class="gigabytes_block">
+                            <div class="gigabytes_block" *ngIf="changeTarifs.limit > 0">
                               <div class="gigabytes_item">
                                 <p>Гигабайты</p>
-                                <p>{{ changeTarifs.gigSpeed }}</p>
+                                <p>{{ changeTarifs.limit }}</p>
                               </div>
-                              <progress max="500" [value]="changeTarifs.gigSpeed"></progress>
+                              <progress max="500" [value]="changeTarifs.limit / 1024"></progress>
+                            </div>
+
+                            <div class="gigabytes_block" *ngIf="changeTarifs.limit < 1">
+                              <div class="gigabytes_item">
+                                <p>Гигабайты</p>
+                                <p><i class="fa-solid fa-infinity"></i></p>
+                              </div>
+                              <progress max="100" [value]="100"></progress>
                             </div>
                             <div class="speed_block">
-                              <p> &#9830; Скорость {{changeTarifs.speed }} Mbit/s</p>
-                              <progress max="15" [value]="changeTarifs.speed"></progress>
+                              <p> &#9830; Скорость {{ changeTarifs.speed / 1000 }} Mbit/s</p>
+                              <progress max="20.5" [value]="changeTarifs.speed / 1000"></progress>
                             </div>
                             <div class="tariffs_button">
-                              <button [disabled]="changeTarifs.id == tarifsLocal_id" [ngStyle]="{color: changeTarifs.id == tarifsLocal_id ? 'grey': '#FFF'}" (click)="sendTarifOrder( changeTarifs.id, changeTarifs.gigSpeed)">Оставить заявку</button>
+                              <button [disabled]="changeTarifs.id == tarifsLocal_id" [ngStyle]="{color: changeTarifs.id == tarifsLocal_id ? 'grey': '#FFF'}" (click)="openTarifOrder(changeTarifs.limit)">Оставить заявку</button>
                             </div>
                           </div>
                         </div>

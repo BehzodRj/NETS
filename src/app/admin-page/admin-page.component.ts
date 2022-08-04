@@ -14,9 +14,10 @@ export class AdminPageComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute, private request: RequestsService) { }
 
   ngOnInit() {
-    this.route.params.subscribe( (param: any) => {
-      localStorage.setItem('tarifs_id', param.id)
-      this.tarifsData = this.request.getLocalTarifs.filter( (res: any) => res.id == param.id )[0]
+    this.request.getRequest('/api/cust_cab/my_tarif').subscribe(response => {
+      this.tarifsData = response
+    }, error => {
+      this.request.error(error)
     })
   }
 

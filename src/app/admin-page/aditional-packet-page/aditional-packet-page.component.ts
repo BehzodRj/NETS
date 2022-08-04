@@ -21,7 +21,7 @@ export class AditionalPacketPageComponent implements OnInit {
   }
 
   backToPackages() {
-    this.router.navigate(['/packet', localStorage.getItem('packages_id')])
+    this.router.navigate(['/packet'])
   }
 
   modalPackagesOpenButton(name: any, id: number) {

@@ -20,22 +20,30 @@
                   <h1>{{ tarifsData.price }}</h1>
                   <h3>Сомони <br />в меcяц</h3>
                 </div>
-                <div class="gigabytes_block">
+                <div class="gigabytes_block" *ngIf="tarifsData.limit > 0">
                   <div class="gigabytes_item">
                     <p>Гигабайты</p>
-                    <p>{{ tarifsData.gigSpeed }}</p>
+                    <p>{{ tarifsData.limit }}</p>
                   </div>
-                  <progress max="500" [value]="tarifsData.gigSpeed"></progress>
+                  <progress max="500" [value]="tarifsData.limit / 1024"></progress>
+                </div>
+
+                <div class="gigabytes_block" *ngIf="tarifsData.limit < 1">
+                  <div class="gigabytes_item">
+                    <p>Гигабайты</p>
+                    <p><i class="fa-solid fa-infinity"></i></p>
+                  </div>
+                  <progress max="100" [value]="100"></progress>
                 </div>
                 <div class="speed_block">
-                  <p>Скорость {{ tarifsData.speed }} Mbit/s</p>
-                  <progress max="15" [value]="tarifsData.speed"></progress>
+                  <p> &#9830; Скорость {{ tarifsData.speed / 1000 }} Mbit/s</p>
+                  <progress max="20.5" [value]="tarifsData.speed / 1000"></progress>
                 </div>
                 <div class="tariffs_button">
-                  <button [routerLink]="['/trafics', tarifsData.id]">Проверить остаток</button>
+                  <button [routerLink]="['/trafics']">Проверить остаток</button>
                 </div>
               </div>
-              <h2 routerLink="/tarifs">Сменить тариф</h2>
+              <h2 [routerLink]="['/tarifs', tarifsData.id]" routerLinkActive="router-link-active" >Сменить тариф</h2>
             </div>
             <div class="banners_block"></div>
           </div>

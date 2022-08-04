@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { RequestsService } from 'src/app/all.service';
 
 @Component({
   selector: 'app-balances-page',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class BalancesPageComponent implements OnInit {
   modalQrCode = false; 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private request: RequestsService) { }
 
   ngOnInit() {}
 

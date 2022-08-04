@@ -24,7 +24,6 @@ export class PacketsPageComponent implements OnInit {
       this.deletePackageButton = true
     } else if(local < 1) {
       this.deletePackageButton = false
-      alert('s')
     }
   }
 

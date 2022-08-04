@@ -30,7 +30,6 @@ export class AppComponent {
     this.allPoints.geometry.attributes.position.needsUpdate = true;
     this.renderer.render( this.scene, this.camera );
     setTimeout(()=>this.animate(), 10)
-    
   }
     constructor() {
       
@@ -59,9 +58,6 @@ export class AppComponent {
       this.allPoints = new THREE.Points( geometry, material );
       this.scene.add( this.allPoints );
       requestAnimationFrame(()=>{this.animate()})
-
-
-
     }
 
 }
