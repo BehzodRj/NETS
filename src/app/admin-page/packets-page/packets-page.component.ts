@@ -9,28 +9,28 @@ import { RequestsService } from 'src/app/all.service';
 })
 export class PacketsPageComponent implements OnInit {
   packagesData: any = []
-  deletePackageButton = true
 
-  constructor(private route: ActivatedRoute, private router: Router, private request: RequestsService) { }
+  constructor(private router: Router, private request: RequestsService) { }
 
   ngOnInit() {
-    this.route.params.subscribe( (param: any) => {
-      localStorage.setItem('packages_id', param.id)
-      this.packagesData = this.request.getLocalPackages.filter( (res: any) => res.id == param.id )[0]
+    this.request.getRequest('/api/cust_cab/get_my_additional_traffic').subscribe( (response: any) => {
+      if(response.length < 1) {
+        this.packagesData = []
+      } else if(response.length > 0) {
+        this.packagesData = response[response.length - 1]
+      }
+    }, error => {
+      this.request.error(error)
     })
-    
-    let local: any = localStorage.getItem('packages_id')
-    if( local >= 1) {
-      this.deletePackageButton = true
-    } else if(local < 1) {
-      this.deletePackageButton = false
-    }
   }
 
-  deletePackage() {
-    this.packagesData = []
-    localStorage.setItem('packages_id', '0')
-    this.deletePackageButton = false
+  connectNewPackage() {
+    if(this.packagesData.length < 1) {
+      localStorage.setItem('package_id', '0')
+    } else {
+      localStorage.setItem('package_id', this.packagesData.additional_traffic.id)
+    }
+    this.router.navigate(['/additionalPackage'])
   }
 
   logOut() {

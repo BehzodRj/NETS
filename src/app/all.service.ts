@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class RequestsService {
-  private url = 'https://api.nets.tj'
-  // https://45.94.219.6:8080
+  private url = ' https://api.nets.tj'
+  // http://45.94.219.6:12345
   // https://api.nets.tj
   allChannelsService = [
     { img: './assets/img/allChannels_category/All/1.jpg' },
@@ -343,15 +343,15 @@ export class RequestsService {
     return this.http.get( this.url + dataUrl + id, {headers: header})
   }
 
-  postRequest(dataUrl: any, body = {}) {
+  postRequest(dataUrl: any, body: any) {
     let header: HttpHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `${localStorage.getItem('access_token')}`
     })
-    return this.http.post( this.url + dataUrl, { body }, {headers: header})
+    return this.http.post( this.url + dataUrl, body, {headers: header})
   }
 
-  putRequest(dataUrl: any, id: any, body = {}) {
+  putRequest(dataUrl: any, id: any, body: any) {
     let header: HttpHeaders = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `${localStorage.getItem('access_token')}`
@@ -366,7 +366,5 @@ export class RequestsService {
     })
     return this.http.delete( this.url + dataUrl + id, {headers: header})
   }
-  // End of Auth Request
-
-  // End of Global Requests
+  // End of Auth Requests
 }

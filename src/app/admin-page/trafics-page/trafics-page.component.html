@@ -19,34 +19,29 @@
                 <div class="browsingTraffic_item">
                   <div class="circle_block">
                     <mat-progress-spinner class="circle1" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.limit / 1024 * 10"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic" *ngIf="trafficFullData.id == 2"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic / 1.5" *ngIf="trafficFullData.id == 3"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic / 2" *ngIf="trafficFullData.id == 4"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic / 3" *ngIf="trafficFullData.id == 5"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.trafficFull[0]?.remainTraffic / 5" *ngIf="trafficFullData.id == 6"></mat-progress-spinner>
+                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.in_bytes / 1024"></mat-progress-spinner>
                     <div class="number">
-                      <h2>{{ trafficFullData.name }} <!-- <span>GB</span> --> </h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024}} <span>GB</span></h2>
                     </div>
                   </div>
                   <div class="general_block">
                     <div class="general_item">
                       <h3>Общий трафик</h3>
-                      <h2>{{ trafficFullData.limit / 1024}}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024}}GB</h2>
                     </div>
                     <div class="line"></div>
                   </div>
                   <div class="spent_block">
                     <div class="spent_item">
                       <h3>Потраченный трафик</h3>
-                      <h2>{{ trafficFullData.limit / 1024 }}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024}}GB</h2>
                     </div>
                     <div class="line"></div>
                   </div>
                   <div class="remainder_block">
                     <div class="remainder_item">
                       <h3>Оставшийся трафик</h3>
-                      <h2>{{ trafficFullData.limit / 1024 }}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024}}GB</h2>
                     </div>
                   </div>
                   <!-- <div class="traffic_btn">

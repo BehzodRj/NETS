@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RequestsService } from 'src/app/all.service';
 
 @Component({
@@ -16,8 +16,13 @@ export class AditionalPacketPageComponent implements OnInit {
   constructor(private request: RequestsService, private router: Router) { }
 
   ngOnInit() {
-    this.changePackagesData = this.request.getLocalPackages
-    this.packageLocal_id = localStorage.getItem('packages_id')
+      this.packageLocal_id = localStorage.getItem('package_id')
+    
+  this.request.getRequest('/api/cust_cab/get_additional_traffic').subscribe(response => {
+    this.changePackagesData = response
+  }, error => {
+    this.request.error(error)
+  })
   }
 
   backToPackages() {
@@ -31,7 +36,17 @@ export class AditionalPacketPageComponent implements OnInit {
   }
 
   modalPackagesConnectButton() {
-    this.router.navigate(['/packet', this.modalPackagesId])
+    this.request.postRequest(
+      '/api/cust_cab/add_additional_traffic',
+      {
+        'additional_traffic_id': this.modalPackagesId,
+      }
+    ).subscribe(response => {
+      console.log(response);
+      this.router.navigate(['/packet'])
+    }, error => {
+      this.request.error(error)
+    })
   }
 
   logOut() {

@@ -2,7 +2,7 @@
     
     <div class="modal_block">
      <i class="fa fa-times" (click)="modalPackagesConnect = false"></i>
-     <h2>Подключить пакет +{{ modalPackagesName }}GB?</h2>
+     <h2>Подключить пакет {{ modalPackagesName }} ?</h2>
      <div class="button_block">
         <button (click)="modalPackagesConnectButton()">Да, подключить</button>
         <button (click)="modalPackagesConnect = false">Отмена</button>
@@ -33,7 +33,7 @@
                     <div class="tarriffs_block">
                       <div class="name_block">
                         <h3>Название</h3>
-                        <h2>+{{ packagesData.name }}GB</h2>
+                        <h2>{{ packagesData.name }}</h2>
                       </div>
                       <div class="line"></div>
                       <div class="price_block">
