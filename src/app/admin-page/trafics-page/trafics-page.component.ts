@@ -13,8 +13,12 @@ export class TraficsPageComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private request: RequestsService) { }
 
   ngOnInit() {
-    this.route.params.subscribe( (param: any) => {
-      this.trafficFullData = this.request.getLocalTarifs.filter( (res: any) => res.id == param.id)[0]
+    this.request.getRequest('/api/cust_cab/get_my_traffic').subscribe( (response: any) => {
+      this.trafficFullData = response[response.length - 1]
+      console.log(response[response.length - 1]);
+      
+    }, error => {
+      this.request.error(error)
     })
   }
 

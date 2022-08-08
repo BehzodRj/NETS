@@ -19,13 +19,12 @@ const routes: Routes = [
   { path: 'b2b', component: ForBusinessPageComponent },
   { path: 'vacancy', component: VacancyPageComponent }, 
   { path: 'vacancy-special/:id', component: VacancySpecialComponent}, 
-  { path: 'admin/:id', component:AdminPageComponent },
-  { path: 'tarifs', component:TarifsPageComponent },
+  { path: 'admin', component:AdminPageComponent },
+  { path: 'tarifs/:id', component:TarifsPageComponent },
   { path: 'balance', component:BalancesPageComponent },
-  { path: 'trafics/:id', component:TraficsPageComponent },
-  { path: 'packet/:id', component:PacketsPageComponent },
-  { path: 'setting', component:SettingsPageComponent },
-  { path: 'slick', component:SlickComponent },
+  { path: 'trafics', component:TraficsPageComponent },
+  { path: 'packet', component:PacketsPageComponent },
+  // { path: 'setting', component:SettingsPageComponent },
   { path: 'additionalPackage', component: AditionalPacketPageComponent},
 
 ];

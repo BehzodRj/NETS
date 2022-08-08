@@ -17,7 +17,7 @@
             </div> -->
             <div class="menu_block">
               <div class="menu-item">
-                <div class="item-list" id="tr" [routerLink]="['/admin', adminId]">
+                <div class="item-list" id="tr" [routerLink]="['/admin']">
                   <img  src="./assets/img/admin_page/tarifs_icon.svg" alt="" />
                   <h2 routerLinkActive="active">Тариф</h2>
                 </div>
@@ -29,23 +29,23 @@
                 </div>
               </div>
               <div class="menu-item">
-                <div class="item-list" [routerLink]="['/trafics', adminId]">
+                <div class="item-list" [routerLink]="['/trafics']">
                   <img src="./assets/img/admin_page/trafics_icon.svg" alt="" />
                   <h2 routerLinkActive="active">Трафик</h2>
                 </div>
               </div>
               <div class="menu-item">
-                <div class="item-list" [routerLink]="['/packet', packagesId]">
+                <div class="item-list" [routerLink]="['/packet']">
                   <img src="./assets/img/admin_page/packets_icon.svg" alt="" />
                   <h2 routerLinkActive="active">Пакеты</h2>
                 </div>
               </div>
-              <div class="menu-item">
+              <!-- <div class="menu-item">
                 <div class="item-list" routerLink="/setting">
                   <img src="./assets/img/admin_page/setting_icon.svg" alt="" />
                   <h2 routerLinkActive="active">Настройки</h2>
                 </div>
-              </div>
+              </div> -->
             </div>
             <li (click)="logOut()">
              <img src="./assets/img/admin_page/logOut.svg" alt="">

@@ -1,10 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestsService {
+  private url = ' https://api.nets.tj'
+  // http://45.94.219.6:12345
+  // https://api.nets.tj
   allChannelsService = [
     { img: './assets/img/allChannels_category/All/1.jpg' },
     { img: './assets/img/allChannels_category/All/2.jpg' },
@@ -276,22 +280,7 @@ export class RequestsService {
       { img: './assets/img/allChannels_category/entertainment/7.jpg' }
     ]
 
-    private url = "http://example.tj"
-
-  constructor(private http: HttpClient) {}
-
-  // Local Requests
-
-  // Tarifs
-  getLocalTarifs: any = [
-    {id: 1, price: '280', gigSpeed: 70, speed: 5, trafficFull: [{ spendTraffic: 0,  remainTraffic: 70}] },
-    {id: 2, price: '400', gigSpeed: 100, speed: 8, trafficFull: [{ spendTraffic: 20,  remainTraffic: 80}] },
-    {id: 3, price: '600', gigSpeed: 150, speed: 10, trafficFull: [{ spendTraffic: 40,  remainTraffic: 110}] },
-    {id: 4, price: '800', gigSpeed: 200, speed: 12, trafficFull: [{ spendTraffic: 60,  remainTraffic: 140}]},
-    {id: 5, price: '1200', gigSpeed: 300, speed: 12, trafficFull: [{ spendTraffic: 80,  remainTraffic: 220}]},
-    {id: 6, price: '2000', gigSpeed: 500, speed: 15, trafficFull: [{ spendTraffic: 100,  remainTraffic: 400}]}
-  ]
-  // End of Tarifs
+  constructor(private http: HttpClient, private router: Router) {}
 
 
   // Packages
@@ -303,20 +292,79 @@ export class RequestsService {
   ]
   // End of Packages
 
-  // End of Local Requests
-
-
-
-  // Global Requests
-
   // Auth Request
-  authRequest(login: any, password: any) {
+  authRequest(id: any, password: any) {
     let header: HttpHeaders = new HttpHeaders({
       'Content-Type': 'application/json'
     })
-    return this.http.post( this.url + "/api/auth/login", {"login": login, "password": password}, {headers: header})
+    return this.http.post( this.url + "/api/cust_cab/login", {"id": id, "password": password}, {headers: header})
   }
+
+  refreshTokenRequest(refresh_token: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+    return this.http.post( this.url + "/refresh", {"refresh_token": refresh_token}, {headers: header})
+  }
+
+  // Error
+
+  error(error: any) {
+    alert(error.error.Error)
+    if(error.status == 401) {
+      this.refreshTokenRequest(localStorage.getItem('refresh_token')).subscribe( (response: any) => {
+        localStorage.setItem('access_token', response.access_token)
+        localStorage.setItem('refresh_token', response.refresh_token)
+        location.reload()
+      }, error => {
+        localStorage.clear()
+        this.router.navigate(['/'])
+      })
+    }
+  }
+
+  // End of Error 
+
   // End of Auth Request
 
-  // End of Global Requests
+  getRequest(dataUrl: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${localStorage.getItem('access_token')}`
+    })
+    return this.http.get( this.url + dataUrl, {headers: header})
+  }
+
+  getRequestByID(dataUrl:any , id: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${localStorage.getItem('access_token')}`
+    })
+    return this.http.get( this.url + dataUrl + id, {headers: header})
+  }
+
+  postRequest(dataUrl: any, body: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${localStorage.getItem('access_token')}`
+    })
+    return this.http.post( this.url + dataUrl, body, {headers: header})
+  }
+
+  putRequest(dataUrl: any, id: any, body: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${localStorage.getItem('access_token')}`
+    })
+    return this.http.put( this.url + dataUrl + id, { body }, {headers: header})
+  }
+
+  deleteRequest(dataUrl: any, id: any) {
+    let header: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${localStorage.getItem('access_token')}`
+    })
+    return this.http.delete( this.url + dataUrl + id, {headers: header})
+  }
+  // End of Auth Requests
 }

@@ -712,6 +712,7 @@
             align-items: center;
             height: 100px;
             border-bottom: 1px solid #FFFFFF;
+            cursor: pointer;
 
 
             &:active {
@@ -732,7 +733,6 @@
               margin: 0;
               margin-left: 30px;
               color: #fff;
-              cursor: pointer;
             }
 
             &:last-child {
@@ -1161,6 +1161,7 @@
           line-height: 140%;
           color: #EA3E2A;
           text-align: center;
+          margin: 0;
           cursor: pointer;
 
           &:hover {

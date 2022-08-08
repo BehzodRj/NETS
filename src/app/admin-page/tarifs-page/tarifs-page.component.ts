@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RequestsService } from 'src/app/all.service';
 
 @Component({
@@ -10,25 +10,31 @@ import { RequestsService } from 'src/app/all.service';
 export class TarifsPageComponent implements OnInit {
   changeTarifsData: any = []
   tarifs_name: any
-  tarifs_id: any
   tarifsLocal_id: any
   showModalTarifsOrder = false
 
-  constructor(private request: RequestsService, private router: Router) { }
+  constructor(private request: RequestsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.changeTarifsData = this.request.getLocalTarifs
-    this.tarifsLocal_id = localStorage.getItem('tarifs_id')
+    this.route.params.subscribe( (params: any) => {
+      this.tarifsLocal_id = params.id
+    })
+
+    this.request.getRequest('/api/cust_cab/get_tarifs').subscribe(response => {
+      console.log(response);
+      this.changeTarifsData = response
+    }, error => {
+      this.request.error(error)
+    })
   }
 
   backToTarif() {
-    this.router.navigate(['/admin', localStorage.getItem('tarifs_id')])
+    this.router.navigate(['/admin'])
   }
 
-  sendTarifOrder(id: number, name: any) {
-    this.tarifs_id = id
-    this.tarifs_name = name
+  openTarifOrder(name: any) {
     this.showModalTarifsOrder = true
+    this.tarifs_name = name
   }
 
   logOut() {

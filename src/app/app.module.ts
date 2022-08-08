@@ -50,7 +50,6 @@ import { HeaderMobiComponent } from './admin-page/header-mobi/header-mobi.compon
     HeaderMobiComponent,
   ],
   imports: [
-    
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,

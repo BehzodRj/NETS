@@ -104,15 +104,15 @@ export class PrivateClientsPageComponent implements OnInit {
       id: 1,
       name: 'GPON+ WIFI',
       img: './assets/img/gpon_wifi.svg',
-      text: 'ONU BDCOM GP1704-2F-E',
-      price: '450',
+      text: 'XPON ONU IGWIFE with WIFE',
+      price: '300',
     },
     {
       id: 2,
       name: 'IPTV',
       img: './assets/img/iptv.svg',
       text: 'TX3 mini',
-      price: '299',
+      price: '--',
     },
     {
       id: 3,
@@ -126,25 +126,28 @@ export class PrivateClientsPageComponent implements OnInit {
       name: 'IPTV',
       img: './assets/img/iptv.svg',
       text: 'TX3 mini',
-      price: '299',
+      price: '--',
     },
   ];
   wifiModal: any = [
     {
       id: 1,
       img: './assets/img/gpon_wifi.svg',
-      title: 'ONU BDCOM GP1704-2F-E',
-      price: '450',
+      title: 'XPON ONU IGWIFE with WIFE',
+      price: '300',
       textModal:
-        'BDCOM GP1704 — это умный абонентский терминал со встроенными: беспроводной, VoIP и CATV функциями. BDCOM GP1704 ориентирована на интегрированную мультисервисную сеть оператора связи.',
+        'XPON ONU IGWIFE with WIFE',
+      rentButton: 'Аренда 25с На 12 месяцев',
+      rentButton2: 'Аренда 50с На 6 месяцев'
     },
     {
       id: 2,
       img: './assets/img/iptv.svg',
-      title: 'IPTV',
+      title: 'TX3 mini',
       price: '299',
       textModal:
-        'TX3 mini работает на операционной системе Android 9.0, имеет производительный 4-ядерный процессор Quad Core ARM Cortex A53 и видео процессор Penta Core Mali-450. Имеет высокую скорость работы и высокое разрешение картинки, включая 4К UHD.',
+        'TX3 mini работает на операционной системе Android 9.0, имеет производительный 4-ядерный процессор Quad Core ARM Cortex A53 и видео процессор Penta Core Mali-450. Имеет высокую скорость работы и высокое разрешение картинки, включая 4К UHD.',
+      rentButton: ''
     },
     {
       id: 3,
@@ -153,14 +156,16 @@ export class PrivateClientsPageComponent implements OnInit {
       price: '299',
       textModal:
         'Абонентский терминал ONU GPON, 1 порт 10/100/1000Base-T, в мини корпусе. Полная совместимость со стандартом ITU-T G.984.X, поддерживает 1 порт GPON (SC/UPC) и 1 порт 10/100/1000-Base-T (RJ45).',
+      rentButton: 'Аренда 25с На 18 месяцев'
     },
     {
       id: 4,
       img: './assets/img/gpon.svg',
-      title: 'GPON',
+      title: 'TX3 mini',
       price: '299',
       textModal:
         'Абонентский терминал ONU GPON, 1 порт 10/100/1000Base-T, в мини корпусе. Полная совместимость со стандартом ITU-T G.984.X, поддерживает 1 порт GPON (SC/UPC) и 1 порт 10/100/1000-Base-T (RJ45).',
+      rentButton: ''
     },
   ];
   textSetting: any = [

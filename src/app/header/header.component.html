@@ -84,7 +84,7 @@
             >
               <mat-expansion-panel-header>
                 <mat-panel-title  >
-                  <!-- <h1 (click)="modalSignIn = true">Войти</h1> -->
+                  <h1 (click)="modalSignIn = true">Войти</h1>
                 </mat-panel-title>
               </mat-expansion-panel-header> 
             </mat-expansion-panel>
@@ -105,17 +105,17 @@
 <div class="modal__SignIn" *ngIf="modalSignIn">
   <div class="modalSignIn__content" > 
      <i class="fa fa-times" (click)="modalSignIn = false"></i>
-    <div class="sign_block">
+    <div class="sign_block" [formGroup]="authForm">
       <h1>Вход в личный кабинет</h1>
       <div class="oldPassword_block">
-        <input type="text" placeholder="Старый пароль">
+        <input type="number" placeholder="Лицевой счёт" formControlName="id">
     </div>
     <div class="newPassword_block">
-      <input [type]="typePassword" placeholder="Новый пароль">
+      <input [type]="typePassword" placeholder="Пароль" formControlName="password">
       <img src="./assets/img/eye.svg" *ngIf="typePassword == 'password'" (click)="changeTypePassword()">
       <img src="./assets/img/akar-icons_eye.svg" *ngIf="typePassword == 'text'" (click)="changeTypeText()">
   </div>
-      <!-- <button (click)="logIn()">Войти</button> -->
+      <button [disabled]="authForm.invalid" [ngStyle]="{opacity: authForm.invalid ? '0.6' : '1'}" (click)="logIn()">Войти</button>
       <!-- <img src="./assets/img/8.svg" alt=""> -->
     </div>
   </div>
