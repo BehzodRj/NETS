@@ -15,21 +15,21 @@ export class ForBusinessPageComponent implements OnInit {
 
 
   constructor() {
-    this.renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( this.renderer.domElement );
+    // this.renderer.setSize( window.innerWidth, window.innerHeight );
+    // document.body.appendChild( this.renderer.domElement );
 
-    const geometry = new THREE.PlaneGeometry(2.5, 1, 1);
-    const texture = new THREE.TextureLoader().load( '/assets/img/logoB2B.svg' );
-    const material = new THREE.MeshBasicMaterial( { map: texture } );
-    const cube = new THREE.Mesh( geometry, material );
-    this.scene.add( cube );
-    this.camera.position.z = 10;
+    // const geometry = new THREE.PlaneGeometry(2.5, 1, 1);
+    // const texture = new THREE.TextureLoader().load( '/assets/img/logoB2B.svg' );
+    // const material = new THREE.MeshBasicMaterial( { map: texture } );
+    // const cube = new THREE.Mesh( geometry, material );
+    // this.scene.add( cube );
+    // this.camera.position.z = 10;
     
-    const animate = () => {
-      this.renderer.render(this.scene, this.camera)
-      requestAnimationFrame(animate)
-    }
-    animate()
+    // const animate = () => {
+    //   this.renderer.render(this.scene, this.camera)
+    //   requestAnimationFrame(animate)
+    // }
+    // animate()
   }
 
   ngOnInit() {}

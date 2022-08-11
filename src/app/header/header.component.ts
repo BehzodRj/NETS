@@ -26,9 +26,11 @@ export class HeaderComponent implements OnInit {
 
     if( localStorage.getItem('access_token') ) {
       this.router.navigate(['/admin'])
-    } else {
-      this.router.navigate(['/'])
     }
+  }
+
+  routerVacancy() {
+    localStorage.setItem('showId', '1')
   }
 
   changeTypePassword() {

@@ -44,7 +44,7 @@
 <div class="specialVacancy__container" *ngIf="modalShow == false">
     <app-header></app-header>
     <div class="type_page">
-    <h2 routerLink="/vacancy">Вакансии</h2>
+    <h2 (click)="backToVacancy()">Вакансии</h2>
     <h3>\ {{ fullVacancyData.title }}</h3>
   </div>
   <div class="special_container">

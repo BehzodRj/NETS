@@ -18,9 +18,15 @@ export class VacancyPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    setTimeout(() => {
+    let loc: any = localStorage.getItem('showId')
+
+    if(loc == 1) {
+      setTimeout(() => {
+        this.show = true
+      }, 9000);
+    } else if(loc == 2) {
       this.show = true
-    }, 9000);
+    }
   }
 
 }

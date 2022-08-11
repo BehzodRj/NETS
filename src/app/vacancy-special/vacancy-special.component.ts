@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-vacancy-special',
@@ -19,7 +19,7 @@ export class VacancySpecialComponent implements OnInit {
   modalShow = false
   getChooseFile:any
   show = true
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     
@@ -41,6 +41,11 @@ export class VacancySpecialComponent implements OnInit {
   send(){
     const vacancyAddFormData = {...this.vacancyAddForm.value}
     console.log(vacancyAddFormData) 
+  }
+
+  backToVacancy() {
+    this.router.navigate(['/vacancy'])
+    localStorage.setItem('showId', '2')
   }
  
 

@@ -8,7 +8,7 @@
       Частным клиентам
     </h3>
     <h3 [routerLink]="['/b2b']" routerLinkActive="active">Для бизнеса</h3>
-    <h3 [routerLink]="['/vacancy']" routerLinkActive="active">Вакансии</h3>
+    <h3 (click)="routerVacancy()" [routerLink]="['/vacancy']" routerLinkActive="active">Вакансии</h3>
   </div>
 </div>
 <div class="header__subtitle">
@@ -55,7 +55,7 @@
             >
               <mat-expansion-panel-header>
                 <mat-panel-title  >
-                  <h1 routerLink="/b2b">Для бизнеса</h1>
+                  <h1 [routerLink]="['/b2b']" routerLinkActive="active">Для бизнеса</h1>
                 </mat-panel-title>
               </mat-expansion-panel-header> 
             </mat-expansion-panel>
@@ -69,7 +69,7 @@
             >
               <mat-expansion-panel-header>
                 <mat-panel-title  >
-                  <h1 routerLink="/vacancy">Вакансии</h1>
+                  <h1 (click)="routerVacancy()" [routerLink]="['/vacancy']" routerLinkActive="active">Вакансии</h1>
                 </mat-panel-title>
               </mat-expansion-panel-header> 
             </mat-expansion-panel>
