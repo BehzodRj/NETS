@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -14,15 +14,16 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
   height: 100%;
 }
 
 .mat-expansion-panel-body {
-  padding:0;
+  padding: 0;
 }
-.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover{
-  background: #EA3E2A;
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
+  .mat-expansion-panel-header:hover {
+  background: #ea3e2a;
 }
 // Scrollbar
 ::-webkit-scrollbar {
@@ -34,35 +35,34 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EA3E2A;
+  background: #ea3e2a;
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #EA3E2A;
+  background: #ea3e2a;
 }
 // End of Scrollbar
-  
-.slide { 
+
+.slide {
   display: flex;
   justify-content: center;
-} 
-.slick-initialized div.slick-slide{
-  display: flex; 
-
 }
-.slick-next:before{
+.slick-initialized div.slick-slide {
+  display: flex;
+}
+.slick-next:before {
   display: none;
-} 
-.slick-prev:before, .slick-next:before{
+}
+.slick-prev:before,
+.slick-next:before {
   display: none;
 }
 
 .circle_block {
-
   .circle1 {
     position: absolute;
-    
+
     circle {
       stroke: gray !important;
     }
@@ -72,7 +72,15 @@ body {
     position: absolute;
 
     circle {
-      stroke: #EA3E2A !important;
+      stroke: #ea3e2a !important;
+    }
+  }
+}
+
+.btn-img {
+  svg {
+    .accent-color-fill {
+      fill: red !important;
     }
   }
 }

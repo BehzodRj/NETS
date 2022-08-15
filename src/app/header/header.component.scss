@@ -42,6 +42,7 @@
   margin: auto;
   z-index: 99;
   background: rgba(0, 0, 0, .6);
+  margin: 10px 0;
 
   .header__container {
     width: 90%;
@@ -353,42 +354,53 @@
         margin: 0 auto;
         background: rgba(255, 255, 255, 0.03);
         margin-top: 85px;
+        input::-webkit-inner-spin-button,
+          input::-webkit-outer-spin-button{
+            -webkit-appearance:none;
+          }
+          input[type="number"]{
+            -moz-appearance: textfield;
+          }
         input{
-            width: 96%;
-            border: none;
-            outline: none;
-            background: none;
-            font-size: 18px;
-            margin-left: 8px;
-            color: #fff;
-            height: 45px;
-            text-indent: 10px;
-
+          width: 100%;
+          border: none;
+          outline: none;
+          background: #202020;
+          border-radius: 35px;
+          font-size: 18px;
+          /* margin-left: 8px; */
+          color: #fff;
+          height: 45px;
+          text-indent: 10px;
+      
+          
             &:-webkit-autofill {
               -webkit-text-fill-color: #fff;
               transition: background-color 5000s ease-in-out 0s;
+              -webkit-appearance: none;
             }
         }
     }
     .newPassword_block{
-        display: flex;
-        border: 1px solid #6F7071;
-        border-radius: 80px;
-        width: 70%;
-        background: rgba(255, 255, 255, 0.03);
-        margin: 0 auto;
-        gap: 5px;
-        margin-top: 25px;
+      display: flex;
+      border: 1px solid #6F7071;
+      border-radius: 80px;
+      width: 70%;
+      background: #202020;
+      margin: 25px auto 0;
+      gap: 5px;
+  
         input{
-        width: 78%;
-        border: none;
-        outline: none;
-        background: none;
-        height: 45px;
-        font-size: 18px;
-        margin-left: 8px;
-        color: #fff;
-        text-indent: 10px;
+          width: 78%;
+          border: none;
+          outline: none;
+          background: #202020;
+          height: 45px;
+          font-size: 18px;
+          /* margin-left: 8px; */
+          border-radius: 25px;
+          color: #fff;
+          text-indent: 10px;
 
         &:-webkit-autofill {
           -webkit-text-fill-color: #fff;
