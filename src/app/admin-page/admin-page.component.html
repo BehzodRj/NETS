@@ -23,9 +23,13 @@
                 <div class="gigabytes_block" *ngIf="tarifsData.limit > 0">
                   <div class="gigabytes_item">
                     <p>Гигабайты</p>
-                    <p>{{ tarifsData.limit }}</p>
+                    <p>{{ tarifsData.limit / 1024 / 1024 / 1024 }}</p>
                   </div>
-                  <progress max="500" [value]="tarifsData.limit / 1024"></progress>
+                  <progress max="1000" [value]="tarifsData.limit / 1024 / 1024 / 1024"></progress>
+                </div>
+                <div class="speed_block" *ngIf="tarifsData.limit > 0">
+                  <p> &#9830; Скорость {{ tarifsData.speed }} Mbit/s</p>
+                  <progress max="20.5" [value]="tarifsData.speed"></progress>
                 </div>
 
                 <div class="gigabytes_block" *ngIf="tarifsData.limit < 1">
@@ -35,7 +39,7 @@
                   </div>
                   <progress max="100" [value]="100"></progress>
                 </div>
-                <div class="speed_block">
+                <div class="speed_block" *ngIf="tarifsData.limit < 1">
                   <p> &#9830; Скорость {{ tarifsData.speed / 1000 }} Mbit/s</p>
                   <progress max="20.5" [value]="tarifsData.speed / 1000"></progress>
                 </div>

@@ -19,29 +19,29 @@
                 <div class="browsingTraffic_item">
                   <div class="circle_block">
                     <mat-progress-spinner class="circle1" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
-                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="trafficFullData.in_bytes / 1024"></mat-progress-spinner>
+                    <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
                     <div class="number">
-                      <h2>{{ trafficFullData.in_bytes / 1024}} <span>GB</span></h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }} <span>GB</span></h2>
                     </div>
                   </div>
                   <div class="general_block">
                     <div class="general_item">
                       <h3>Общий трафик</h3>
-                      <h2>{{ trafficFullData.in_bytes / 1024}}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }}GB</h2>
                     </div>
                     <div class="line"></div>
                   </div>
                   <div class="spent_block">
                     <div class="spent_item">
                       <h3>Потраченный трафик</h3>
-                      <h2>{{ trafficFullData.in_bytes / 1024}}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }}GB</h2>
                     </div>
                     <div class="line"></div>
                   </div>
                   <div class="remainder_block">
                     <div class="remainder_item">
                       <h3>Оставшийся трафик</h3>
-                      <h2>{{ trafficFullData.in_bytes / 1024}}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }}GB</h2>
                     </div>
                   </div>
                   <!-- <div class="traffic_btn">
