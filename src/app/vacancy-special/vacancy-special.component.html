@@ -55,55 +55,79 @@
     <div class="text">
       <h1>{{ fullVacancyData.title }}</h1>
       <div class="insideText">
-        <h2>Что нужно делать:</h2>
+        <h2>{{fullVacancyData.looking}}</h2>
+        <h2>{{fullVacancyData.desk}}</h2>
+
+        <h2 *ngIf="fullVacancyData.tasks?.length > 0 || fullVacancyData.write?.length > 0 || fullVacancyData.create?.length > 0 || fullVacancyData.optimize?.length > 0 || fullVacancyData.tracking?.length > 0 || fullVacancyData.performanser?.length > 0 || fullVacancyData.preparation?.length > 0 || fullVacancyData.activity?.length > 0 || fullVacancyData.good?.length > 0">Задачи:</h2>
         <ul>
-          <li>Обеспечивает правовое сопровождение деятельности Компании;</li>
-          <li>
-            Ведет договорную работу в компании: разрабатывает проекты договоров
-            (подряд на выполнение работ; поставка оборудования, оказание услуг и
-            др.), проверяет соответствие законодательству проектов договоров,
-            представляемых Компании, обеспечивает нотариальное удостоверение или
-            государственную регистрацию отдельных видов договоров и документов;
+          <li *ngIf="fullVacancyData.tasks?.length > 0">
+            {{fullVacancyData.tasks}}
           </li>
-          <li>Ведёт документацию по корпоративному управлению;</li>
-          <li>Ведет претензионно-исковую работу в Компании;</li>
-          <li>
-            Готовит материалы для получения лицензий, разрешений и других
-            разрешительных документов, необходимых для осуществления
-            деятельности Компании; представляет интересы Компании при проверках,
-            проводимых государственными контрольно-надзорными органами;
+          <li *ngIf="fullVacancyData.write?.length > 0">
+            {{fullVacancyData.write}}
           </li>
-          <li>
-            Выполняет другие задачи и поручения непосредственного руководителя в
-            рамках своих полномочий.
+          <li *ngIf="fullVacancyData.create?.length > 0">
+            {{fullVacancyData.create}}
+          </li>
+          <li *ngIf="fullVacancyData.optimize?.length > 0">
+            {{fullVacancyData.optimize}}
+          </li>
+          <li *ngIf="fullVacancyData.tracking?.length > 0">
+            {{fullVacancyData.tracking}}
+          </li>
+          <li *ngIf="fullVacancyData.performanser?.length > 0">
+            {{fullVacancyData.performanser}}
+          </li>
+          <li *ngIf="fullVacancyData.preparation?.length > 0">
+            {{fullVacancyData.preparation}}
+          </li>
+          <li *ngIf="fullVacancyData.activity?.length > 0">
+            {{fullVacancyData.activity}}
+          </li>
+          <li *ngIf="fullVacancyData.good?.length > 0">
+            {{fullVacancyData.good}}
           </li>
         </ul>
-        <h2>Кого мы ищем:</h2>
+        <h2 *ngIf="fullVacancyData.programming?.length > 0 ||fullVacancyData.experience?.length > 0 || fullVacancyData.understanding?.length > 0 || fullVacancyData.office?.length > 0 || fullVacancyData.competent?.length > 0 || fullVacancyData.skill?.length > 0 || fullVacancyData.accuraty?.length > 0 || fullVacancyData.under?.length > 0 ||fullVacancyData.similar?.length > 0">Требования:</h2>
         <ul>
-          <li>Высшее юридическое образование - обязательно;</li>
-          <li>Опыт работы в должности юриста от 3 лет – обязательно;</li>
-          <li>
-            Знание гражданского, коммерческого, налогового, трудового,
-            административного, финансового права и других отраслей
-            законодательства РТ - обязательно;
+          <li *ngIf="fullVacancyData.programming?.length > 0">{{fullVacancyData.programming}}</li>
+          <li *ngIf="fullVacancyData.experience?.length > 0">{{fullVacancyData.experience}}</li>
+          <li *ngIf="fullVacancyData.understanding?.length > 0">{{fullVacancyData.understanding}}</li>
+          <li *ngIf="fullVacancyData.office?.length > 0">{{fullVacancyData.office}}</li>
+          <li *ngIf="fullVacancyData.competent?.length > 0">{{fullVacancyData.competent}}</li>
+          <li *ngIf="fullVacancyData.skill?.length > 0">{{fullVacancyData.skill}}</li>
+          <li *ngIf="fullVacancyData.accuraty?.length > 0">{{fullVacancyData.accuraty}}</li>
+          <li *ngIf="fullVacancyData.under?.length > 0">{{fullVacancyData.under}}</li>
+          <li *ngIf="fullVacancyData.similar?.length > 0">{{fullVacancyData.similar}}</li>
+        </ul>
+        <h2 *ngIf="fullVacancyData.Knowledge?.length > 0 || fullVacancyData.Understanding?.length > 0 || fullVacancyData.pprof?.length > 0 || fullVacancyData.nginx?.length > 0">Будет преимуществом:</h2>
+        <ul>
+          <li *ngIf="fullVacancyData.Knowledge?.length > 0">
+            {{fullVacancyData.Knowledge}}
           </li>
-          <li>
-            Знание нормативно – правовых актов, регулирующие сферу электрической
-            связи;
+          <li *ngIf="fullVacancyData.Understanding?.length > 0">
+            {{fullVacancyData.Understanding}}
           </li>
-          <li>Знание стандартов делопроизводства по правовым документам;</li>
-          <li>
-            Знание государственного и русского языков (хороший уровень устных и
-            письменных навыков) – обязательно; знание английского языка –
-            является преимуществом;
+          <li *ngIf="fullVacancyData.pprof?.length > 0">
+            {{fullVacancyData.pprof}}
           </li>
-          <li>
-            Уверенный пользователь персонального компьютера – обязательно;
+          <li *ngIf="fullVacancyData.nginx?.length > 0">
+            {{fullVacancyData.nginx}}
           </li>
-          <li>
-            Высокий уровень организованности, ответственности и деловой хватки,
-            хорошие навыки переговоров и коммуникаций, умение работать в команде
-            и инициативность в работе.
+        </ul>
+        <h2 *ngIf="fullVacancyData.willingness?.length > 0 || fullVacancyData.pursuit?.length > 0 || fullVacancyData.pprof?.ability > 0 || fullVacancyData.nginx?.openness" >Мы ценим:</h2>
+        <ul>
+          <li *ngIf="fullVacancyData.willingness?.length > 0">
+            {{fullVacancyData.willingness}}
+          </li>
+          <li *ngIf="fullVacancyData.pursuit?.length > 0">
+            {{fullVacancyData.pursuit}}
+          </li>
+          <li *ngIf="fullVacancyData.ability?.length > 0">
+            {{fullVacancyData.ability}}
+          </li>
+          <li *ngIf="fullVacancyData.openness?.length > 0">
+            {{fullVacancyData.openness}}
           </li>
         </ul>
       </div>
