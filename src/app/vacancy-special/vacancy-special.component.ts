@@ -50,6 +50,7 @@ export class VacancySpecialComponent implements OnInit {
   send(){
     const vacancyAddFormData = {...this.vacancyAddForm.value}
     console.log(vacancyAddFormData) 
+    
   }
 
   backToVacancy() {
