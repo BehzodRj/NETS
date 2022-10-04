@@ -24,10 +24,10 @@ const routes: Routes = [
   { path: 'tarifs/:id', component:TarifsPageComponent },
   { path: 'balance', component:BalancesPageComponent },
   { path: 'trafics', component:TraficsPageComponent },
-  { path: 'packet', component:PacketsPageComponent },
-  // { path: 'setting', component:SettingsPageComponent },
-  { path: 'additionalPackage', component: AditionalPacketPageComponent},
   { path: 'detail', component: DetailPageComponent },
+  { path: 'packet', component:PacketsPageComponent },
+  { path: 'additionalPackage', component: AditionalPacketPageComponent},
+  // { path: 'setting', component:SettingsPageComponent },
 
 ];
 

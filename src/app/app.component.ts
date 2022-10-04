@@ -29,7 +29,7 @@ export class AppComponent {
     }
     this.allPoints.geometry.attributes.position.needsUpdate = true;
     this.renderer.render( this.scene, this.camera );
-    setTimeout(()=>this.animate(), 10)
+    setTimeout(()=>this.animate(), 40)
   }
     constructor() {
       

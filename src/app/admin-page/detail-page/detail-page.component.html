@@ -14,25 +14,27 @@
         <div class="detail_container">
             <div class="detail_block">
                 <h1>Детализация трафика</h1>
-                <h2>Потрачено <span>75,035GB</span></h2>
-                <div class="statistics_block"></div>
-                <div class="when_block">
+                <h2>Потрачено <span>{{ sendMB | number: '1.1-2' }}MB</span></h2>
+                <div class="statistics_block">
+                  <canvas width="100vw" height="500"  id="MyChart" >{{ chart }}</canvas>
+                </div>
+                <div class="when_block" [formGroup]="detailForm">
                     <div class="when_item">
                         <h1>Период с </h1>
-                        <input type="date" value="white">
+                        <input type="date" formControlName="start_date">
                     </div>
                     <div class="when_item">
                         <h1>По</h1>
-                        <input type="date">
+                        <input type="date" formControlName="last_date">
                     </div>
                 </div>
-                <div class="period_block">
+                <!-- <div class="period_block">
                     <h1>Неделя</h1>
                     <h1>Месяц</h1>
                     <h1>Год</h1>
-                </div>
+                </div> -->
                 <div class="detail_button">
-                    <button>Далее</button>
+                    <button [disabled]="detailForm.invalid" [ngStyle]="{opacity: detailForm.invalid ? '0.5' : '1'}" (click)="filterByDate()">Далее</button>
                 </div>
             </div>
         </div>
