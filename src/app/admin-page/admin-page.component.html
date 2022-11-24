@@ -1,5 +1,6 @@
 <app-header-mobi></app-header-mobi>
-<div class="admin__page">
+<div class="loading_container">
+<div class="admin__page" *ngIf="!loading; else block">
   <app-menu-dashboard></app-menu-dashboard>
   <div class="admin__container">
     <div class="admin_navbar">
@@ -56,5 +57,9 @@
     </div>
   </div>
 </div> 
-
-
+<ng-template #block>
+  <div class="loading_block">
+  <img src="./assets/img/loadind.gif" alt="" class="loading">
+ </div>
+</ng-template>
+</div>

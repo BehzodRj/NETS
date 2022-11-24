@@ -21,13 +21,13 @@
                             <mat-progress-spinner class="circle1" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
                             <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
                             <div class="number">
-                              <h2>{{ packagesData.additional_traffic.name }} <!-- <span>GB</span> --></h2>
+                              <h2>{{ packagesData.additional_traffic!.name }} <!-- <span>GB</span> --></h2>
                             </div>
                         </div>
                         <div class="naming_block">
                             <div class="naming_item">
                                 <h3>Название</h3>
-                                <h2>{{ packagesData.additional_traffic.name }}</h2>
+                                <h2>{{ packagesData.additional_traffic!.name }}</h2>
                             </div>
                                 <div class="line"></div>
                              </div>

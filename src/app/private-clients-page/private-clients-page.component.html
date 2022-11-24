@@ -182,7 +182,7 @@
                   <h3>{{ wifiGpon.price }}TJS</h3>
                 </div>
                 <div class="btn">
-                  <button (click)="wifiClick(wifiGpon.id)">Подробнее</button>
+                  <button (click)="wifiClick(wifiGpon.id)" (click)="showModalConnection = true">Подробнее</button>
                 </div>
               </div> 
             </div> 
@@ -394,10 +394,10 @@
         </div>
         <div class="form" style="background-image: url(./assets/img/Intersect.svg);">
         <h1>Заполните поля ниже и мы вам перезвоним в течении 24 часов</h1>
-        <div class="form_item">
-          <input type="text" placeholder="Имя">
-          <input type="text" placeholder='+992'>
-          <button>Жду звонка</button>
+        <div class="form_item" [formGroup]="CallformGroup">
+          <input type="text" placeholder="Имя" formControlName="name">
+          <input type="number" placeholder='+992' formControlName="number">
+          <button (click)="waitCall()">Жду звонка</button>
         </div></div>
         <div class="left_img">
           <img src="./assets/img/back1.svg" alt="">

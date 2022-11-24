@@ -9,13 +9,15 @@ import { RequestsService } from '../all.service';
 })
 export class AdminPageComponent implements OnInit {
   tarifsData: any = []
- 
+  loading = false
  
   constructor(private router: Router, private route: ActivatedRoute, private request: RequestsService) { }
 
   ngOnInit() {
+    this.loading = true
     this.request.getRequest('/api/cust_cab/my_tarif').subscribe(response => {
       this.tarifsData = response
+      this.loading = false
     }, error => {
       this.request.error(error)
     })

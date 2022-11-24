@@ -12,17 +12,18 @@ export class TarifsPageComponent implements OnInit {
   tarifs_name: any
   tarifsLocal_id: any
   showModalTarifsOrder = false
-
+  loading = false
   constructor(private request: RequestsService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe( (params: any) => {
       this.tarifsLocal_id = params.id
     })
-
+    this.loading = true
     this.request.getRequest('/api/cust_cab/get_tarifs').subscribe(response => {
       console.log(response);
       this.changeTarifsData = response
+      this.loading = false
     }, error => {
       this.request.error(error)
     })

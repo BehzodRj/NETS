@@ -12,6 +12,7 @@ export class PrivateClientsPageComponent implements OnInit {
   colorChannel: any = 1;
   progressValue: any = -1
   fileName = 'Перетащи фото сюда или выбери из папки';
+  file : any
   slideConfig = { 
     slidesToShow: 4, 
     slidesToScroll: 1,
@@ -200,7 +201,6 @@ export class PrivateClientsPageComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  
   allChannels: any = []
   tarifsName: any;
   connectionForm!: FormGroup;
@@ -210,7 +210,7 @@ export class PrivateClientsPageComponent implements OnInit {
   slideMargin = 0;
   slideMargin2 = 0;
   activeWifi = 0;
-
+  CallformGroup!: FormGroup
   constructor(private request: RequestsService) {}
 
   ngOnInit() {
@@ -225,12 +225,49 @@ export class PrivateClientsPageComponent implements OnInit {
     });
 
     this.allChannels = this.request.allChannelsService
+
+    this.CallformGroup = new FormGroup({
+      name: new FormControl('', Validators.required),
+      number: new FormControl('', Validators.required)
+    })
   }
   submit() {
-    const connectionFormData = { ...this.connectionForm.value };
-    console.log(connectionFormData);
+    const fdata = {...this.connectionForm.value}
+    let form = new FormData()
+    form.append("surname",fdata.surname)
+    form.append("name",fdata.name)
+    form.append("secondName",fdata.secondName)
+    form.append("phone",fdata.phone)
+    form.append("address",fdata.address)
+    form.append("comments",fdata.comments)
+    form.append("cv-file",this.file)
+    let req =  this.request.postRequest1('',form)
+    
+  //  async () => {
+    
+  //  } 
+   fetch("https://nets.tj/mail_send", req)
+    .then(response => {this.connectionForm.reset()})
+    .then(result => alert('Мы объязательно вам позвоним в течение 5 минут'))
+    .catch(error => console.log("error", error));
+    
   }
-
+  waitCall(){
+    const CallformData = {...this.CallformGroup.value}
+    let form = new FormData()
+    form.append("name",CallformData.name)
+    form.append("phone",CallformData.phone)
+    console.log(CallformData.phone)
+    let req =  this.request.postRequest1('',form)
+    
+  //  async () => {
+    
+  //  } 
+   fetch("https://nets.tj/mail_send", req)
+    .then(response => {this.CallformGroup.reset()})
+    .then(result => alert('Мы объязательно вам позвоним в течение 5 минут'))
+    .catch(error => console.log("error", error));
+  }
   connectionTarifs(id: number) {
     this.showModalConnection = true;
     this.tarifsName = this.tarifsData.filter(
@@ -258,8 +295,8 @@ export class PrivateClientsPageComponent implements OnInit {
   }
 
   upload(event: any) {
-    let file = event.target.files[0];
-    this.fileName = file.name;
+    this.file = event.target.files[0];
+    // this.fileName = .name;
   }
    
 

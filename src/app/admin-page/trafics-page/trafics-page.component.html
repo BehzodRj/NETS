@@ -1,5 +1,6 @@
 <app-header-mobi></app-header-mobi>
-<div class="admin__page">
+<div class="loading_container">
+<div class="admin__page" *ngIf="!loading; else block">
   <app-menu-dashboard></app-menu-dashboard>
   <div class="admin__container">
     <div class="admin_navbar">
@@ -21,27 +22,27 @@
                     <mat-progress-spinner class="circle1" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
                     <mat-progress-spinner class="circle2" strokeWidth="12" diameter="170" [value]="100"></mat-progress-spinner>
                     <div class="number">
-                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }} <span>GB</span></h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 / 1024| number: '1.1-1' }} <span>GB</span></h2>
                     </div>
                   </div>
                   <div class="general_block">
                     <div class="general_item">
                       <h3>Общий трафик</h3>
-                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 / 1024 | number: '1.1-1' }}GB</h2>
                     </div>
                     <div class="line"></div>
                   </div>
                   <div class="spent_block">
                     <div class="spent_item">
                       <h3>Потраченный трафик</h3>
-                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 /1024 | number: '1.1-1' }}GB</h2>
                     </div>
                     <div class="line"></div>
                   </div>
                   <div class="remainder_block">
                     <div class="remainder_item">
                       <h3>Оставшийся трафик</h3>
-                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 | number: '1.1-1' }}GB</h2>
+                      <h2>{{ trafficFullData.in_bytes / 1024 / 1024 / 1024 | number: '1.1-1' }}GB</h2>
                     </div>
                   </div>
                   <!-- <div class="traffic_btn">
@@ -56,4 +57,10 @@
       </div>
     </div>
   </div>
+</div>
+<ng-template #block>
+  <div class="loading_block">
+  <img src="./assets/img/loadind.gif" alt="" class="loading">
+ </div>
+</ng-template>
 </div>

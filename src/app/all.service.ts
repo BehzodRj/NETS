@@ -1,14 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Router } from '@angular/router'; 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestsService {
-  private url = ' https://api.nets.tj'
+  private url = "https://api.nets.tj"
+  // private url = ' https://api.nets.tj'
   // http://45.94.219.6:12345
+  // http://45.94.219.6:8090
   // https://api.nets.tj
+  
   allChannelsService = [
     { img: './assets/img/allChannels_category/All/1.jpg' },
     { img: './assets/img/allChannels_category/All/2.jpg' },
@@ -280,9 +282,12 @@ export class RequestsService {
       { img: './assets/img/allChannels_category/entertainment/7.jpg' }
     ]
 
+ 
   constructor(private http: HttpClient, private router: Router) {}
 
-
+  
+   
+ 
   // Packages
   getLocalPackages: any = [
     {id: 1, name: '10', price: 40, date: new Date()},
@@ -349,6 +354,14 @@ export class RequestsService {
       'Authorization': `${localStorage.getItem('access_token')}`
     })
     return this.http.post( this.url + dataUrl, body, {headers: header})
+  }
+
+  postRequest1(dataUrl: any, body:  FormData) { 
+    const requestOptions: RequestInit = {
+      method: "POST",
+      body: body,
+    };
+    return requestOptions
   }
 
   putRequest(dataUrl: any, id: any, body: any) {

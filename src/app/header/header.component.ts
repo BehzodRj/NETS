@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   modalSignIn = false
   route = ""
 
+
   constructor(private router: Router, private request: RequestsService ) { }
 
   ngOnInit() {
@@ -40,6 +41,7 @@ export class HeaderComponent implements OnInit {
   changeTypeText() {
     this.typePassword = 'password'
   }
+
 
   logIn() {
     const authFormData = {...this.authForm.value}

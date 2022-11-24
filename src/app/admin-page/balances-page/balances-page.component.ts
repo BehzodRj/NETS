@@ -10,12 +10,14 @@ import { RequestsService } from 'src/app/all.service';
 export class BalancesPageComponent implements OnInit {
   balanceData: any
   modalQrCode = false; 
-
+  loading = false
   constructor(private router: Router, private request: RequestsService) { }
 
   ngOnInit() {
+    this.loading = true
     this.request.getRequest('/api/cust_cab/my_balance').subscribe(response => {
       this.balanceData = response
+      this.loading = false
     }, error => {
       this.request.error(error)
     })
